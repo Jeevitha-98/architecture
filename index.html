@@ -64,36 +64,75 @@
 
     <!-- 2. STICKY INTERACTIVE GLASS NAVBAR -->
     <header class="global-header animate-header">
-      <div class="nav-container">
-          
-        <a href="index.html" class="logo-container">
-          <div class="logo-wrapper">
-              <svg class="nav-logo-icon" viewBox="0 0 100 100" width="34" height="34" fill="#AF9272">
-                  <path d="M52.3,18.1 C44.2,18.1 35.8,24.3 30.6,33.5 C24.1,44.9 25.4,56.2 32.1,62.8 C38.5,69.1 48.7,68.2 55.4,62.1 C60.2,57.7 61.3,51.8 57.2,48.3 C52.1,43.9 41.5,47.8 38.6,41.9 C36.2,37.1 39.8,30.4 46.7,27.1 C52.8,24.2 60.1,25.6 63.8,30.2 C64.7,24.1 59.8,18.1 52.3,18.1 Z" />
-                  <path d="M47.7,81.9 C55.8,81.9 64.2,75.7 69.4,66.5 C75.9,55.1 74.6,43.8 67.9,37.2 C61.5,30.9 51.3,31.8 44.6,37.9 C39.8,42.3 38.7,48.2 42.8,51.7 C47.9,56.1 58.5,52.2 61.4,58.1 C63.8,62.9 60.2,69.6 53.3,72.9 C47.2,75.8 39.9,74.4 36.2,69.8 C35.3,75.9 40.2,81.9 47.7,81.9 Z" />
-              </svg>
-              <span class="logo-brand-text">Stackly</span>
-          </div>
-        </a>
-          
-        <nav class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="404.html">About Us</a></li>
-                <li><a href="404.html">Services</a></li>
-                <li><a href="404.html">Projects</a></li>
-                <li><a href="404.html">Blog</a></li>
-                <li><a href="404.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        
-        <div class="header-actions">
-            <a href="404.html" class="quote-cta-btn">Get Free Quote <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
+  <div class="nav-container">
+      
+    <a href="index.html" class="logo-container">
+      <div class="logo-wrapper">
+          <svg class="nav-logo-icon" viewBox="0 0 100 100" width="34" height="34" fill="#AF9272">
+              <path d="M52.3,18.1 C44.2,18.1 35.8,24.3 30.6,33.5 C24.1,44.9 25.4,56.2 32.1,62.8 C38.5,69.1 48.7,68.2 55.4,62.1 C60.2,57.7 61.3,51.8 57.2,48.3 C52.1,43.9 41.5,47.8 38.6,41.9 C36.2,37.1 39.8,30.4 46.7,27.1 C52.8,24.2 60.1,25.6 63.8,30.2 C64.7,24.1 59.8,18.1 52.3,18.1 Z" />
+              <path d="M47.7,81.9 C55.8,81.9 64.2,75.7 69.4,66.5 C75.9,55.1 74.6,43.8 67.9,37.2 C61.5,30.9 51.3,31.8 44.6,37.9 C39.8,42.3 38.7,48.2 42.8,51.7 C47.9,56.1 58.5,52.2 61.4,58.1 C63.8,62.9 60.2,69.6 53.3,72.9 C47.2,75.8 39.9,74.4 36.2,69.8 C35.3,75.9 40.2,81.9 47.7,81.9 Z" />
+          </svg>
+          <span class="logo-brand-text">Stackly</span>
       </div>
-    </header>
+    </a>
+      
+    <!-- FIX: Attached ID handle here so your JavaScript observer can capture the toggle clock states -->
+    <nav class="nav-menu" id="mobile-nav-overlay">
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="404.html">About Us</a></li>
+            <li><a href="404.html">Services</a></li>
+            <li><a href="404.html">Projects</a></li>
+            <li><a href="404.html">Blog</a></li>
+            <li><a href="404.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- FIX: Swaps out the Quote button for the clean 3-line hamburger nodes dynamically on mobile screens -->
+    <div class="header-actions">
+        <a href="404.html" class="quote-cta-btn">Get Free Quote <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        
+        <button class="mobile-menu-toggle" id="menu-toggle-trigger" aria-label="Toggle Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </div>
+  </div>
+</header>
 
-    <!-- 3. MAIN CO-CREATION HERO SCREEN INTERFACE -->
+ <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const menuToggleButton = document.getElementById("menu-toggle-trigger");
+          const navigationMenuOverlay = document.getElementById("mobile-nav-overlay");
+          const overlayLinksList = document.querySelectorAll(".nav-links a");
+
+          if (menuToggleButton && navigationMenuOverlay) {
+              // 1. Listen for the click action on your 3-line hamburger icon
+              menuToggleButton.addEventListener("click", function (event) {
+                  event.stopPropagation();
+                  navigationMenuOverlay.classList.toggle("mobile-menu-active");
+                  console.log("Mobile menu toggle clicked!"); // Sends verification note to developer logs
+              });
+
+              // 2. Auto-close the dark overlay screen when any menu path is clicked
+              overlayLinksList.forEach(function (link) {
+                  link.addEventListener("click", function () {
+                      navigationMenuOverlay.classList.remove("mobile-menu-active");
+                  });
+              });
+
+              // 3. Close the menu if a user clicks anywhere on the dark background mask
+              document.addEventListener("click", function (event) {
+                  if (!navigationMenuOverlay.contains(event.target) && !menuToggleButton.contains(event.target)) {
+                      navigationMenuOverlay.classList.remove("mobile-menu-active");
+                  }
+              });
+          } else {
+              console.error("Missing critical menu elements! Check your HTML IDs.");
+          }
+      });
+    </script>
     <main>
       <section id="home" class="hero-viewport">
           

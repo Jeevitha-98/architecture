@@ -112,9 +112,7 @@ body {
    RESTORED PREMIUM FLOATING CAPSULE NAVIGATION ENGINE (FORCE TARGET MATCH)
    ========================================================================== */
 
-/* ==========================================================================
-   RESTORED PREMIUM FLOATING CAPSULE NAVIGATION ENGINE (FIXED BASE CODE)
-   ========================================================================== */
+
 
 .global-header {
     position: fixed !important;
@@ -252,34 +250,40 @@ body {
 /* ==========================================================================
    PRODUCTION REVISED CAPSULE NAVIGATION RESPONSIVE BREAKPOINT SYSTEM
    ========================================================================== */
+/* ==========================================================================
+   PRODUCTION MOBILE LAYOUT: SWAP CTA BUTTON FOR THE 3-LINE MENU ICON
+   ========================================================================== */
+/* ==========================================================================
+   PRODUCTION REVISED CAPSULE NAVIGATION RESPONSIVE BREAKPOINT SYSTEM
+   ========================================================================== */
 
-/* Structural containers for mobile header actions */
+/* Core container alignments */
 .header-actions {
     display: flex !important;
     align-items: center !important;
-    gap: 12px !important;
+    justify-content: flex-end !important;
 }
 
+/* Base style for the hamburger button wrapper */
 .mobile-menu-toggle {
-    display: none !important;
+    display: none !important; /* Hidden completely on large desktop monitors */
     background: transparent !important;
     border: none !important;
     cursor: pointer !important;
     flex-direction: column !important;
     gap: 5px !important;
     z-index: 2500 !important;
-    padding: 4px !important;
+    padding: 6px !important;
 }
 
 .hamburger-bar {
-    width: 24px !important;
-    height: 2.5px !important;
-    background-color: #FFFFFF !important;
-    border-radius: 2px !important;
+    display: block !important;
+    background-color: #FFFFFF !important; /* Pure crisp white horizontal lines match image */
+    border-radius: 4px !important;
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
-/* --- 1. TABLETS AND SMARTPHONES (1024px DOWN) --- */
+/* --- 1. TABLETS AND SMARTPHONES (1024px DOWN BREAKPOINT) --- */
 @media (max-width: 1024px) {
     header.global-header {
         top: 14px !important;
@@ -292,67 +296,88 @@ body {
         padding: 0.6rem 1.25rem !important;
     }
 
-    /* CRITICAL FIX: Forces the horizontal desktop links to disappear from the header bar completely */
+    /* FIX: Hides the horizontal link list to prevent menu row layout clutter */
     .nav-links {
         display: none !important; 
     }
 
-    /* Transforms your navigation menu element tree into the full-screen overlay panel */
+    /* FIX: Hides the wide text button completely to gain huge horizontal pixel space */
+    .quote-cta-btn, .cta-btn, .header-actions .quote-cta-btn {
+        display: none !important;
+    }
+
+    /* FIX: Reveals your 3-line hamburger menu icon inside right actions block container */
+    .mobile-menu-toggle {
+        display: flex !important; 
+    }
+
+    .hamburger-bar {
+        width: 26px !important;
+        height: 2.5px !important;
+    }
+
+    /* Transforms navigation menu element tree into an immersive full-screen dark overlay panel */
     .nav-menu {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
         height: 100vh !important;
-        background: rgba(17, 20, 18, 0.98) !important; /* Premium dark mask backdrop matching reference image */
         z-index: 1500 !important;
         
-        /* Forces full vertical arrangement and centering for overlay link options */
-        display: flex !important;
+        /* High-end frosted glass layout mix matching presentation layout sample exactly */
+        background: rgba(17, 20, 18, 0.94) !important; 
+        backdrop-filter: blur(25px) brightness(0.75) contrast(1.1) !important;
+        -webkit-backdrop-filter: blur(25px) brightness(0.75) contrast(1.1) !important;
+        
+        /* Center content links vertically and horizontally across viewport boundaries */
+        display: none !important; /* Hidden until class active runner overrides below */
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
-        
-        /* Smooth fade/slide animation entries */
         opacity: 0 !important;
         visibility: hidden !important;
         transform: translateY(-20px) !important;
         transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.4s !important;
     }
 
-    /* ACTIVE MODAL OPEN CLASS RUNNER: Restores full display visibility upon burger click */
+    /* FORCED FIX: Restores complete display visibility structure when clicked */
     .nav-menu.mobile-menu-active {
-        opacity: 1 !important;
+        display: flex !important; 
+        opacity: 1 !important;    
         visibility: visible !important;
         transform: translateY(0) !important;
     }
 
-    /* RE-INJECT LINKS INSIDE TRANSFORMED VERTICAL OVERLAY PANEL ONLY */
+    /* Re-injects and unlocks text link list items formatting array maps inside overlay mask */
     .nav-menu.mobile-menu-active .nav-links {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         gap: 2.5rem !important; /* Spacious link padding separator gaps */
         width: 100% !important;
+        padding: 2rem !important;
     }
 
     .nav-menu.mobile-menu-active .nav-links a {
-        font-size: 1.65rem !important; /* Large crisp mobile typography matching your reference exactly */
-        font-family: 'Inter', sans-serif !important;
-        font-weight: 400 !important;
-        color: #FFFFFF !important;
-        letter-spacing: 0.05rem !important;
+        display: inline-block !important;
+        font-family: 'Cinzel', 'Inter', serif !important; /* Premium brand typography serif */
+        font-size: 1.8rem !important; /* Large, bold presentation font formats matching reference exactly */
+        font-weight: 500 !important;
+        color: #FFFFFF !important; /* Crisp pure white text contrast */
+        text-transform: uppercase !important;
+        letter-spacing: 0.08rem !important;
+        text-decoration: none !important;
+        transition: color 0.3s ease, letter-spacing 0.3s ease !important;
     }
 
-    .nav-menu.mobile-menu-active .nav-links a::after {
-        display: none !important; /* Drops gold underlines inside the mobile menu panel layout */
+    .nav-menu.mobile-menu-active .nav-links a:hover,
+    .nav-menu.mobile-menu-active .nav-links a.active {
+        color: #AF9272 !important; /* Accent gold focus selection color indicator */
+        letter-spacing: 0.12rem !important;
     }
 
-    .mobile-menu-toggle {
-        display: flex !important; /* Reveals white hamburger bar indicators */
-    }
-
-    /* FIX: Calibrated structural selection targets morph crossbars cleanly into an 'X' close indicator */
+    /* Morphing menu toggle crossbar animations transformation rules */
     .mobile-menu-active ~ .header-actions .mobile-menu-toggle .hamburger-bar:nth-child(1),
     .mobile-menu-active ~ .mobile-menu-toggle .hamburger-bar:nth-child(1) {
         transform: translateY(7.5px) rotate(45deg) !important;
@@ -367,7 +392,7 @@ body {
     }
 }
 
-/* --- 2. EXTRA SMALL SMARTPHONES --- */
+/* --- 2. EXTRA SMALL SMARTPHONE VIEWPORTS (480px DOWN) --- */
 @media (max-width: 480px) {
     header.global-header {
         top: 10px !important;
@@ -375,22 +400,22 @@ body {
     }
 
     .nav-container {
-        padding: 0.5rem 1rem !important;
+        padding: 0.55rem 1.2rem !important;
     }
 
     .logo-brand-text {
-        font-size: 1.25rem !important; /* Gracefully downscales text size */
+        font-size: 1.35rem !important; /* Scaled text logo sizing */
+        letter-spacing: -0.01rem !important;
+    }
+
+    .nav-logo-icon {
+        width: 24px !important;
+        height: 24px !important;
     }
 
     .hamburger-bar {
-        width: 22px !important; /* Scales down the hamburger toggle lines footprint width */
-    }
-
-    /* Compresses CTA button dimensions to fit small portrait smartphone viewing widths flawlessly */
-    .cta-btn, .quote-cta-btn {
-        padding: 0.55rem 1rem !important;
-        font-size: 0.72rem !important;
-        letter-spacing: 0.02rem !important;
+        width: 24px !important; /* Perfect midpoint touch target scale formats on touchscreen glass */
+        height: 2.5px !important;
     }
 }
 
@@ -1100,117 +1125,121 @@ body {
    ========================================================================== */
 
 /* ==========================================================================
-   UNIFIED ABOUT STUDIO RESPONSIVE LAYOUT ENGINE (COMPREHENSIVE RESET)
+   UNIFIED ABOUT STUDIO RESPONSIVE LAYOUT ENGINE (MOBILE SCALE LOCK)
    ========================================================================== */
 
-/* --- GLOBAL MOBILE OVERFLOW PROTECTION MATRIX --- */
+/* ==========================================================================
+   BULLETPROOF ABOUT STUDIO RESPONSIVE LAYOUT ENGINE (OVERRIDE RESOLUTION)
+   ========================================================================== */
+
+/* --- GLOBAL MOBILE OVERFLOW RESET --- */
 html, body {
-    overflow-x: hidden !important; /* Completely blocks unwanted horizontal layout scrolling */
+    overflow-x: hidden !important; 
     width: 100% !important;
     max-width: 100% !important;
+    position: relative !important; 
 }
 
-/* --- 1. TABLETS AND INTERMEDIATE LANDSCAPE SCREEN LAYOUTS --- */
+/* --- 1. TABLETS AND MOBILE VIEWPORTS (1024px DOWN) --- */
 @media (max-width: 1024px) {
-    /* Part 1: Main Section Padding Shrinkage */
     .about-studio-wrapper {
-        padding: 6rem 5% !important;
+        padding: 5rem 5% !important; /* Compresses large desktop vertical spacing */
     }
 
-    /* Part 1 & 2 Combined: Flat Grid Stack */
+    /* FORCED FIX: Overrides desktop side-by-side grid splits to force a vertical layout flow */
     .about-split-grid {
-        grid-template-columns: 1fr !important; /* Forces columns into a clean vertical flow */
-        gap: 5rem !important;
+        display: flex !important;
+        flex-direction: column !important; /* Vertically stacks text column on top, image on bottom */
+        gap: 3.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* FORCED FIX: Allows the left text container panel to occupy full container width */
+    .about-content-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+
+    .about-studio-heading {
+        font-size: clamp(1.8rem, 5vw, 2.6rem) !important; /* Fluid scaling keeps titles inside screen edges */
+        line-height: 1.2 !important;
+        width: 100% !important;
     }
 
     .about-studio-summary {
-        max-width: 100% !important; /* Allows paragraph elements to read across the full grid layer */
+        max-width: 100% !important; /* Allows paragraph elements to expand naturally across the viewport width */
+        width: 100% !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
         margin-bottom: 2.5rem !important;
     }
 
-    /* Part 2: Image Framework Scale Correction */
-    .monolith-main-img {
-        height: 450px !important; /* Switches from vh to a fixed landscape height proportion */
+    .about-value-checklist {
+        width: 100% !important;
+        gap: 1.5rem !important;
+        margin-bottom: 3rem !important;
     }
 
-    /* Part 2: Absolute Positioning Bounds Safety Fix */
+    /* Image Asset Dimensions Adjustments */
+    .monolith-main-img {
+        height: 380px !important; /* Changes from vh to a fixed landscape height proportion */
+        width: 100% !important;
+    }
+
+    /* Floating Metric Overlay Card Compactions */
     .studio-metric-floating-card {
-        left: 20px !important; /* Safely brings the card inward to prevent horizontal overflow */
+        padding: 1.25rem 1.5rem !important;
+        left: 15px !important; /* Pulls absolute element safely inward to completely prevent right side bleed */
         bottom: -20px !important;
     }
 }
 
-/* --- 2. SMALL TABLET & PORTRAIT SMARTPHONE SCALES --- */
-@media (max-width: 768px) {
-    .about-studio-wrapper {
-        padding: 5rem 5% !important;
-    }
-
-    /* Part 1: Title Line Layout Compression */
-    .about-studio-heading {
-        margin-bottom: 1.5rem !important;
-    }
-
-    .about-value-checklist {
-        gap: 1.5rem !important;
-        margin-bottom: 3.5rem !important;
-    }
-
-    /* Part 2: Metric Overlay Compactions */
-    .studio-metric-floating-card {
-        padding: 1.5rem 1.75rem !important;
-        max-width: 240px !important;
-    }
-
-    .metric-huge-label {
-        font-size: 2.6rem !important;
-    }
-
-    .monolith-main-img {
-        height: 380px !important;
-    }
-}
-
-/* --- 3. EXTRA SMALL SMARTPHONE VIEWPORTS --- */
+/* --- 2. SMALL SMARTPHONE PORTRAIT DEVICES (480px DOWN) --- */
 @media (max-width: 480px) {
     .about-studio-wrapper {
-        padding: 4rem 1.2rem !important; /* Minimizes boundaries to optimize pixel workspace */
+        padding: 4rem 1rem !important; /* Tightens boundaries perfectly on small mobile screens */
     }
 
-    /* Part 1: Touch Interaction Protection */
+    .about-studio-heading {
+        font-size: 1.65rem !important;
+    }
+
+    /* Disables side-slide on hover to keep mobile swiping completely stable */
     .value-item-row:hover {
-        transform: none !important; /* Disables side-slide on hover to keep mobile swiping stable */
+        transform: none !important;
     }
     
     .value-item-row {
-        gap: 0.95rem !important;
+        gap: 0.85rem !important;
+        width: 100% !important;
     }
 
-    /* Part 1 & Part 2 Unified: Target Interface Scalings */
     .about-pill-cta {
         padding: 0.9rem 2rem !important;
         font-size: 0.8rem !important;
-        width: 100% !important; /* Stretches button link across full row layout matching the stack */
-        justify-content: center !important;
+        width: 100% !important; /* Stretches call-to-action button across full screen width */
+        justify-content: center !important; /* Perfectly balances typography centers on mobile scales */
     }
 
-    /* Part 2: Monolith Framing Adaptations */
     .monolith-main-img {
-        height: 320px !important; /* Prevents long vertical images on tiny mobile screens */
+        height: 300px !important; /* Prevents long vertical images on tiny mobile screens */
         border-radius: 16px !important;
     }
 
+    /* Unpins the absolute overlapping layout card, dropping it beautifully under the image frame */
     .studio-metric-floating-card {
-        position: relative !important; /* Unpins the absolute card layout overlay on tiny phones */
+        position: relative !important; 
         bottom: 0 !important;
         left: 0 !important;
-        margin-top: 1.5rem !important; /* Drops underneath image frame with grid balance */
-        max-width: 100% !important; /* Overrides the 240px tablet constraint to stretch fully */
+        margin-top: 1.5rem !important; 
+        max-width: 100% !important;
         width: 100% !important;
+        box-sizing: border-box !important; /* Keeps padding inside from forcing box past edge boundaries */
         text-align: center !important;
     }
 }
-
 
 /* ==========================================
    THE ARCHITECTURAL LIFECYCLE PORTAL STYLES
