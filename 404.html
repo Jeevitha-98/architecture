@@ -135,14 +135,19 @@
         <h2 class="error-heading-title">Oops! Page Not Found</h2>
         <p class="error-descriptive-summary">The page you're looking for doesn't exist or has been moved. Let's get you back to building something great.</p>
         
-        <div class="error-action-deck">
-            <!-- Smooth return route steps directly back out into the home layout container -->
+        <div class="error-action-deck" style="display: flex; gap: 15px; justify-content: center;">
+            <!-- Button 1: Takes user back to the previous page they came from -->
+            <a href="#" onclick="history.back(); return false;" class="error-pill-cta back-btn">
+                <i class="fa-solid fa-arrow-left"></i> BACK
+            </a>
+
+            <!-- Button 2: Smooth return route steps directly back out into the home layout container -->
             <a href="index.html" class="error-pill-cta">
-                Back To Home <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Go to Home <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
         </div>
     </div>
 
-  </body>
+</body>
 </html>
 
