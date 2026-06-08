@@ -108,269 +108,15 @@ body {
     to { opacity: 1; letter-spacing: 0.4rem; }
 }
 
+/* ==========================================================================
+   RESTORED PREMIUM FLOATING CAPSULE NAVIGATION ENGINE (FORCE TARGET MATCH)
+   ========================================================================== */
+
+/* ==========================================================================
+   RESTORED PREMIUM FLOATING CAPSULE NAVIGATION ENGINE (FIXED BASE CODE)
+   ========================================================================== */
+
 .global-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: rgba(244, 242, 238, 0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1.5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    text-decoration: none;
-}
-
-.logo-blueprint-box {
-    width: 35px;
-    height: 35px;
-    border: 2px solid var(--text-main);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-serif);
-    font-weight: 600;
-    color: var(--text-main);
-    font-size: 1.1rem;
-}
-
-.logo-blueprint-box::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: 6px;
-    width: 1px;
-    height: 40px;
-    background-color: var(--accent-gold);
-    transform: rotate(45deg);
-}
-
-.logo-brand-text {
-    font-family: var(--font-serif);
-    font-size: 1.3rem;
-    letter-spacing: 0.3rem;
-    color: var(--text-main);
-    text-transform: uppercase;
-}
-
-.nav-links {
-    display: flex;
-    gap: 3rem;
-    list-style: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
-    transition: var(--transition);
-}
-
-.nav-links a:hover {
-    color: var(--accent-gold);
-}
-
-.cta-btn {
-    padding: 0.8rem 1.8rem;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-    display: inline-block;
-}
-
-.border-btn {
-    background-color: var(--text-main);
-    color: var(--white);
-}
-
-.border-btn:hover {
-    background-color: var(--accent-gold);
-    color: var(--white);
-}
-
-.primary-gold-btn {
-    background-color: var(--accent-gold);
-    color: var(--white);
-}
-
-.primary-gold-btn:hover {
-    background-color: var(--text-main);
-    color: var(--white);
-}
-
-.hero-viewport {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
-    background: linear-gradient(rgba(17, 20, 18, 0.5), rgba(17, 20, 18, 0.6)), 
-                url('https://unsplash.com') no-repeat center center/cover;
-}
-
-.hero-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-    color: var(--white);
-}
-
-.hero-tagline {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    color: var(--accent-gold);
-    display: block;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.hero-title {
-    font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 6vw, 5.5rem);
-    line-height: 1.1;
-    font-weight: 400;
-    margin-bottom: 2rem;
-    max-width: 900px;
-}
-
-.hero-title span {
-    font-style: italic;
-    color: var(--accent-gold);
-}
-
-.hero-desc {
-    font-size: 1.1rem;
-    max-width: 500px;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    color: rgba(255,255,255,0.8);
-    font-weight: 300;
-}
-
-.hero-action-row {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.inline-text-link {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
-    transition: var(--transition);
-}
-
-.inline-text-link i {
-    margin-left: 0.5rem;
-    transition: var(--transition);
-}
-
-.inline-text-link:hover i {
-    transform: translateX(6px);
-    color: var(--accent-gold);
-}
-
-.services-wrapper {
-    padding: 8rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.section-header {
-    margin-bottom: 5rem;
-}
-
-.section-tag {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    color: var(--accent-gold);
-    display: block;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.section-title {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    font-weight: 400;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background-color: var(--white);
-    padding: 3.5rem 2.5rem;
-    border: 1px solid rgba(0,0,0,0.03);
-    transition: var(--transition);
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent-gold);
-}
-
-.card-icon-frame {
-    font-size: 2rem;
-    color: var(--accent-gold);
-    margin-bottom: 2rem;
-}
-
-.card-title {
-    font-family: var(--font-serif);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    font-weight: 400;
-}
-
-.card-desc {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-@media (max-width: 1024px) {
-    .nav-menu { display: none; }
-    .services-wrapper { padding: 5rem 1.5rem; }
-    .hero-action-row { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-}
-
-
-
-/* ==========================================
-   GLOBAL STICKY GLASS HEADER NAVBAR
-   ========================================== */
-/* ==========================================
-   GLOBAL STICKY GLASS HEADER NAVBAR
-   ========================================== */
-header.global-header {
     position: fixed !important;
     top: 24px !important;
     left: 50% !important;
@@ -379,95 +125,57 @@ header.global-header {
     max-width: 1400px !important;
     z-index: 1000 !important;
     
-    /* UPDATED: Solid premium deep black background matching the logo's raw background */
-    background: #000000 !important; 
+    /* Translucent luxury dark glassmorphism styling foundation */
+    background: rgba(17, 20, 18, 0.45) !important; 
+    backdrop-filter: blur(20px) contrast(1.1) brightness(0.85) !important;
+    -webkit-backdrop-filter: blur(20px) contrast(1.1) brightness(0.85) !important;
     
-    /* OPTIONAL: Reduced blur since background is opaque solid black, preserves rendering performance */
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    
+    /* Elegant capsule bounding border */
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 50px !important;
+    border-radius: 50px !important; /* Locks the sleek curved capsule edge profiles */
     display: block !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
 }
 
 .nav-container {
-    padding: 0.75rem 2.5rem !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0.75rem 2.5rem !important; /* Compressed thickness matching reference layout */
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
     width: 100% !important;
 }
 
-/* ==========================================
-   PRODUCTION LOGO MATRIX RE-COLOR ENGINE
-   ========================================== */
-/* ==========================================
-   PRODUCTION ISOLATED LOGO ICON EXTRACTOR
-   ========================================== */
+/* BRAND IDENTITY PACKETS */
 .logo-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
     text-decoration: none !important;
-    display: inline-block !important;
 }
 
 .logo-wrapper {
     display: flex !important;
-    align-items: center !important; /* Perfect middle line vertical alignment with menu text */
-    gap: 12px !important; /* Elegant spacing separating your icon and brand text */
+    align-items: center !important;
+    gap: 12px !important;
 }
 
-/* Precision viewport container reveals the icon and drops out the rest */
-.logo-icon-mask {
-    width: 32px !important;
-    height: 32px !important;
-    overflow: hidden !important;
-    position: relative !important;
-    display: block !important;
-    flex-shrink: 0 !important;
-}
-
-.brand-logo-img {
-    height: 32px !important;
-    width: auto !important;
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    
-    /* CRITICAL FIX: Shifts the coordinates left to line up the gold icon inside the mask */
-    left: 0px !important; 
-    
-    object-fit: contain !important;
-    max-width: none !important; /* Prevents compression or squishing inside the mask */
-    
-    /* Blends away the white background seamlessly while keeping your icon crisp */
-    mix-blend-mode: multiply !important;
-    filter: brightness(0.95) contrast(1.2) !important;
-}
-
-/* Enforces the modern bold structural typography from your layout example */
 .logo-brand-text {
     font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
     font-size: 1.65rem !important;
     font-weight: 900 !important; 
     letter-spacing: -0.01rem !important; 
-    color: #FFFFFF !important; 
+    color: #FFFFFF !important; /* Solid high-contrast white text state lock */
     text-transform: uppercase !important;
     line-height: 1 !important;
     display: inline-block !important;
 }
 
-
-
-
-/* HORIZONTAL NAVIGATION INTERACTIVE LINKS */
-.nav-menu {
-    display: flex !important;
-    align-items: center !important;
-}
-
+/* HORIZONTAL MULTI-LINK DIRECTORY CONTAINER */
 .nav-links {
     display: flex !important;
-    flex-direction: row !important; /* Arranges links horizontally side-by-side */
+    flex-direction: row !important;
     gap: 2.5rem !important;
     list-style: none !important;
     margin: 0 !important;
@@ -476,7 +184,7 @@ header.global-header {
 
 .nav-links a {
     text-decoration: none !important;
-    color: #FFFFFF !important; /* Enforces clean white typography across menus */
+    color: #FFFFFF !important; /* Holds solid high-contrast white links */
     font-size: 0.85rem !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
@@ -488,37 +196,32 @@ header.global-header {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: var(--accent-gold, #AF9272) !important; /* Warm gold focus selection */
+    color: #AF9272 !important; /* Trademark selection accent gold toggle color */
 }
 
-/* Luxury animated hover underline slide effect indicator */
+/* Premium active underline tracing bar indicator matching reference style */
 .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-gold, #AF9272);
-    transition: width 0.3s ease;
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 2px !important;
+    background-color: #AF9272 !important;
+    transition: width 0.3s ease !important;
 }
 
 .nav-links a:hover::after, .nav-links a.active::after {
-    width: 100%;
+    width: 100% !important; /* Slides the gold marker smoothly underneath active navigation links */
 }
 
-/* RIGHT ACTION PILL BUTTON (FIXES INVISIBLE PURPLE CORES) */
-.header-actions {
-    display: flex !important;
-    align-items: center !important;
-}
-
-.quote-cta-btn {
+/* RIGHT ACTION PILL BUTTON MODULE */
+.cta-btn, .quote-cta-btn {
     background: rgba(255, 255, 255, 0.08) !important;
-    color: #FFFFFF !important; /* FORCED FIX: Overrides dark default text states to high-contrast white */
+    color: #FFFFFF !important; /* Structural white text state lock */
     padding: 0.75rem 1.6rem !important;
     font-size: 0.8rem !important;
-    border-radius: 30px !important;
+    border-radius: 30px !important; /* Curve profile fits capsule symmetry shapes */
     text-decoration: none !important;
     font-weight: 600 !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -530,41 +233,184 @@ header.global-header {
     letter-spacing: 0.04rem !important;
 }
 
-.quote-cta-btn i {
-    font-size: 0.7rem !important;
-    color: #FFFFFF !important; /* Synchronizes icon vector link color to pure white */
-}
-
-.quote-cta-btn:hover {
+.cta-btn:hover, .quote-cta-btn:hover {
     background: #FFFFFF !important;
-    color: #1A1D1B !important; /* Flips color profile gracefully upon pointer hover */
+    color: #111412 !important; /* Elegant focus color inversion */
     transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1) !important;
 }
 
-.quote-cta-btn:hover i {
-    color: #1A1D1B !important;
+/* ==========================================================================
+   SAFEGUARD LOCK: COMPLETELY PREVENTS MOBILE HEADER TEXT LEAKING CORES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    /* Hard-locks the desktop row links to stay hidden until overlay is requested */
+    .nav-links {
+        display: none !important; 
+    }
+}
+/* ==========================================================================
+   PRODUCTION REVISED CAPSULE NAVIGATION RESPONSIVE BREAKPOINT SYSTEM
+   ========================================================================== */
+
+/* Structural containers for mobile header actions */
+.header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
 }
 
-/* AUTOMATIC TABLET MOBILE VIEWPORT SAFELOCK PROTECTION */
-@media (max-width: 900px) {
+.mobile-menu-toggle {
+    display: none !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    z-index: 2500 !important;
+    padding: 4px !important;
+}
+
+.hamburger-bar {
+    width: 24px !important;
+    height: 2.5px !important;
+    background-color: #FFFFFF !important;
+    border-radius: 2px !important;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* --- 1. TABLETS AND SMARTPHONES (1024px DOWN) --- */
+@media (max-width: 1024px) {
+    header.global-header {
+        top: 14px !important;
+        width: 93% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .nav-container {
+        padding: 0.6rem 1.25rem !important;
+    }
+
+    /* CRITICAL FIX: Forces the horizontal desktop links to disappear from the header bar completely */
+    .nav-links {
+        display: none !important; 
+    }
+
+    /* Transforms your navigation menu element tree into the full-screen overlay panel */
     .nav-menu {
-        display: none !important; /* Cleanly collapses item blocks on small view screens */
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background: rgba(17, 20, 18, 0.98) !important; /* Premium dark mask backdrop matching reference image */
+        z-index: 1500 !important;
+        
+        /* Forces full vertical arrangement and centering for overlay link options */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        
+        /* Smooth fade/slide animation entries */
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transform: translateY(-20px) !important;
+        transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.4s !important;
+    }
+
+    /* ACTIVE MODAL OPEN CLASS RUNNER: Restores full display visibility upon burger click */
+    .nav-menu.mobile-menu-active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+    }
+
+    /* RE-INJECT LINKS INSIDE TRANSFORMED VERTICAL OVERLAY PANEL ONLY */
+    .nav-menu.mobile-menu-active .nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2.5rem !important; /* Spacious link padding separator gaps */
+        width: 100% !important;
+    }
+
+    .nav-menu.mobile-menu-active .nav-links a {
+        font-size: 1.65rem !important; /* Large crisp mobile typography matching your reference exactly */
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 400 !important;
+        color: #FFFFFF !important;
+        letter-spacing: 0.05rem !important;
+    }
+
+    .nav-menu.mobile-menu-active .nav-links a::after {
+        display: none !important; /* Drops gold underlines inside the mobile menu panel layout */
+    }
+
+    .mobile-menu-toggle {
+        display: flex !important; /* Reveals white hamburger bar indicators */
+    }
+
+    /* FIX: Calibrated structural selection targets morph crossbars cleanly into an 'X' close indicator */
+    .mobile-menu-active ~ .header-actions .mobile-menu-toggle .hamburger-bar:nth-child(1),
+    .mobile-menu-active ~ .mobile-menu-toggle .hamburger-bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg) !important;
+    }
+    .mobile-menu-active ~ .header-actions .mobile-menu-toggle .hamburger-bar:nth-child(2),
+    .mobile-menu-active ~ .mobile-menu-toggle .hamburger-bar:nth-child(2) {
+        opacity: 0 !important;
+    }
+    .mobile-menu-active ~ .header-actions .mobile-menu-toggle .hamburger-bar:nth-child(3),
+    .mobile-menu-active ~ .mobile-menu-toggle .hamburger-bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg) !important;
+    }
+}
+
+/* --- 2. EXTRA SMALL SMARTPHONES --- */
+@media (max-width: 480px) {
+    header.global-header {
+        top: 10px !important;
+        width: 92% !important;
+    }
+
+    .nav-container {
+        padding: 0.5rem 1rem !important;
+    }
+
+    .logo-brand-text {
+        font-size: 1.25rem !important; /* Gracefully downscales text size */
+    }
+
+    .hamburger-bar {
+        width: 22px !important; /* Scales down the hamburger toggle lines footprint width */
+    }
+
+    /* Compresses CTA button dimensions to fit small portrait smartphone viewing widths flawlessly */
+    .cta-btn, .quote-cta-btn {
+        padding: 0.55rem 1rem !important;
+        font-size: 0.72rem !important;
+        letter-spacing: 0.02rem !important;
     }
 }
 
 
-//* ==========================================
+
+/* ==========================================
    IMMERSIVE HERO SECTION LAYOUT CORE
    ========================================== */
 .hero-viewport {
     min-height: 100vh;
     display: flex !important;
     align-items: center !important;
-    padding: 140px 5% 60px 5% !important;
+    /* FIX: Increased to 185px to give the right glass panel full breathing room below the header */
+    padding: 185px 5% 60px 5% !important;
     position: relative !important;
     overflow: hidden !important; 
     background-color: #111412 !important; /* Elegant architectural dark tone fallback */
 }
+
+
 
 /* PREMIUM ANIMATED BACKGROUND FRAME CONTAINER */
 .hero-animated-background {
@@ -822,9 +668,40 @@ header.global-header {
     100% { transform: scale(1.06) translate(-6px, -4px); } 
 }
 @keyframes fadeDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-@keyframes titleReveal { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-@keyframes fadeUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-@keyframes glassSlideIn { from { transform: translateX(40px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+/* ==========================================================================
+   ANIMATION MATRIX ACCELERATION FAILSAFE (RESTORE VISIBILITY)
+   ========================================================================== */
+
+/* FORCED FIX: Overwrites the hidden animation states to guarantee elements show up immediately */
+.hero-editorial-panel,
+.badge-pill,
+.hero-title .block-span,
+.hero-title .italic-span,
+.hero-desc,
+.hero-button-row,
+.hero-value-glass-panel {
+    opacity: 1 !important; /* Forces layout layers to be solid and completely visible */
+    visibility: visible !important;
+}
+
+/* Optional: If you want to keep the slide animation movements without the invisible fading risk, 
+   update your keyframes to end at solid visible states */
+@keyframes titleReveal { 
+    from { transform: translateY(40px); opacity: 1; } 
+    to { transform: translateY(0) !important; opacity: 1 !important; } 
+}
+
+@keyframes fadeUp { 
+    from { transform: translateY(40px); opacity: 1; } 
+    to { transform: translateY(0) !important; opacity: 1 !important; } 
+}
+
+@keyframes glassSlideIn { 
+    from { transform: translateX(40px) translateY(20px); opacity: 1; } 
+    to { transform: translateX(0) translateY(0) !important; opacity: 1 !important; } 
+}
+
+
 
 /* FIXED & RE-LINKED TIMELINE MATRIX ENGINE EXECUTION CALLS */
 .animate-fade-down { animation: fadeDown 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.3s !important; }
@@ -834,6 +711,121 @@ header.global-header {
 .animate-fade-up-delayed { animation: fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.1s !important; }
 .animate-glass-slide { animation: glassSlideIn 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.3s !important; }
 
+/* ==========================================================================
+   UNIFIED ARCHITECTURAL RESPONSIVE STYLESHEET (PART 1 & PART 2)
+   ========================================================================== */
+
+/* --- 1. TABLET AND INTERMEDIATE LAPTOP SCREEN SCALES --- */
+@media (max-width: 1024px) {
+    /* Part 1: Grid Grid Structure Flattening */
+    .hero-viewport {
+        padding: 130px 6% 60px 6% !important;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+
+    .hero-central-grid {
+        grid-template-columns: 1fr !important; /* Converts side-by-side columns into a single vertical stack */
+        gap: 3.5rem !important;
+    }
+
+    .hero-desc {
+        max-width: 100% !important; /* Allows description typography to span fluidly across the screen width */
+        margin-bottom: 2.5rem !important;
+    }
+
+    /* Part 2: Glass Panel Proportional Shrinkage */
+    .hero-value-glass-panel {
+        padding: 2.2rem 1.8rem !important; /* Optimizes padding inside the collapsed card container */
+        margin-top: 1rem !important;
+    }
+
+    /* Part 2: Animation Path Fix - Changes side sliding to vertical fade to prevent overflow-x page breaking */
+    @keyframes glassSlideIn { 
+        from { transform: translateY(30px); opacity: 0; } 
+        to { transform: translateY(0); opacity: 1; } 
+    }
+}
+
+/* --- 2. SMALL TABLET & LARGE SMARTPHONE SCALES --- */
+@media (max-width: 768px) {
+    /* Part 1: Core Typography Adaptations */
+    .hero-title {
+        line-height: 1.2 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .badge-pill {
+        padding: 0.45rem 1rem !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.18rem !important;
+    }
+
+    /* Part 2: Action Call-To-Action Compactions */
+    .cta-primary, .cta-secondary {
+        padding: 0.9rem 1.6rem !important; /* Compresses premium button dimensions gracefully */
+        font-size: 0.8rem !important;
+        gap: 0.6rem !important;
+    }
+
+    .glass-panel-title {
+        font-size: 1.25rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .glass-value-list {
+        gap: 1.35rem !important;
+    }
+}
+
+/* --- 3. EXTRA SMALL SMARTPHONE VIEWPORTS --- */
+@media (max-width: 480px) {
+    /* Part 1: Compact Container Boundary Locks */
+    .hero-viewport {
+        padding-top: 110px !important; /* Prevents overlap with your floating glass header */
+        padding-left: 1.2rem !important;
+        padding-right: 1.2rem !important;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Part 1 & Part 2 Unified: Vertical Button Row Stacking Matrix */
+    .hero-button-row {
+        flex-direction: column !important; /* Enforces seamless vertical action flow */
+        align-items: stretch !important;  /* Forces buttons to map symmetrically across the layout container */
+        gap: 1.2rem !important;
+        width: 100% !important;
+    }
+
+    /* Part 2: Full Width Touch Targets */
+    .cta-primary, .cta-secondary {
+        padding: 0.85rem 1.4rem !important;
+        font-size: 0.75rem !important;
+        width: 100% !important; 
+        justify-content: center !important; /* Perfectly balances typography centers on mobile scales */
+    }
+
+    .cta-secondary {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .glass-value-list li {
+        gap: 0.95rem !important; /* Closes spacing between icons and body headers */
+    }
+
+    .list-text-wrapper strong {
+        font-size: 0.9rem !important;
+    }
+
+    .list-text-wrapper p {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
+}
 
 /* ==========================================
    PRODUCTION ABOUT STUDIO ENVIRONMENT
@@ -1103,6 +1095,123 @@ header.global-header {
     text-shadow: 0 0 15px rgba(175, 146, 114, 0.7) !important;
 }
 
+/* ==========================================================================
+   UNIFIED ABOUT STUDIO RESPONSIVE LAYOUT ENGINE (PART 1 & PART 2)
+   ========================================================================== */
+
+/* ==========================================================================
+   UNIFIED ABOUT STUDIO RESPONSIVE LAYOUT ENGINE (COMPREHENSIVE RESET)
+   ========================================================================== */
+
+/* --- GLOBAL MOBILE OVERFLOW PROTECTION MATRIX --- */
+html, body {
+    overflow-x: hidden !important; /* Completely blocks unwanted horizontal layout scrolling */
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* --- 1. TABLETS AND INTERMEDIATE LANDSCAPE SCREEN LAYOUTS --- */
+@media (max-width: 1024px) {
+    /* Part 1: Main Section Padding Shrinkage */
+    .about-studio-wrapper {
+        padding: 6rem 5% !important;
+    }
+
+    /* Part 1 & 2 Combined: Flat Grid Stack */
+    .about-split-grid {
+        grid-template-columns: 1fr !important; /* Forces columns into a clean vertical flow */
+        gap: 5rem !important;
+    }
+
+    .about-studio-summary {
+        max-width: 100% !important; /* Allows paragraph elements to read across the full grid layer */
+        margin-bottom: 2.5rem !important;
+    }
+
+    /* Part 2: Image Framework Scale Correction */
+    .monolith-main-img {
+        height: 450px !important; /* Switches from vh to a fixed landscape height proportion */
+    }
+
+    /* Part 2: Absolute Positioning Bounds Safety Fix */
+    .studio-metric-floating-card {
+        left: 20px !important; /* Safely brings the card inward to prevent horizontal overflow */
+        bottom: -20px !important;
+    }
+}
+
+/* --- 2. SMALL TABLET & PORTRAIT SMARTPHONE SCALES --- */
+@media (max-width: 768px) {
+    .about-studio-wrapper {
+        padding: 5rem 5% !important;
+    }
+
+    /* Part 1: Title Line Layout Compression */
+    .about-studio-heading {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .about-value-checklist {
+        gap: 1.5rem !important;
+        margin-bottom: 3.5rem !important;
+    }
+
+    /* Part 2: Metric Overlay Compactions */
+    .studio-metric-floating-card {
+        padding: 1.5rem 1.75rem !important;
+        max-width: 240px !important;
+    }
+
+    .metric-huge-label {
+        font-size: 2.6rem !important;
+    }
+
+    .monolith-main-img {
+        height: 380px !important;
+    }
+}
+
+/* --- 3. EXTRA SMALL SMARTPHONE VIEWPORTS --- */
+@media (max-width: 480px) {
+    .about-studio-wrapper {
+        padding: 4rem 1.2rem !important; /* Minimizes boundaries to optimize pixel workspace */
+    }
+
+    /* Part 1: Touch Interaction Protection */
+    .value-item-row:hover {
+        transform: none !important; /* Disables side-slide on hover to keep mobile swiping stable */
+    }
+    
+    .value-item-row {
+        gap: 0.95rem !important;
+    }
+
+    /* Part 1 & Part 2 Unified: Target Interface Scalings */
+    .about-pill-cta {
+        padding: 0.9rem 2rem !important;
+        font-size: 0.8rem !important;
+        width: 100% !important; /* Stretches button link across full row layout matching the stack */
+        justify-content: center !important;
+    }
+
+    /* Part 2: Monolith Framing Adaptations */
+    .monolith-main-img {
+        height: 320px !important; /* Prevents long vertical images on tiny mobile screens */
+        border-radius: 16px !important;
+    }
+
+    .studio-metric-floating-card {
+        position: relative !important; /* Unpins the absolute card layout overlay on tiny phones */
+        bottom: 0 !important;
+        left: 0 !important;
+        margin-top: 1.5rem !important; /* Drops underneath image frame with grid balance */
+        max-width: 100% !important; /* Overrides the 240px tablet constraint to stretch fully */
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
+
+
 /* ==========================================
    THE ARCHITECTURAL LIFECYCLE PORTAL STYLES
    ========================================== */
@@ -1318,6 +1427,93 @@ header.global-header {
     .expertise-asymmetric-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
     .expertise-matrix-wrapper { padding: 6rem 4% !important; }
 }
+/* ==========================================================================
+   PRODUCTION EXPERTISE MATRIX LAYOUT RESPONSIVE SYSTEM
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS AND LANDSCAPE LAPTOPS --- */
+@media (max-width: 1024px) {
+    /* Balance top offset metrics cleanly */
+    .expertise-matrix-wrapper {
+        padding-bottom: 5rem !important;
+        margin-top: 0 !important;
+    }
+
+    /* Convert 4 columns into a balanced 2x2 grid */
+    .expertise-asymmetric-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 3rem 2rem !important; /* Elegant vertical row padding offset */
+    }
+
+    /* Neutralize structural stagger offsets to maintain flat alignment balance across rows */
+    .expertise-asymmetric-grid .expertise-luxury-card:nth-child(even) {
+        transform: translateY(0) !important;
+    }
+
+    /* Standardize interactive transition response patterns across all active elements */
+    .expertise-asymmetric-grid .expertise-luxury-card:nth-child(odd):hover,
+    .expertise-asymmetric-grid .expertise-luxury-card:nth-child(even):hover {
+        transform: translateY(-6px) scale(1) !important;
+    }
+}
+
+/* --- 2. SMALL PORTRAIT TABLETS & LARGE MOBILE VIEWPORTS --- */
+@media (max-width: 768px) {
+    .expertise-matrix-wrapper {
+        padding: 5rem 5% !important;
+    }
+
+    .matrix-editorial-header {
+        margin-bottom: 4rem !important;
+    }
+
+    /* Flatten grid items into a single unified column layout */
+    .expertise-asymmetric-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .expertise-luxury-card {
+        padding: 3rem 2rem 2.5rem 2rem !important; /* Compresses large padding parameters */
+    }
+}
+
+/* --- 3. EXTRA SMALL MOBILE SMARTPHONES --- */
+@media (max-width: 480px) {
+    .expertise-matrix-wrapper {
+        padding: 4rem 1.2rem !important;
+    }
+
+    .matrix-main-title {
+        margin-bottom: 1rem !important;
+    }
+
+    .matrix-desc-summary {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .card-vector-circle {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.15rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .card-structural-heading {
+        font-size: 1.15rem !important;
+    }
+
+    .card-editorial-desc {
+        font-size: 0.85rem !important;
+    }
+
+    .card-metric-counter {
+        top: 1.5rem !important;
+        right: 1.5rem !important;
+        font-size: 1rem !important;
+    }
+}
 
 /* ==========================================
    SCROLL OBSERVER TIMELINE ANIMATIONS 
@@ -1344,6 +1540,47 @@ header.global-header {
 .exp-card-animate-1 { animation: expertiseFadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.45s; }
 .exp-card-animate-2 { animation: expertiseFadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.6s; }
 .exp-card-animate-3 { animation: expertiseFadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.75s; }
+
+/* ==========================================================================
+   PRODUCTION EXPERTISE MATRIX SCROLL ANIMATION RESPONSIVE ENGINE
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    /* Smooth out entry distances to avoid layout clipping on tablet screens */
+    @keyframes expertiseFadeUp {
+        from { transform: translateY(30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes expertiseFadeDown {
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Compress the staggered delay gaps so cards on the second row reveal faster */
+    .exp-card-animate-0 { animation-delay: 0.15s !important; }
+    .exp-card-animate-1 { animation-delay: 0.25s !important; }
+    .exp-card-animate-2 { animation-delay: 0.15s !important; /* Matches row 2 left card */ }
+    .exp-card-animate-3 { animation-delay: 0.25s !important; /* Matches row 2 right card */ }
+}
+
+@media (max-width: 768px) {
+    /* Minimize trajectory distance for small mobile vertical scroll flows */
+    @keyframes expertiseFadeUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Universal delay reset: since elements are now stacked completely vertically,
+       they should reveal immediately based on the scroll observer trigger point,
+       not background clock delays. */
+    .exp-card-animate-0,
+    .exp-card-animate-1,
+    .exp-card-animate-2,
+    .exp-card-animate-3 { 
+        animation-delay: 0.1s !important; 
+    }
+}
 
 /* ==========================================
    THE CORE ARCHITECTURAL PILLARS STYLES
@@ -1711,6 +1948,185 @@ header.global-header {
     to { transform: scale(1) translateY(0) !important; opacity: 1 !important; }
 }
 
+/* ==========================================================================
+   UNIFIED ARCHITECTURAL PILLARS RESPONSIVE ENGINE (PARTS 1, 2 & 3)
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS AND INTERMEDIATE LANDSCAPE SCREEN SCALES --- */
+@media (max-width: 1024px) {
+    .pillars-studio-wrapper {
+        padding: 6rem 5% !important;
+    }
+
+    /* Part 1: Collapse main asymmetric section columns into a unified layer stack */
+    .pillars-central-container {
+        grid-template-columns: 1fr !important;
+        gap: 4.5rem !important;
+    }
+
+    .pillars-media-column {
+        order: 1 !important; /* Positions monolith layout display above text elements on mobile */
+    }
+
+    .pillars-content-column {
+        order: 2 !important;
+    }
+
+    .pillars-main-img {
+        height: 450px !important; /* Converts vertical viewport vh blocks to fluid landscape pixels */
+    }
+
+    /* Part 1: Adjust floating metric coordinates inward to fit layout bounds */
+    .pillars-metric-floating-card {
+        left: 20px !important;
+        bottom: -20px !important;
+    }
+
+    .pillars-studio-summary {
+        max-width: 100% !important;
+        margin-bottom: 2.5rem !important;
+    }
+
+    /* Part 2: Compress background stagger clocks to sync up with mobile scroll loops */
+    .pil-run-card-1 { animation-delay: 0.25s !important; }
+    .pil-run-card-2 { animation-delay: 0.35s !important; }
+    .pil-run-card-3 { animation-delay: 0.25s !important; }
+    .pil-run-card-4 { animation-delay: 0.35s !important; }
+
+    /* Part 3: Tighten the scale entry boundaries for sleek tablet transitions */
+    @keyframes structuralZoomIn {
+        from { transform: scale(0.98) translateY(15px); opacity: 0; }
+        to { transform: scale(1) translateY(0) !important; opacity: 1 !important; }
+    }
+}
+
+/* --- 2. SMALL PORTRAIT TABLETS & PORTRAIT HANDSET INTERFACES --- */
+@media (max-width: 768px) {
+    .pillars-studio-wrapper {
+        padding: 5rem 5% !important;
+    }
+
+    .pillars-studio-heading {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .pillars-metric-floating-card {
+        padding: 1.5rem 1.75rem !important;
+        max-width: 240px !important;
+    }
+
+    .pillars-huge-label {
+        font-size: 2.6rem !important;
+    }
+
+    .pillars-main-img {
+        height: 380px !important;
+    }
+
+    .pillars-quadrant-grid {
+        gap: 2rem 1.5rem !important;
+        margin-bottom: 3rem !important;
+    }
+
+    /* Part 3: Compresses the distance tracking for up/down slide actions on mid-size screens */
+    @keyframes structuralFadeUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralRevealRight {
+        from { transform: translateX(-20px); opacity: 0; }
+        to { transform: translateX(0) !important; opacity: 1 !important; }
+    }
+}
+
+/* --- 3. EXTRA SMALL MOBILE SMARTPHONE CONSTRAINTS --- */
+@media (max-width: 600px) {
+    /* Part 2: Flatten 2x2 layout quadrants to single-column list format */
+    .pillars-quadrant-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .pillars-studio-wrapper {
+        padding: 4rem 1.2rem !important;
+    }
+
+    /* Part 1 & Part 2 Unified: Neutralize translation hover interactions to maintain smooth touchscreen scrolling */
+    .pillars-main-img:hover,
+    .pillars-metric-floating-card:hover,
+    .pillars-studio-heading:hover,
+    .pillars-studio-summary:hover,
+    .pillar-quadrant-card:hover,
+    .pillars-pill-cta:hover {
+        transform: none !important;
+    }
+
+    .pillars-main-img {
+        height: 320px !important;
+        border-radius: 16px !important;
+    }
+
+    /* Part 1: Unpin absolute overlapping layers on small screens */
+    .pillars-metric-floating-card {
+        position: relative !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        margin-top: 1.5rem !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .pillar-quadrant-card {
+        gap: 0.95rem !important;
+    }
+
+    .pillars-pill-cta {
+        padding: 0.9rem 2rem !important;
+        font-size: 0.8rem !important;
+        width: 100% !important; /* Stretches the call-to-action button to fill the screen width */
+        justify-content: center !important;
+    }
+
+    /* Part 2 & Part 3 Unified: Accelerate timelines completely on small screens to remove scroll-blocking layout gaps */
+    .pil-run-badge, .pil-run-heading, .pil-run-summary, .pil-run-btn, 
+    .pil-run-image, .pil-run-metric, .pil-run-card-1, .pil-run-card-2, 
+    .pil-run-card-3, .pil-run-card-4 {
+        animation-delay: 0.05s !important;
+    }
+
+    /* Part 3: Mobile Performance Boost: Prevents hidden layout stuttering during fast scrolling */
+    .pillars-studio-badge,
+    .pillars-studio-heading,
+    .pillars-studio-summary,
+    .pillar-quadrant-card,
+    .pillars-pill-cta,
+    .pillars-main-img,
+    .pillars-metric-floating-card {
+        opacity: 0.5; /* Elevates visibility baseline to prevent invisible gaps on lagging networks */
+        will-change: transform, opacity; /* Informs mobile hardware processors to optimize translation passes */
+    }
+
+    /* Part 3: Keeps travel distance to a minimal pixel footprint for fast mobile thumb sweeps */
+    @keyframes structuralFadeUp {
+        from { transform: translateY(12px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralRevealRight {
+        from { transform: translateX(-12px); opacity: 0; }
+        to { transform: translateX(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralZoomIn {
+        from { transform: scale(1) translateY(12px); opacity: 0; } /* Disables scale zoom processing to save mobile processor load */
+        to { transform: scale(1) translateY(0) !important; opacity: 1 !important; }
+    }
+}
+
 /* ==========================================
    CINEMA VIDEO SHOWCASE PORTAL STYLES
    ========================================== */
@@ -1980,6 +2396,111 @@ header.global-header {
 .vid-run-title   { animation: structuralFadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.25s !important; }
 .vid-run-desc    { animation: structuralFadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.4s !important; }
 .vid-run-trigger { animation: structuralZoomIn 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s !important; }
+
+/* ==========================================================================
+   UNIFIED CINEMA PORTAL RESPONSIVE ENGINE (PART 1 & PART 2)
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS AND INTERMEDIATE LANDSCAPE SCREEN LAYOUTS --- */
+@media (max-width: 992px) {
+    /* Part 1: Flattens the main layout structure into a centered vertical stack */
+    .cinema-central-container {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        gap: 3.5rem !important;
+    }
+
+    .cinema-portal-wrapper {
+        min-height: auto !important;
+        max-height: none !important;
+        padding: 5.5rem 5% !important;
+    }
+
+    /* Part 1: Rotates gradient matrix overlay to top-to-bottom for uniform centered text coverage */
+    .cinema-atmosphere-tint {
+        background: linear-gradient(180deg, 
+            rgba(17, 20, 18, 0.94) 0%, 
+            rgba(17, 20, 18, 0.75) 60%, 
+            rgba(17, 20, 18, 0.90) 100%) !important;
+    }
+
+    .cinema-desc-summary {
+        margin: 0 auto !important; /* Centers the editorial paragraph layout inside the column text container */
+    }
+
+    /* Part 2: Tames structural transition travel distances to ensure clean, smooth scrolling passes */
+    @keyframes structuralFadeUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralFadeDown {
+        from { transform: translateY(-15px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+}
+
+/* --- 2. SMALL PORTRAIT TABLETS & LARGE PHONE VIEWPORTS --- */
+@media (max-width: 768px) {
+    .cinema-portal-wrapper {
+        padding: 4.5rem 5% !important;
+    }
+
+    .cinema-main-title {
+        margin-bottom: 1.25rem !important;
+    }
+}
+
+/* --- 3. EXTRA SMALL SMARTPHONE VIEWPORTS --- */
+@media (max-width: 480px) {
+    .cinema-portal-wrapper {
+        padding: 4rem 1.2rem !important;
+    }
+
+    /* Part 1 & Part 2 Unified: Disables scaling transformations on hover to prevent layout boundary shifts on mobile swipe actions */
+    .cinema-portal-wrapper:hover .cinema-static-asset,
+    .catalog-interactive-anchor-btn:hover .catalog-btn-core-circle {
+        transform: none !important;
+    }
+
+    /* Part 2: Compresses the interactive button footprint to comfortably sit on small mobile touchscreens */
+    .catalog-interactive-anchor-btn {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    /* Part 2: Compresses radar pulse wave bounds to eliminate horizontal page shaking */
+    .catalog-btn-pulse-ring-1, .catalog-btn-pulse-ring-2 {
+        top: -15px !important;
+        left: -15px !important;
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .catalog-action-string-text {
+        font-size: 0.65rem !important;
+    }
+
+    .catalog-action-string-text strong {
+        font-size: 0.68rem !important;
+    }
+
+    /* Part 2: Minimizes scroll entrance distance tracking metrics to zero for crisp load timing on mobile */
+    @keyframes structuralFadeUp {
+        from { transform: translateY(10px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralFadeDown {
+        from { transform: translateY(-10px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralZoomIn {
+        from { transform: scale(0.95); opacity: 0; }
+        to { transform: scale(1) !important; opacity: 1 !important; }
+    }
+}
 
 
 /* ==========================================
@@ -2269,6 +2790,44 @@ header.global-header {
 /* INSTANT REVEAL: Testimonial box appears immediately with no delay */
 .run-proof-animations .proof-testimonials-column { transition-delay: 0s !important; }
 
+/* ==========================================================================
+   PRODUCTION PROOF MATRIX ANIMATION TIMELINE RESPONSIVE SYSTEM
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS AND LANDSCAPE VIEWS --- */
+@media (max-width: 1024px) {
+    /* Compress staggered delay windows to make stacked vertical text blocks reveal immediately */
+    .run-proof-animations .proof-main-title   { transition-delay: 0.05s !important; }
+    .run-proof-animations .proof-desc-summary { transition-delay: 0.10s !important; }
+    .run-proof-animations .prf-row-1          { transition-delay: 0.15s !important; }
+    .run-proof-animations .prf-row-2          { transition-delay: 0.20s !important; }
+    .run-proof-animations .prf-row-3          { transition-delay: 0.25s !important; }
+    .run-proof-animations .proof-action-deck  { transition-delay: 0.30s !important; }
+}
+
+/* --- 2. EXTRA SMALL SMARTPHONE VIEWPORTS --- */
+@media (max-width: 480px) {
+    /* Tames travel distances to keep elements close to their layout anchors for fast rendering loops */
+    .proof-badge-pill, .proof-main-title, .proof-desc-summary,
+    .proof-value-item-row, .proof-action-deck, .proof-testimonials-column {
+        transform: translateY(15px);
+        transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+
+    .proof-badge-pill { 
+        transform: translateY(-10px); 
+    }
+
+    /* Accelerate timelines to 0s across all layers on small screens to remove scroll-blocking layout gaps */
+    .run-proof-animations .proof-main-title,
+    .run-proof-animations .proof-desc-summary,
+    .run-proof-animations .prf-row-1,
+    .run-proof-animations .prf-row-2,
+    .run-proof-animations .prf-row-3,
+    .run-proof-animations .proof-action-deck { 
+        transition-delay: 0.02s !important; 
+    }
+}
 
 /* ==========================================
    GLOBAL STUDIO METRICS SHOWROOM PORTAL STYLES
@@ -2525,6 +3084,116 @@ header.global-header {
 .run-metrics-animations .odometer-card:nth-child(3) { transition-delay: 0.6s !important; }
 .run-metrics-animations .odometer-card:nth-child(4) { transition-delay: 0.7s !important; }
 
+/* ==========================================================================
+   UNIFIED STUDIO METRICS SHOWROOM RESPONSIVE ENGINE (PART 1 & PART 2)
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS AND INTERMEDIATE LANDSCAPE SCREEN SCALES --- */
+@media (max-width: 1024px) {
+    .metrics-portal-wrapper {
+        padding: 5rem 5% !important; /* Optimizes section vertical spacing bounds */
+    }
+
+    /* Part 1 & Part 2 Unified: Collapse main asymmetric section columns into a unified layer stack */
+    .metrics-central-container {
+        grid-template-columns: 1fr !important;
+        gap: 4rem !important;
+    }
+
+    .metrics-main-img {
+        height: 420px !important; /* Converts vertical viewport vh blocks to fluid landscape pixels */
+    }
+    
+    .metrics-studio-summary {
+        max-width: 100% !important; /* Allows paragraph elements to expand naturally */
+        margin-bottom: 2.5rem !important;
+    }
+
+    /* Part 2: Compress background stagger clocks to sync up with mobile scroll loops */
+    .run-metrics-animations .metrics-studio-heading { transition-delay: 0.1s !important; }
+    .run-metrics-animations .metrics-studio-summary { transition-delay: 0.2s !important; }
+    .run-metrics-animations .odometer-card:nth-child(1) { transition-delay: 0.25s !important; }
+    .run-metrics-animations .odometer-card:nth-child(2) { transition-delay: 0.35s !important; }
+    .run-metrics-animations .odometer-card:nth-child(3) { transition-delay: 0.25s !important; /* Row 2 sync alignment */ }
+    .run-metrics-animations .odometer-card:nth-child(4) { transition-delay: 0.35s !important; }
+}
+
+/* --- 2. SMALL PORTRAIT TABLETS & PORTRAIT HANDSET INTERFACES --- */
+@media (max-width: 768px) {
+    .metrics-portal-wrapper {
+        padding: 4.5rem 5% !important;
+    }
+
+    .metrics-studio-heading {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .metrics-odometer-grid {
+        gap: 2rem 1.5rem !important;
+    }
+
+    .odometer-card {
+        padding: 2rem 1.5rem !important; /* Compresses container dimensions gracefully */
+    }
+
+    .odometer-numeric-string {
+        font-size: 2.4rem !important;
+    }
+
+    .odometer-suffix {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* --- 3. EXTRA SMALL MOBILE SMARTPHONE CONSTRAINTS --- */
+@media (max-width: 600px) {
+    /* Part 1 & Part 2 Unified: Flatten 2-column quadrant odometer layout into a clean single vertical stack list format */
+    .metrics-odometer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .metrics-portal-wrapper {
+        padding: 4rem 1.2rem !important; /* Minimizes boundaries to optimize pixel workspace */
+    }
+
+    /* Part 1 & Part 2 Unified: Neutralize translation hover interactions to maintain smooth touchscreen scrolling */
+    .metrics-frame-wrapper:hover .metrics-main-img,
+    .odometer-card:hover,
+    .odometer-card:hover .odometer-numeric-string,
+    .odometer-card:hover strong {
+        transform: none !important;
+    }
+
+    .metrics-main-img {
+        height: 300px !important; /* Prevents awkward image elongation on small portrait devices */
+    }
+    
+    .odometer-card {
+        padding: 1.75rem 1.25rem !important;
+    }
+
+    /* Part 2 Unified: Accelerate timelines completely on small screens to remove scroll-blocking layout gaps */
+    .run-metrics-animations .metrics-studio-heading,
+    .run-metrics-animations .metrics-studio-summary,
+    .run-metrics-animations .odometer-card:nth-child(1),
+    .run-metrics-animations .odometer-card:nth-child(2),
+    .run-metrics-animations .odometer-card:nth-child(3),
+    .run-metrics-animations .odometer-card:nth-child(4) {
+        transition-delay: 0.05s !important;
+    }
+
+    /* Part 2: Mobile Performance Boost: Prevents hidden layout stuttering during fast scrolling */
+    .metrics-main-img,
+    .mt-reveal-down,
+    .mt-reveal-up,
+    .mt-card-animate {
+        opacity: 0.4; /* Elevates visibility baseline to prevent invisible gaps on lagging networks */
+        will-change: transform, opacity; /* Informs mobile hardware processors to optimize translation passes */
+    }
+}
 
 /* ==========================================
    BESPOKE CONSULTATION BLUEPRINT PORTAL STYLES
@@ -2730,6 +3399,103 @@ header.global-header {
 .run-cta-animations .blueprint-desc-summary { animation: structuralFadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.4s !important; }
 .run-cta-animations .cta-reveal-zoom  { animation: structuralZoomIn 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s !important; }
 
+/* ==========================================================================
+   PRODUCTION BESPOKE BLUEPRINT PORTAL RESPONSIVE ENGINE
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS AND LANDSCAPE VIEWS --- */
+@media (max-width: 1024px) {
+    .blueprint-cta-wrapper {
+        padding: 5rem 6% !important; /* Calibrates vertical spacing flows */
+    }
+    
+    .blueprint-desc-summary {
+        max-width: 100% !important; /* Allows description copy to span naturally */
+        margin-bottom: 2.5rem !important;
+    }
+
+    /* Compresses scroll entrance travel distances to guarantee smooth scrolling passes */
+    @keyframes structuralFadeUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralFadeDown {
+        from { transform: translateY(-15px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+}
+
+/* --- 2. SMALL PORTRAIT TABLETS & LARGE MOBILE DEVICES --- */
+@media (max-width: 768px) {
+    .blueprint-cta-wrapper {
+        padding: 4.5rem 5% !important;
+    }
+
+    /* Lightens background mesh layout to keep smaller viewports clean */
+    .blueprint-grid-mesh {
+        opacity: 0.40 !important;
+        background-size: 30px 30px !important;
+    }
+
+    .blueprint-main-title {
+        margin-bottom: 1.25rem !important;
+    }
+
+    .blueprint-pill-btn {
+        padding: 1rem 2.2rem !important; /* Compresses premium button bounds gracefully */
+        font-size: 0.8rem !important;
+    }
+}
+
+/* --- 3. EXTRA SMALL MOBILE SMARTPHONES --- */
+@media (max-width: 480px) {
+    .blueprint-cta-wrapper {
+        padding: 4rem 1.2rem !important;
+    }
+
+    /* Neutralize translation hover interactions to maintain smooth touchscreen scrolling */
+    .blueprint-main-title:hover,
+    .blueprint-desc-summary:hover,
+    .blueprint-pill-btn:hover {
+        transform: none !important;
+        letter-spacing: normal !important;
+        text-shadow: none !important;
+    }
+
+    /* Stretches the call-to-action button symmetrically across the mobile layout */
+    .blueprint-pill-btn {
+        padding: 0.9rem 1.8rem !important;
+        font-size: 0.78rem !important;
+        width: 100% !important;
+        justify-content: center !important; /* Centers typography perfectly in full-width targets */
+    }
+
+    /* Accelerate timelines completely on small screens to remove scroll-blocking layout gaps */
+    .run-cta-animations .cta-reveal-down,
+    .run-cta-animations .cta-reveal-up,
+    .run-cta-animations .blueprint-desc-summary,
+    .run-cta-animations .cta-reveal-zoom {
+        animation-delay: 0.05s !important;
+    }
+
+    /* Minimizes mobile entrance trajectory distance metrics to a compact layout footprint */
+    @keyframes structuralFadeUp {
+        from { transform: translateY(12px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralFadeDown {
+        from { transform: translateY(-12px); opacity: 0; }
+        to { transform: translateY(0) !important; opacity: 1 !important; }
+    }
+
+    @keyframes structuralZoomIn {
+        from { transform: scale(0.98) translateY(10px); opacity: 0; }
+        to { transform: scale(1) translateY(0) !important; opacity: 1 !important; }
+    }
+}
+
 
 /* ==========================================
    THE CENTRAL ARCHITECTURAL FOOTER STYLES
@@ -2928,106 +3694,284 @@ header.global-header {
     margin: 0 !important;
 }
 
-/* SYSTEM RESPONSIVE COMPRESSION FALLBACKS */
-@media (max-width: 1150px) {
-    .studio-premium-footer .footer-master-grid { grid-template-columns: 1fr !important; gap: 4rem !important; }
+/* =========================
+   LARGE TABLETS (1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  .hero-content,
+  .about-content,
+  .services-grid,
+  .projects-grid,
+  .contact-content {
+    gap: 2rem !important;
+  }
+
+  .hero-title {
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .section-title {
+    font-size: 2.5rem !important;
+  }
+
+  .stats-grid,
+  .services-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
-@media (max-width: 768px) {
-    .footer-right-directory-panel { grid-template-columns: 1fr !important; gap: 3.5rem !important; }
+
+/* =========================
+   TABLETS (768px - 991px)
+========================= */
+@media (max-width: 991px) {
+
+  .hero-section,
+  .about-section,
+  .contact-section {
+    padding: 100px 30px !important;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid,
+  .footer-master-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-description,
+  .about-description {
+    max-width: 100% !important;
+  }
+
+  .services-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .section-title {
+    font-size: 2.2rem !important;
+  }
 }
+
+/* =========================
+   MOBILE (767px)
+========================= */
 @media (max-width: 767px) {
 
-  /* 1. Prevent the pill nav from overflowing the screen */
-  header.global-header {
-    top: 12px !important;
-    width: calc(100% - 24px) !important;
-    left: 12px !important;
-    transform: none !important;
-    right: 12px !important;
-    box-sizing: border-box !important;
+  .container,
+  .section-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
-  /* 2. Shrink nav padding & prevent overflow */
-  .nav-container {
-    padding: 0.6rem 1.25rem !important;
-    overflow: hidden !important;
-  }
- .logo-brand-text {
-    font-size: 1.1rem !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 160px !important;
+  .hero-section,
+  .about-section,
+  .services-section,
+  .projects-section,
+  .contact-section {
+    padding: 80px 20px !important;
   }
 
-  /* 4. Show hamburger button (hidden by default) */
-  .mobile-menu-toggle {
-    display: flex !important;
-  }
-.nav-menu {
-    display: block !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    background: #000000 !important;
-    border-radius: 0 0 24px 24px !important;
-    border-top: 1px solid rgba(255,255,255,0.06) !important;
-    overflow: hidden !important;
-    max-height: 0 !important;
-    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
   }
 
-  .nav-menu.menu-open {
-    max-height: 400px !important;
+  .section-title {
+    font-size: 1.8rem !important;
   }
- .nav-links {
+
+  .section-subtitle {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-buttons {
     flex-direction: column !important;
-    gap: 0 !important;
-    padding: 1rem 1.25rem 1.5rem !important;
+    width: 100% !important;
+    gap: 1rem !important;
   }
 
-  .nav-links a {
-    padding: 0.85rem 0 !important;
-    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
-    font-size: 0.9rem !important;
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100% !important;
   }
 
-  .nav-links li:last-child a {
-    border-bottom: none !important;
+  .services-grid,
+  .projects-grid,
+  .stats-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  /* 6. Move CTA button into drawer on mobile */
-  .header-actions {
-    display: none !important;
+  .service-card,
+  .project-card,
+  .testimonial-card {
+    padding: 1.5rem !important;
   }
-   .mobile-cta-link {
-    display: block !important;
-    margin: 1rem 0 0.5rem !important;
+
+  .footer-right-directory-panel {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
     text-align: center !important;
-    background: rgba(255,255,255,0.08) !important;
-    border-radius: 30px !important;
-    padding: 0.8rem !important;
-    color: #fff !important;
-    font-size: 0.8rem !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.08rem !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-    border: 1px solid rgba(255,255,255,0.15) !important;
+    gap: 1rem !important;
   }
 
-  /* 7. Hamburger icon animation */
-  .mobile-menu-toggle .bar {
-    transition: transform 0.3s ease, opacity 0.3s ease !important;
+  img {
+    max-width: 100% !important;
+    height: auto !important;
   }
-  .mobile-menu-toggle.is-open .bar-1 {
-    transform: translateY(8px) rotate(45deg) !important;
+}
+
+/* =========================
+   SMALL MOBILE (480px)
+========================= */
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 1.6rem !important;
   }
-  .mobile-menu-toggle.is-open .bar-2 {
-    opacity: 0 !important;
+
+  .section-title {
+    font-size: 1.5rem !important;
   }
-  .mobile-menu-toggle.is-open .bar-3 {
-    transform: translateY(-8px) rotate(-45deg) !important;
+
+  .logo-brand-text {
+    max-width: 120px !important;
+    font-size: 1rem !important;
+  }
+
+  .service-card,
+  .project-card,
+  .testimonial-card {
+    padding: 1.2rem !important;
+  }
+
+  .btn,
+  .primary-btn,
+  .secondary-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+/* ==========================================================================
+   UNIFIED CENTRAL ARCHITECTURAL FOOTER & GLOBAL BREAKPOINT ENGINE
+   ========================================================================== */
+
+/* --- 1. LARGE TABLETS AND MID-SIZE SCREEN INTERFACES (1024px) --- */
+@media (max-width: 1024px) {
+  /* Part 1 & Part 2 Balance: Adjusts section padding boundaries */
+  .studio-premium-footer {
+    padding: 5rem 5% 0 5% !important;
+  }
+
+  /* Flattens master architectural row into a clean single vertical stack layout layer */
+  .studio-premium-footer .footer-master-grid {
+    grid-template-columns: 1fr !important;
+    gap: 4rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .footer-left-brand-panel {
+    align-items: center !important; /* Centers brand group columns inside tablet stack views */
+    text-align: center !important;
+  }
+
+  .footer-editorial-summary {
+    max-width: 500px !important;
+    text-align: center !important;
+    margin: 0 auto 1.5rem auto !important;
+  }
+
+  /* Part 1 Adjust: Prevents 3-column squishing by using a balanced 2-column layout on tablets */
+  .footer-right-directory-panel {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 3rem 2rem !important;
+  }
+  
+  .footer-cta-container-row {
+    margin-top: 1.5rem !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+
+/* --- 2. TABLETS & LARGE MOBILE PORTRAIT VIEWPORTS (768px - 991px) --- */
+@media (max-width: 991px) {
+  /* Part 2 Engine Core Integration hooks */
+  .studio-premium-footer {
+    padding-top: 4.5rem !important;
+  }
+
+  .footer-section-title {
+    margin-bottom: 1.25rem !important; /* Closes list tracking distance metrics */
+  }
+}
+
+/* --- 3. STANDARD MOBILE VIEWPORTS & SMARTPHONE SCREENS (600px - 767px) --- */
+@media (max-width: 767px) {
+  /* Part 2: Adjusts global section margin distributions */
+  .footer-bottom-shroud-cap {
+    margin-top: 3rem !important;
+    padding: 2rem 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Part 1 & Part 2 Unified: Collapses link blocks into a clean vertical list */
+  .footer-right-directory-panel {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  .footer-brick-column {
+    align-items: center !important; /* Centers link lists and menus for balanced portrait swiping */
+    text-align: center !important;
+  }
+
+  .footer-menu-index, .footer-contact-matrix {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .footer-contact-matrix li {
+    justify-content: center !important;
+  }
+}
+
+/* --- 4. EXTRA SMALL MOBILE DEVICES & SMARTPHONES (480px) --- */
+@media (max-width: 480px) {
+  .studio-premium-footer {
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+  }
+
+  /* Part 1 Adjust: Dynamically reduces font sizing metrics */
+  .footer-identity-title {
+    font-size: 1.35rem !important;
+  }
+
+  .footer-editorial-summary {
+    font-size: 0.85rem !important;
+  }
+
+  /* Part 1 & Part 2 Unified: Explicitly captures and stretches the footer button to full width */
+  .footer-gold-pill-btn {
+    padding: 0.85rem 2rem !important;
+    font-size: 0.8rem !important;
+    width: 100% !important; 
+    justify-content: center !important; /* Centers typography perfectly inside full-width touch targets */
   }
 }
