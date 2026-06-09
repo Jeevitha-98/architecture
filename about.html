@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | STACKLY Studio</title>
+    <!-- Fonts matching homepage typography framework -->
+    <link rel="stylesheet" href="https://googleapis.com">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Links to your existing stylesheet -->
+    <link rel="stylesheet" href="../architecture/css/style.css">
+</head>
+<body style="background-color: #111412; margin: 0; padding: 0; color: #FFFFFF; overflow-x: hidden;">
+
+        <!-- ==========================================
+       2. STICKY INTERACTIVE GLASS NAVBAR (Fixed Alignment Matrix)
+       ========================================== -->
+    <header class="global-header animate-header">
+        <div class="nav-container">
+            
+            <!-- Structural Brand Logo Connector -->
+            <a href="index.html" class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="./Assests/stackly-logo-final (1).webp" alt="Stackly logo" class="nav-logo-icon" />
+                </div>
+            </a>
+            
+            <!-- Navigation Directory Deck Layout -->
+            <nav class="nav-menu" id="mobile-nav-overlay" style="display: block !important;">
+                <ul class="nav-links" style="display: flex !important; list-style: none; gap: 2.5rem; margin: 0; padding: 0;">
+                    <li><a href="index.html" style="text-decoration: none;">Home</a></li>
+                    <li><a href="about.html" class="active" style="text-decoration: none;">About Us</a></li>
+                    <li><a href="404.html" style="text-decoration: none;">Services</a></li>
+                    <li><a href="404.html" style="text-decoration: none;">Projects</a></li>
+                    <li><a href="404.html" style="text-decoration: none;">Blog</a></li>
+                    <li><a href="404.html" style="text-decoration: none;">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Global Action Trigger Module Button Deck -->
+            <div class="header-actions">
+                <a href="404.html" class="quote-cta-btn">Get Free Quote <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                
+                <button class="mobile-menu-toggle" id="menu-toggle-trigger" aria-label="Toggle Menu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+            
+        </div>
+    </header>
+
+ <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const menuToggleButton = document.getElementById("menu-toggle-trigger");
+          const navigationMenuOverlay = document.getElementById("mobile-nav-overlay");
+          const overlayLinksList = document.querySelectorAll(".nav-links a");
+
+          if (menuToggleButton && navigationMenuOverlay) {
+              // 1. Listen for the click action on your 3-line hamburger icon
+              menuToggleButton.addEventListener("click", function (event) {
+                  event.stopPropagation();
+                  navigationMenuOverlay.classList.toggle("mobile-menu-active");
+                  console.log("Mobile menu toggle clicked!"); // Sends verification note to developer logs
+              });
+
+              // 2. Auto-close the dark overlay screen when any menu path is clicked
+              overlayLinksList.forEach(function (link) {
+                  link.addEventListener("click", function () {
+                      navigationMenuOverlay.classList.remove("mobile-menu-active");
+                  });
+              });
+
+              // 3. Close the menu if a user clicks anywhere on the dark background mask
+              document.addEventListener("click", function (event) {
+                  if (!navigationMenuOverlay.contains(event.target) && !menuToggleButton.contains(event.target)) {
+                      navigationMenuOverlay.classList.remove("mobile-menu-active");
+                  }
+              });
+          } else {
+              console.error("Missing critical menu elements! Check your HTML IDs.");
+          }
+      });
+    </script>
+    <!-- ==========================================
+       BALANCED ARCHITECTURAL WORKSPACE HERO 
+       ========================================== -->
+    <section class="about-hero-clean" style="min-height: 85vh; display: flex; align-items: center; justify-content: center; padding: 180px 5% 80px 5%; position: relative; text-align: center; background-color: #181B19; overflow: hidden;">
+        
+        <!-- 1. DYNAMIC OFFICE WORKSPACE BACKGROUND ENGINE -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden; pointer-events: none;">
+            
+            <!-- Target your new workspace interior image asset here with a slow luxury parallax zoom animation -->
+            <img src="./Assests/About us - hero.webp" alt="Stackly Studio Architecture Office" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.38; filter: contrast(1.1) brightness(0.85); animation: premiumWorkspacePan 24s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;">
+            
+            <!-- Technical Grid Overlay (Reinforces the structural/engineering vibe on top of the office photo) -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(175, 146, 114, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(175, 146, 114, 0.04) 1px, transparent 1px); background-size: 55px 55px;"></div>
+
+            <!-- Precision Matte Charcoal Blend Overlay (Keeps the shade balanced and protects text readability) -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(24, 27, 25, 0.85) 0%, rgba(24, 27, 25, 0.45) 40%, rgba(24, 27, 25, 0.45) 60%, rgba(24, 27, 25, 0.92) 100%);"></div>
+        </div>
+        
+        <!-- 2. RADIANT IVORY TYPOGRAPHY CONTAINER -->
+        <div style="max-width: 950px; margin: 0 auto; position: relative; z-index: 5;">
+            
+            <!-- Small Editorial Pill Label -->
+            <div class="badge-pill" style="display: inline-flex; align-items: center; justify-content: center; background: rgba(24, 27, 25, 0.65); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid #AF9272; color: #AF9272; padding: 0.6rem 1.5rem; border-radius: 30px; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15rem; text-transform: uppercase; margin-bottom: 2.5rem; opacity: 0; transform: scale(0.9); animation: luxuryPillPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards; box-shadow: 0 4px 20px rgba(0,0,0,0.35);">
+                Our Story
+            </div>
+            
+            <!-- High-Impact Structural Title Header (Staggered Animated Spans) -->
+            <h1 style="font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 600; line-height: 1.25; letter-spacing: -0.01rem; color: #FFFFFF; text-transform: uppercase; margin: 0 0 2rem 0; overflow: hidden; text-shadow: 0 4px 12px rgba(0,0,0,0.6);">
+                <span class="animated-text-line" style="display: block; opacity: 0; transform: translateY(40px); animation: structuralLineRise 1s cubic-bezier(0.25, 1, 0.5, 1) 0.4s forwards;">
+                    Rooted in <span style="color: #AF9272;">Tradition</span>,
+                </span>
+                <span class="animated-text-line" style="display: block; opacity: 0; transform: translateY(40px); animation: structuralLineRise 1s cubic-bezier(0.25, 1, 0.5, 1) 0.6s forwards;">
+                    Driven by <span style="color: #FFFFFF;">Innovation</span>
+                </span>
+            </h1>
+            
+            <!-- Clear Subtitle Description Paragraph Layer -->
+            <p style="font-family: 'Inter', sans-serif; font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 300; line-height: 1.7; color: rgba(255, 255, 255, 0.88); max-width: 760px; margin: 0 auto; opacity: 0; transform: translateY(15px); letter-spacing: 0.04rem; text-shadow: 0 2px 6px rgba(0,0,0,0.6); animation: editorialDescFade 1.2s cubic-bezier(0.25, 1, 0.5, 1) 1s forwards;">
+                From a small design workshop in 2012 to a leading voice in premium, sustainable, technology-driven luxury architecture and interior layouts.
+            </p>
+            
+        </div>
+    </section>
+
+    <!-- 3. ANIMATION RUNTIME CONTROLS ENGINE -->
+    <style>
+        /* Parallax slow scale-in movement for your new interior workspace asset */
+        @keyframes premiumWorkspacePan {
+            0% {
+                transform: scale(1.0);
+                background-position: center;
+            }
+            100% {
+                transform: scale(1.06) translateY(-10px);
+            }
+        }
+
+        @keyframes luxuryPillPop {
+            0% { opacity: 0; transform: scale(0.85) translateY(10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes structuralLineRise {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes editorialDescFade {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+      <!-- ==========================================
+       THE STUDIO STORY NARRATIVE SECTION (HIGH ANIMATION)
+ <!-- ==========================================
+   THE STUDIO STORY NARRATIVE SECTION (HTML STRUCTURE FIX)
+   ========================================== -->
+<section class="studio-story-section" id="story-reveal-viewport" style="padding: 100px 5%; background-color: #111412; position: relative; overflow: visible !important; border-top: 1px solid rgba(255, 255, 255, 0.03);">
+    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6.5rem; align-items: center; overflow: visible !important;">
+        
+        <!-- Left Panel: Bounded Grid Matrix Cell to guarantee vertical height safety tracks -->
+        <!-- ==========================================
+   THE STUDIO STORY NARRATIVE SECTION (HTML FIXED ICONS MATRIX)
+   ========================================== -->
+<div class="story-image-showcase-matrix" style="position: relative; width: 100%; max-width: 480px; margin: 0 auto; padding: 20px 0; overflow: visible !important;">
+    
+    <!-- Central Core Image Frame (Maintains boundary structure) -->
+    <div class="story-image-showcase" style="width: 100%; height: 480px; border-radius: 24px; overflow: visible !important; box-shadow: 0 25px 50px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 5;">
+        
+        <!-- Main Portrait Asset Image Layer -->
+        <img src="./Assests/Who we are - about us.webp" alt="Stackly Architecture Team Collaboration" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 24px; filter: brightness(0.95) contrast(1.02); animation: imageBreathingEffect 20s ease-in-out infinite alternate;">
+        
+        <!-- 1. Floating Metric Card Top Left: Studio Rating (FIXED VECTOR ICON) -->
+        <div class="floating-architectural-badge badge-top-left" style="position: absolute; top: -20px; left: -30px; background: rgba(17, 20, 18, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 0.85rem 1.25rem; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); z-index: 10; display: flex; align-items: center; gap: 0.75rem; width: fit-content;">
+            <div style="width: 36px; height: 36px; background: rgba(175, 146, 114, 0.2); border: 1px solid rgba(175, 146, 114, 0.4); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <!-- Precision Gold Star SVG Vector -->
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="16" height="16" fill="#AF9272" style="display: block;">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+            </div>
+            <div>
+                <div style="font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 600; color: #FFFFFF; line-height: 1.2;">4.9 / 5</div>
+                <span style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: rgba(255,255,255,0.5); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05rem; display: block;">Studio Rating</span>
+            </div>
+        </div>
+
+        <!-- 2. Floating Metric Card Middle Right: Projects Completed (FIXED VECTOR ICON) -->
+        <!-- 2. Floating Metric Card Middle Right: Projects Completed (FIXED NAMESPACE PATH) -->
+<!-- 2. Floating Metric Card Middle Right: Projects Completed (UPDATED EDITORIAL ICON) -->
+<div class="floating-architectural-badge badge-mid-right" style="position: absolute; top: 40%; right: -40px; background: rgba(17, 20, 18, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 0.85rem 1.25rem; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); z-index: 10; width: fit-content; display: flex; align-items: center; gap: 0.75rem;">
+    <div style="width: 36px; height: 36px; background: rgba(175, 146, 114, 0.2); border: 1px solid rgba(175, 146, 114, 0.4); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        
+        <!-- Premium Architectural Drawing Layout / Completed Tasks Blueprint Grid Vector -->
+        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+        </svg>
+        
+    </div>
+    <div>
+        <div style="font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 600; color: #AF9272; line-height: 1.1;">150+</div>
+        <span style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: rgba(255,255,255,0.6); font-weight: 500; text-transform: uppercase; letter-spacing: 0.02rem; display: block; white-space: nowrap;">Projects Done</span>
+    </div>
+</div>
+
+
+
+        <!-- 3. Floating Metric Card Bottom Right: Happy Clients & Partners -->
+        <div class="floating-architectural-badge badge-bottom-center" style="position: absolute; bottom: -25px; left: 30px; background: rgba(17, 20, 18, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 0.8rem 1.25rem; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.55); z-index: 12; display: flex; align-items: center; gap: 1rem;">
+            <div class="testimonial-avatar-stack" style="display: flex; align-items: center;">
+                <img src="./Assests/Testimonial 1.webp" alt="Client portrait" class="stack-avatar-node" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid #111412; margin-right: -10px; transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); position: relative; cursor: pointer;">
+                <img src="./Assests/Testimonial 2.webp" alt="Client portrait" class="stack-avatar-node" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid #111412; margin-right: -10px; transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); position: relative; cursor: pointer;">
+                <img src="./Assests/Testimonial 3.webp" alt="Client portrait" class="stack-avatar-node" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid #111412; margin-right: -10px; transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); position: relative; cursor: pointer;">
+                <div class="stack-avatar-node plus-node" style="width: 32px; height: 32px; border-radius: 50%; background: #AF9272; border: 2px solid #111412; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700; color: #111412; cursor: pointer; transition: all 0.3s ease;">+</div>
+            </div>
+            <div>
+                <div style="font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 600; color: #FFFFFF; line-height: 1.1;">4,800+</div>
+                <span style="font-family: 'Inter', sans-serif; font-size: 0.65rem; color: rgba(255,255,255,0.5); font-weight: 400; display: block; white-space: nowrap;">Happy Partners</span>
+            </div>
+        </div>
+
+        <!-- Gold frame bounding lines accent -->
+        <div style="position: absolute; bottom: 0; right: 0; width: 60px; height: 60px; border-bottom: 2px solid #AF9272; border-right: 2px solid #AF9272; margin: 20px; pointer-events: none; animation: goldAccentPulse 3s ease-in-out infinite alternate; z-index: 6;"></div>
+    </div>
+</div>
+
+
+        <!-- Right Panel: Narrative Context and Content Blocks (Preserved and Balanced) -->
+        <div class="story-content-block" style="display: flex; flex-direction: column; align-items: flex-start; overflow: hidden;">
+            <div class="badge-pill" style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(175, 146, 114, 0.1); border: 1px solid rgba(175, 146, 114, 0.3); color: #AF9272; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.25rem; text-transform: uppercase; margin-bottom: 1.5rem; font-family: 'Inter', sans-serif; opacity: 0; transform: translateY(20px); animation: structuralLineRise 1s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards;">
+                <span style="width: 6px; height: 6px; background-color: #AF9272; border-radius: 50%; display: inline-block;"></span>
+                Who We Are
+            </div>
+            
+            <h2 style="font-family: 'Cinzel', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.25; color: #FFFFFF; text-transform: uppercase; margin: 0 0 2rem 0; letter-spacing: 0.02rem;">
+                <span style="display: block; opacity: 0; transform: translateY(30px); animation: structuralLineRise 1s cubic-bezier(0.25, 1, 0.5, 1) 0.5s forwards;">From a small workshop</span>
+                <span style="display: block; opacity: 0; transform: translateY(30px); animation: structuralLineRise 1s cubic-bezier(0.25, 1, 0.5, 1) 0.7s forwards;">to full-scale</span>
+                <span style="display: block; opacity: 0; transform: translateY(30px); animation: structuralLineRise 1s cubic-bezier(0.25, 1, 0.5, 1) 0.9s forwards; color: #AF9272; font-style: italic; text-transform: lowercase;">architectural <span style="font-family: 'Cinzel', serif; font-style: normal; text-transform: uppercase; color: #FFFFFF;">stewardship.</span></span>
+            </h2>
+            
+            <p style="font-family: 'Inter', sans-serif; font-size: 1.02rem; font-weight: 300; line-height: 1.85; color: rgba(255, 255, 255, 0.8); margin: 0 0 3rem 0; text-align: justify; letter-spacing: 0.01rem; opacity: 0; transform: translateY(25px); animation: structuralLineRise 1.2s cubic-bezier(0.25, 1, 0.5, 1) 1.1s forwards;">
+                Founded in 2012 by a passionate team of architects and designers, STACKLY Studio began as a small boutique workshop focused on bespoke residential projects. Over the past decade, we have evolved into a leading architectural firm known for our innovative approach to design, commitment to sustainability, and dedication to client satisfaction. Our journey from humble beginnings to industry leaders is a testament to our unwavering passion for creating spaces that inspire and endure.
+</p>
+        
+        <div class="story-action-deck" style="width: 100%; opacity: 0; transform: translateY(20px); animation: structuralLineRise 1s cubic-bezier(0.25, 1, 0.5, 1) 1.3s forwards;">
+    <a href="404.html" class="homepage-pill-cta" style="display: inline-flex; align-items: center; justify-content: center; background: #FFFFFF; color: #111412; padding: 1.1rem 2.8rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1rem; text-decoration: none; border-radius: 50px; border: 2px solid #FFFFFF; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); cursor: pointer;">
+        Connect With Us
+    </a>
+</div>
+</div>
+    <!-- ==========================================
+       STORY COMPONENT ANIMATION CLASS ENGINE
+       ========================================== -->
+    <style>
+        /* ==========================================
+       ISOLATED FIX STYLING ARCHITECTURE
+       ========================================== */
+
+    /* Force unrendered icon sets to parse with high readability contrast dimensions */
+    .floating-architectural-badge i {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    @keyframes structuralLineRise {
+        0% { opacity: 0; transform: translateY(35px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes luxuryRevealLeft {
+        0% { opacity: 0; transform: scale(0.98); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes imageBreathingEffect {
+        0% { transform: scale(1.0); }
+        100% { transform: scale(1.04) translateY(-4px); }
+    }
+
+    /* Continuous fluid micro drifting vectors */
+    /* ==========================================
+   METRIC EMBEDDED GRAPHICS SYSTEM & HOVER PHYSICS
+   ========================================== */
+
+/* 1. Slow, micro-parallax organic drifting animations for card floating states */
+.floating-architectural-badge.badge-top-left {
+    animation: finalDriftTopLeft 5s ease-in-out infinite alternate;
+}
+.floating-architectural-badge.badge-mid-right {
+    animation: finalDriftMidRight 6s ease-in-out infinite alternate-reverse;
+}
+.floating-architectural-badge.badge-bottom-center {
+    animation: finalDriftBottom 4s ease-in-out infinite alternate;
+}
+
+@keyframes finalDriftTopLeft {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+@keyframes finalDriftMidRight {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(6px); }
+}
+@keyframes finalDriftBottom {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-4px); }
+}
+
+/* 2. Interactive spreading hover effects: Badges scale and shift smoothly when the image box is hovered */
+.story-image-showcase:hover .badge-top-left {
+    transform: translate(-10px, -15px) !important;
+    box-shadow: 0 20px 40px rgba(175, 146, 114, 0.3) !important;
+    border-color: rgba(175, 146, 114, 0.4) !important;
+}
+.story-image-showcase:hover .badge-mid-right {
+    transform: translate(15px, 4px) !important;
+    box-shadow: 0 20px 40px rgba(175, 146, 114, 0.3) !important;
+    border-color: rgba(175, 146, 114, 0.4) !important;
+}
+.story-image-showcase:hover .badge-bottom-center {
+    transform: translate(-8px, 12px) !important;
+    box-shadow: 0 25px 45px rgba(175, 146, 114, 0.35) !important;
+    border-color: rgba(175, 146, 114, 0.4) !important;
+}
+
+/* 3. Individual avatar portrait hover pop animations */
+.stack-avatar-node:hover {
+    transform: translateY(-8px) scale(1.18) !important;
+    z-index: 99 !important;
+    border-color: #AF9272 !important;
+    box-shadow: 0 8px 15px rgba(175, 146, 114, 0.5) !important;
+}
+.testimonial-avatar-stack:hover .stack-avatar-node:not(:hover) {
+    opacity: 0.5;
+    transform: scale(0.92);
+}
+.stack-avatar-node.plus-node:hover {
+    background-color: #FFFFFF !important;
+    color: #111412 !important;
+}
+
+@keyframes imageBreathingEffect {
+    0% { transform: scale(1.0); }
+    100% { transform: scale(1.04) translateY(-4px); }
+}
+
+   /* ==========================================
+   HOMEPAGE PILL CTA DYNAMIC HOVER FIELDS
+   ========================================== */
+.homepage-pill-cta:hover {
+    background-color: #AF9272 !important; /* Smoothly transitions background to architectural gold */
+    border-color: #AF9272 !important;     /* Syncs outline border bounds perfectly */
+    color: #FFFFFF !important;             /* Flips text from dark charcoal to clean white */
+    box-shadow: 0 12px 25px rgba(175, 146, 114, 0.4) !important; /* Premium ambient gold outer glow */
+    transform: translateY(-3px) scale(1.02) !important; /* Subtle interactive lift response */
+}
+
+/* Micro interaction for user tap/click pressure simulation */
+.homepage-pill-cta:active {
+    transform: translateY(-1px) scale(1.0) !important;
+    box-shadow: 0 5px 15px rgba(175, 146, 114, 0.3) !important;
+}
+
+    </style>
+
+
+<!-- ==========================================
+   THE STUDIO METRIC FOOTPRINT COUNTER BANNER
+<!-- ==========================================
+   THE STUDIO METRIC FOOTPRINT INFINITE CAROUSEL
+   ========================================== -->
+<!-- ==========================================
+   THE STUDIO METRIC FOOTPRINT INFINITE CAROUSEL (TRUE FULL WIDTH FIX)
+   ========================================== -->
+<section class="studio-metric-banner-container" style="background-color: #111412; padding: 20px 0 60px 0; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; width: 100vw; box-sizing: border-box; overflow: hidden; border-bottom: 1px solid rgba(255, 255, 255, 0.03); margin-top: -20px;">
+    
+    <!-- Outer Hidden Scroller Viewport Wrapper -->
+    <div class="carousel-ticker-viewport" style="width: 100vw; overflow: hidden; background: #141715; border-top: 1px solid rgba(255, 255, 255, 0.04); border-bottom: 1px solid rgba(255, 255, 255, 0.04); padding: 1.5rem 0; display: flex; position: relative;">
+        
+        <!-- TRACK 1: Main moving layout stream -->
+        <div class="carousel-ticker-track" style="display: flex; align-items: center; gap: 8rem; white-space: nowrap; padding-right: 8rem; animation: infiniteTextScroll 30s linear infinite;">
+            
+            <!-- BLOCK 1: SPACES DESIGNED -->
+            <div class="ticker-metric-cell" style="display: inline-flex; align-items: center; gap: 1.5rem; font-family: 'Inter', sans-serif;">
+                <span class="ticker-number" style="font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; color: #AF9272; letter-spacing: -0.01rem;">250+</span>
+                <span class="ticker-label" style="font-size: 0.72rem; font-weight: 600; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.15rem;">Spaces Designed</span>
+            </div>
+
+            <div style="width: 6px; height: 6px; background-color: rgba(175, 146, 114, 0.3); border-radius: 50%;"></div>
+
+            <!-- BLOCK 2: YEARS ACTIVE -->
+            <div class="ticker-metric-cell" style="display: inline-flex; align-items: center; gap: 1.5rem; font-family: 'Inter', sans-serif;">
+                <span class="ticker-number" style="font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; color: #FFFFFF; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background-color: #AF9272; border-radius: 50%; display: inline-block;"></span>15+
+                </span>
+                <span class="ticker-label" style="font-size: 0.72rem; font-weight: 600; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.15rem;">Years Active</span>
+            </div>
+
+            <div style="width: 6px; height: 6px; background-color: rgba(175, 146, 114, 0.3); border-radius: 50%;"></div>
+
+            <!-- BLOCK 3: HAPPY CLIENTS -->
+            <div class="ticker-metric-cell" style="display: inline-flex; align-items: center; gap: 1.5rem; font-family: 'Inter', sans-serif;">
+                <span class="ticker-number" style="font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; color: #AF9272; letter-spacing: -0.01rem;">4,800+</span>
+                <span class="ticker-label" style="font-size: 0.72rem; font-weight: 600; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.15rem;">Happy Clients</span>
+            </div>
+
+            <div style="width: 6px; height: 6px; background-color: rgba(175, 146, 114, 0.3); border-radius: 50%;"></div>
+
+            <!-- BLOCK 4: SATISFACTION RATE -->
+            <div class="ticker-metric-cell" style="display: inline-flex; align-items: center; gap: 1.5rem; font-family: 'Inter', sans-serif;">
+                <span class="ticker-number" style="font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; color: #FFFFFF; letter-spacing: -0.01rem;">98%</span>
+                <span class="ticker-label" style="font-size: 0.72rem; font-weight: 600; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.15rem;">Satisfaction Rate</span>
+            </div>
+
+        </div>
+
+        <!-- TRACK 2: Exact Twin Duplicate copy for seamless loop connection -->
+        <div class="carousel-ticker-track" aria-hidden="true" style="display: flex; align-items: center; gap: 8rem; white-space: nowrap; padding-right: 8rem; animation: infiniteTextScroll 30s linear infinite;">
+            
+            <div class="ticker-metric-cell" style="display: inline-flex; align-items: center; gap: 1.5rem; font-family: 'Inter', sans-serif;">
+                <span class="ticker-number" style="font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; color: #AF9272; letter-spacing: -0.01rem;">250+</span>
+                <span class="ticker-label" style="font-size: 0.72rem; font-weight: 600; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.15rem;">Spaces Designed</span>
+            </div>
+
+            <div style="width: 6px; height: 6px; background-color: rgba(175, 146, 114, 0.3); border-radius: 50%;"></div>
+
+            <div class="ticker-metric-cell" style="display: inline-flex; align-items: center; gap: 1.5rem; font-family: 'Inter', sans-serif;">
+                <span class="ticker-number" style="font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; color: #FFFFFF; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background-color: #AF9272; border-radius: 50%; display: inline-block;"></span>15+
+                </span>
+                <span class="ticker-label" style="font-size: 0.72rem; font-weight: 600; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.15rem;">Years Active</span>
+            </div>
+
+            <div style="width: 6px; height: 6px; background-color: rgba(175, 146, 114, 0.3); border-radius: 50%;"></div>
+
+            <div class="ticker-metric-cell" style="display: inline-flex; align-items: center; gap: 1.5rem; font-family: 'Inter', sans-serif;">
+                <span class="ticker-number" style="font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; color: #AF9272; letter-spacing: -0.01rem;">4,800+</span>
+                <span class="ticker-label" style="font-size: 0.72rem; font-weight: 600; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.15rem;">Happy Clients</span>
+            </div>
+
+            <div style="width: 6px; height: 6px; background-color: rgba(175, 146, 114, 0.3); border-radius: 50%;"></div>
+
+            <div class="ticker-metric-cell" style="display: inline-flex; align-items: center; gap: 1.5rem; font-family: 'Inter', sans-serif;">
+                <span class="ticker-number" style="font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; color: #FFFFFF; letter-spacing: -0.01rem;">98%</span>
+                <span class="ticker-label" style="font-size: 0.72rem; font-weight: 600; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.15rem;">Satisfaction Rate</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<style> /* ==========================================
+   METRIC BANNER INTERACTION CONTROLS
+   ========================================== */
+
+    /* ==========================================
+       INFINITE TICKER CAROUSEL ENGINE LAWS
+       ========================================== */
+
+       /* ==========================================
+       INFINITE TICKER CAROUSEL ENGINE LAWS
+       ========================================== */
+
+    @keyframes infiniteTextScroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            /* Smoothly loops the twin tracks edge to edge */
+            transform: translateX(calc(-100% - 4rem));
+        }
+    }
+
+    /* Interactive hover pause */
+    .carousel-ticker-viewport:hover .carousel-ticker-track {
+        animation-play-state: paused !important;
+    }
+
+    /* Micro text accent transformation fields */
+    .ticker-metric-cell {
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+    
+    .ticker-metric-cell:hover .ticker-number {
+        color: #AF9272 !important;
+        text-shadow: 0 0 15px rgba(175, 146, 114, 0.3);
+    }
+
+    .ticker-metric-cell:hover .ticker-label {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+</style>
