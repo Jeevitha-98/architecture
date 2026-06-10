@@ -11,6 +11,49 @@
     <link rel="stylesheet" href="../architecture/css/style.css">
 </head>
 <body>
+
+     <!-- 1. SYSTEM LOADING CONTAINER (FIXED STATE MODULE) -->
+<div id="app-preloader-shroud">
+  <div class="loader-centerpiece">
+    <div class="architect-spinner-zone">
+      <img 
+        src="./Assests/stackly-icon-only.webp" 
+        alt="Stackly" 
+        class="stackly-logo-vector"
+      />
+      <div class="blueprint-orbit-ring"></div>
+    </div>
+    <div class="loader-brand-label">Stackly Architecture & Design</div>
+  </div>
+</div>
+
+<!-- PLACE THIS SCRIPT AT THE VERY BOTTOM RIGHT BEFORE YOUR CLOSING </body> TAG -->
+<!-- PLACE THIS SCRIPT AT THE VERY BOTTOM RIGHT BEFORE YOUR CLOSING </body> TAG -->
+<script>
+  (function() {
+    function liftPreloader() {
+      const preloader = document.getElementById('app-preloader-shroud');
+      if (preloader) {
+        // Enforces the correct synchronized class match target
+        preloader.classList.add('shroud-clear');
+      }
+    }
+
+    // LUXURY BRAND EXPERIENCE HOLD: Forces a 1.8-second display window 
+    // This gives your CSS @keyframes 'revealText' and 'pulseIcon' time to play fully
+    function queuePreloaderLift() {
+      setTimeout(liftPreloader, 1800);
+    }
+
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      queuePreloaderLift();
+    } else {
+      document.addEventListener('DOMContentLoaded', queuePreloaderLift);
+    }
+  })();
+</script>
+
+
         <!-- ==========================================
        2. STICKY INTERACTIVE GLASS NAVBAR (Fixed Alignment Matrix)
        ========================================== -->
