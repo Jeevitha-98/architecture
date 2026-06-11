@@ -474,3 +474,28 @@ function handleSocialConnect(platform) {
     });
 }
 </script>
+
+
+<script>
+// =========================================================================
+// ROLE ROUTING CONTROLLER
+// =========================================================================
+function executeLoginValidation() {
+    const email = document.getElementById("login-email").value.trim();
+    const pass = document.getElementById("login-pass").value.trim();
+
+    if (!email || !pass) {
+        alert("Error: Please fill in all fields before requesting server log-in parameters.");
+        return;
+    }
+
+    alert(`Access Authorization Granted: Welcome to your ${selectedRole === 'partner' ? 'Studio Partner' : 'Corporate Client'} portal.`);
+    
+    // Renders direct routing track matching selected login roles
+    if (selectedRole === "partner") {
+        window.location.href = "partner-dashboard.html";
+    } else {
+        window.location.href = "client-dashboard.html";
+    }
+}
+</script>

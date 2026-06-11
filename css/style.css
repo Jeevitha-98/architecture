@@ -343,10 +343,35 @@ body {
         display: none !important; 
     }
 
+    .nav-menu.mobile-menu-active .nav-links a.mobile-login-link {
+    color: #AF9272 !important;
+    border: 1px solid #AF9272 !important;
+    padding: 10px 24px !important;
+    border-radius: 30px !important;
+    background: rgba(175, 146, 114, 0.08) !important;
+    font-weight: 600 !important;
+}
+
+.nav-menu.mobile-menu-active .nav-links a.mobile-login-link:hover {
+    background: #AF9272 !important;
+    color: #111412 !important;
+}
+
+
     /* FIX: Hides the wide text button completely to gain huge horizontal pixel space */
-    .quote-cta-btn, .cta-btn, .header-actions .quote-cta-btn {
+   .quote-cta-btn,
+.cta-btn,
+.header-actions .quote-cta-btn {
+    display: flex !important;
+}
+
+@media (max-width: 1024px) {
+    .quote-cta-btn,
+    .cta-btn,
+    .header-actions .quote-cta-btn {
         display: none !important;
     }
+}
 
     /* FIX: Reveals your 3-line hamburger menu icon inside right actions block container */
     .mobile-menu-toggle {
@@ -404,7 +429,7 @@ body {
     .nav-menu.mobile-menu-active .nav-links a {
         display: inline-block !important;
         font-family: 'Cinzel', 'Inter', serif !important; /* Premium brand typography serif */
-        font-size: 1.8rem !important; /* Large, bold presentation font formats matching reference exactly */
+        font-size: 1.0rem !important; /* Large, bold presentation font formats matching reference exactly */
         font-weight: 500 !important;
         color: #FFFFFF !important; /* Crisp pure white text contrast */
         text-transform: uppercase !important;
@@ -3955,6 +3980,8 @@ html, body {
     color: rgba(255, 255, 255, 0.4) !important;
     margin: 0 !important;
 }
+
+
 
 /* =========================
    LARGE TABLETS (1024px)

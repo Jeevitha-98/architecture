@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Studio — Client Access Portal</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+<!-- LEFT SIDEBAR -->
+<aside class="sidebar">
+    <div class="sidebar-brand">Stackly<span>.Client</span></div>
+
+    <ul class="nav-menu">
+        <li class="nav-item active" onclick="switchClientDashboardTab(this, 'client-overview')">
+            <a><i class="fa-solid fa-chart-line"></i> Portfolio Overview</a>
+        </li>
+
+        <li class="nav-item" onclick="switchClientDashboardTab(this, 'client-acquisitions')">
+            <a><i class="fa-solid fa-city"></i> Site Acquisitions</a>
+        </li>
+
+        <li class="nav-item" onclick="switchClientDashboardTab(this, 'client-ledger')">
+            <a><i class="fa-solid fa-file-invoice-dollar"></i> Procurement Ledger</a>
+        </li>
+
+        <li class="nav-item" onclick="switchClientDashboardTab(this, 'client-communications')">
+            <a><i class="fa-solid fa-comments"></i> Communications</a>
+        </li>
+
+        <li class="nav-item" onclick="switchClientDashboardTab(this, 'client-draw')">
+            <a><i class="fa-solid fa-wallet"></i> Corporate Draw</a>
+        </li>
+
+        <li class="nav-item" onclick="switchClientDashboardTab(this, 'client-settings')">
+            <a><i class="fa-solid fa-sliders"></i> Portal Settings</a>
+        </li>
+
+        <li class="nav-item" style="margin-top:auto;" onclick="executeStudioLogout()">
+            <a style="color:#ea4335 !important;">
+                <i class="fa-solid fa-power-off"></i> Log out
+            </a>
+        </li>
+    </ul>
+</aside>
+
+<!-- MAIN -->
+<div class="main-content">
+
+    <!-- TOP BAR -->
+    <nav class="top-navbar">
+        <h2 id="client-header-title">Portfolio Overview</h2>
+
+        <div class="user-profile" onclick="toggleProfileDropdown(event)">
+            <span>Welcome, Enterprise Investor</span>
+            <div class="profile-avatar">EI</div>
+
+            <div id="profile-dropdown-menu" class="profile-dropdown-container">
+                <div class="dropdown-header-user">
+                    <strong>Enterprise Investor</strong>
+                    <div style="font-size:0.75rem; opacity:0.5;">investor@stackly.com</div>
+                </div>
+
+                <div class="dropdown-divider-line"></div>
+
+                <a onclick="switchClientDashboardTab(null,'client-settings')">
+                    <i class="fa-solid fa-user-gear"></i> Account Settings
+                </a>
+
+                <a onclick="alert('Help Desk Opening...')">
+                    <i class="fa-solid fa-circle-question"></i> Help Support
+                </a>
+
+                <div class="dropdown-divider-line"></div>
+
+                <a onclick="executeStudioLogout()" style="color:#ea4335;">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PANELS -->
+    <div class="dashboard-body">
+
+        <div id="client-overview" class="dashboard-tab-panel active-panel">
+            <h3>Portfolio Overview</h3>
+        </div>
+
+        <div id="client-acquisitions" class="dashboard-tab-panel">
+            <h3>Site Acquisitions</h3>
+        </div>
+
+        <div id="client-ledger" class="dashboard-tab-panel">
+            <h3>Procurement Ledger</h3>
+        </div>
+
+        <div id="client-communications" class="dashboard-tab-panel">
+            <h3>Communications</h3>
+        </div>
+
+        <div id="client-draw" class="dashboard-tab-panel">
+            <h3>Corporate Draw</h3>
+        </div>
+
+        <div id="client-settings" class="dashboard-tab-panel">
+            <h3>Portal Settings</h3>
+        </div>
+
+    </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function switchClientDashboardTab(activeNavItem, targetPanelId) {
+
+    if (activeNavItem) {
+        document.querySelectorAll('.nav-menu .nav-item')
+            .forEach(i => i.classList.remove('active'));
+
+        activeNavItem.classList.add('active');
+
+        document.getElementById("client-header-title").innerText =
+            activeNavItem.querySelector('a').innerText.trim();
+    }
+
+    document.querySelectorAll('.dashboard-tab-panel')
+        .forEach(p => p.classList.remove('active-panel'));
+
+    document.getElementById(targetPanelId).classList.add('active-panel');
+}
+
+function toggleProfileDropdown(event) {
+    event.stopPropagation();
+    document.getElementById("profile-dropdown-menu")
+        .classList.toggle("active-dropdown");
+}
+
+window.onclick = function(event) {
+    const menu = document.getElementById("profile-dropdown-menu");
+    if (menu && menu.classList.contains("active-dropdown")) {
+        if (!event.target.closest('.user-profile')) {
+            menu.classList.remove("active-dropdown");
+        }
+    }
+};
+
+function executeStudioLogout() {
+    if (confirm("Disconnect session?")) {
+        window.location.href = "login.html";
+    }
+}
+</script>
+
+
+<style>
+/* =========================================================================
+   CLIENT ACCESS PORTAL SYSTEM PROPERTIES & DROPDOWN LAYOUT OVERRIDES
+   ========================================================================= */
+
+:root {
+    --studio-gold: #AF9272;
+    --studio-dark: #111412;
+    --studio-glass: rgba(255,255,255,0.02);
+    --studio-border: rgba(255,255,255,0.06);
+}
+
+body {
+    background-color: var(--studio-dark);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* SIDEBAR LAYOUT DRAWER */
+.sidebar {
+    width: 260px;
+    background: rgba(15,18,16,0.95);
+    border-right: 1px solid var(--studio-border);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+}
+.sidebar-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sidebar-brand span { color: var(--studio-gold); }
+.nav-menu { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+.nav-item a {
+    display: flex; align-items: center; gap: 1rem; padding: 0.85rem 1.2rem;
+    color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.9rem;
+    font-weight: 500; border-radius: 10px; cursor: pointer; transition: all 0.3s ease;
+}
+.nav-item.active a, 
+.nav-item a:hover {
+    background: rgba(175, 146, 114, 0.08);
+    color: var(--studio-gold);
+    font-weight: 600;
+}
+
+/* TOP NAVBAR FRAME COMPONENTS */
+.main-content { margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-height: 100vh; box-sizing: border-box; }
+.top-navbar {
+    height: 70px; background: rgba(20,24,22,0.6); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--studio-border); display: flex; align-items: center; justify-content: space-between;
+    padding: 0 3rem; position: sticky; top: 0; z-index: 90;
+}
+.nav-title { font-family: 'Cinzel', serif; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05rem; margin: 0; }
+.user-profile { display: flex; align-items: center; gap: 1rem; font-size: 0.88rem; color: rgba(255,255,255,0.7); position: relative; padding: 0.5rem; border-radius: 8px; transition: background 0.3s ease; }
+.user-profile:hover { background: rgba(255,255,255,0.02); }
+.profile-avatar { width: 36px; height: 36px; border-radius: 50%; background: #FFFFFF; color: var(--studio-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; }
+
+/* PROFILE DROPDOWN CONTAINER */
+.profile-dropdown-container {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 240px;
+    background: rgba(20, 24, 22, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--studio-border);
+    border-radius: 12px;
+    padding: 0.8rem 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    display: none;
+    flex-direction: column;
+    z-index: 500;
+    animation: dropdownSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.profile-dropdown-container.active-dropdown {
+    display: flex;
+}
+@keyframes dropdownSlideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-header-user { padding: 0.6rem 1.2rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #FFFFFF; text-align: left; }
+.dropdown-divider-line { height: 1px; background-color: var(--studio-border); margin: 0.4rem 0; }
+.profile-dropdown-container a {
+    display: flex; align-items: center; gap: 0.8rem; padding: 0.7rem 1.2rem;
+    font-family: 'Inter', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.6);
+    text-decoration: none; transition: all 0.3s ease; text-align: left;
+}
+.profile-dropdown-container a i { width: 16px; text-align: center; color: var(--studio-gold); }
+.profile-dropdown-container a:hover {
+    background: rgba(175, 146, 114, 0.08);
+    color: var(--studio-gold);
+    font-weight: 600;
+}
+
+/* DATA BLOCKS PANELS SHEET */
+.dashboard-body { padding: 3rem; flex: 1; display: flex; flex-direction: column; gap: 2.5rem; box-sizing: border-box; }
+.dashboard-tab-panel { display: none; animation: panelFadeIn 0.4s ease-out forwards; }
+.dashboard-tab-panel.active-panel { display: block; }
+@keyframes panelFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+.metric-card { background: var(--studio-glass); border: 1px solid var(--studio-border); padding: 1.8rem; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+.metric-card h3 { margin: 0; font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.4); letter-spacing: 0.08rem; }
+.metric-val { font-family: 'Cinzel', serif; font-size: 2.2rem; color: #FFFFFF; margin: 0.5rem 0 0 0; font-weight: 600; }
+
+.data-table-container { background: var(--studio-glass); border: 1px solid var(--studio-border); border-radius: 16px; padding: 2rem; box-shadow: 0 20px 45px rgba(0,0,0,0.3); }
+.table-header { font-family: 'Cinzel', serif; font-size: 1.1rem; text-transform: uppercase; margin: 0 0 1.5rem 0; color: #FFFFFF; letter-spacing: 0.02rem; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th { font-size: 0.75rem; text-transform: uppercase; color: rgba(255,255,255,0.4); padding: 1rem; border-bottom: 1px solid var(--studio-border); letter-spacing: 0.05rem; }
+td { padding: 1.2rem 1rem; font-size: 0.88rem; color: rgba(255,255,255,0.8); border-bottom: 1px solid rgba(255,255,255,0.02); }
+.status-badge { padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03rem; display: inline-block; }
+.status-badge.complete { background: rgba(46, 125, 50, 0.15); color: #4caf50; border: 1px solid #4caf50; }
+
+/* 📟 SCREEN RESPONSIVE DEVICE CONSTRAINT LAWS */
+@media (max-width: 1024px) {
+    .metrics-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 991px) {
+    .sidebar { display: none; } .main-content { margin-left: 0; } .top-navbar { padding: 0 1.5rem; } .dashboard-body { padding: 1.5rem; }
+}
+@media (max-width: 575px) {
+    .metrics-grid { grid-template-columns: 1fr !important; } table, th, td { font-size: 0.75rem; }
+    .top-navbar span { display: none; } /* Hides welcome string on small phone frames */
+}
+</style>
+
+
+</body>
+</html>
