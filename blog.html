@@ -623,136 +623,75 @@
     }
 }
 
-/* ==========================================================================
-   RESPONSIVE
-   ========================================================================== */
 
-/* Tablet */
-/* ==========================================
-   MOBILE FILTER BAR FIX
-========================================== */
+@media screen and (min-width: 1025px) {
 
-@media screen and (max-width: 768px) {
+    /* Forces side-by-side rows matching your content bounds neatly */
+    .journal-cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important; /* Locks 4 equal columns across desktop */
+        gap: 2.5rem !important; /* Premium spacing matching your project section rules */
+        width: 100% !important;
+        max-width: 1200px !important; /* Centers grid box with your header logo bounds */
+        margin: 0 auto !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
 
-    .journal-filter-deck {
+    /* Sets up internal equal height tracks so cards match beautifully */
+    .journal-post-card {
         display: flex !important;
         flex-direction: column !important;
-        align-items: stretch !important;
+        justify-content: space-between !important;
+        height: 100% !important; /* Extends card outlines to the exact same bottom line */
+    }
+
+    /* Standardizes headline layout boxes */
+    .journal-post-card .j-title {
+        min-height: 3.8rem !important; /* Keeps your titles structurally uniform */
+        margin: 0 0 1rem 0 !important;
+    }
+
+    /* Manages paragraph margins */
+    .journal-post-card p {
+        margin: 0 0 2rem 0 !important;
+    }
+}
+
+/* ==========================================================================
+   DESKTOP SEARCH CONTAINER EXTENSION CORRECTION (MIN-WIDTH: 1025px)
+   ========================================================================== */
+@media screen and (min-width: 1025px) {
+
+    /* Aligns category tabs to the left side and pushes search container to the far right corner */
+    .journal-filter-deck {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important; /* Forces side corner alignment split */
+        align-items: center !important;
         width: 100% !important;
-        gap: 20px !important;
-        padding: 20px !important;
+        max-width: 1200px !important; /* Perfect symmetrical match with card grid limits below */
+        margin: 0 auto 3.5rem auto !important; /* Balanced breathing room spacing below filters */
         box-sizing: border-box !important;
     }
 
+    /* Packs category menu tabs tightly to the left side */
     .journal-filter-tabs {
         display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        width: 100% !important;
-        gap: 15px !important;
-        padding-bottom: 10px !important;
-        scrollbar-width: none;
+        flex-direction: row !important;
+        gap: 2.25rem !important; /* Premium horizontal spacing between links */
+        width: auto !important; /* Disables wide tracking loops */
+        margin: 0 !important;
     }
 
-    .journal-filter-tabs::-webkit-scrollbar {
-        display: none;
-    }
-
-    .j-tab {
-        flex-shrink: 0 !important;
-        white-space: nowrap !important;
-    }
-
+    /* Binds the search container tightly to the right corner width profile */
     .journal-search-wrapper {
         width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .journal-search-wrapper input {
-        width: 100% !important;
-        box-sizing: border-box !important;
+        max-width: 320px !important; /* Elegant compact search frame boundary tracking */
+        margin-left: auto !important; /* Absolute right-side placement lock */
     }
 }
 
-@media (max-width:1024px){
-
-    .journal-cards-grid{
-        grid-template-columns:repeat(2,1fr) !important;
-        gap:2rem !important;
-    }
-
-    .journal-filter-deck{
-        gap:1.5rem !important;
-    }
-}
-
-/* Mobile */
-@media (max-width:768px){
-
-    .studio-journal-matrix-section{
-        padding:80px 0 !important;
-    }
-
-    .journal-filter-deck{
-        flex-direction:column !important;
-        align-items:flex-start !important;
-        gap:1.5rem !important;
-        margin-bottom:3rem !important;
-    }
-
-    .journal-filter-tabs{
-        width:100% !important;
-        overflow-x:auto !important;
-        white-space:nowrap !important;
-        padding-bottom:10px !important;
-    }
-
-    .journal-search-wrapper{
-        max-width:100% !important;
-        width:100% !important;
-    }
-
-    .journal-cards-grid{
-        grid-template-columns:1fr !important;
-        gap:1.8rem !important;
-    }
-
-    .journal-post-card{
-        max-width:100% !important;
-    }
-
-    .j-img-frame{
-        height:220px !important;
-    }
-
-    .j-tab.active-j-tab::after{
-        bottom:-0.8rem !important;
-    }
-}
-
-/* Small Mobile */
-@media (max-width:480px){
-
-    .studio-journal-matrix-section{
-        padding:60px 0 !important;
-    }
-
-    .j-img-frame{
-        height:200px !important;
-    }
-
-    .journal-post-card{
-        padding:1.2rem !important;
-    }
-
-    .j-title{
-        font-size:1.05rem !important;
-    }
-
-    .journal-fixed-video-chassis video{
-        opacity:0.28 !important;
-    }
-}
 
 /* ==========================================
    4 COLUMN BLOG GRID
@@ -1259,6 +1198,51 @@ font-weight: 400;
 
 
 <style>
+
+    /* ================================
+   1. TITLE → FLOW CHART GAP FIX
+   ================================ */
+
+.workflow-header,
+.workflow-title,
+.workflow-section-header {
+    margin-bottom: 0 !important;   /* remove extra gap */
+    padding-bottom: 0 !important;
+}
+
+/* If title is directly above grid */
+.workflow-header + .workflow-pipe-grid,
+.workflow-title + .workflow-pipe-grid {
+    margin-top: 0 !important;
+}
+
+
+/* ================================
+   2. FLOW CHART → CTA GAP FIX
+   ================================ */
+
+.workflow-pipe-grid {
+    margin-bottom: 0 !important;   /* IMPORTANT */
+}
+
+/* Better control: CTA spacing ONLY */
+.workflow-pipe-grid + div,
+.workflow-pipe-grid + section,
+.workflow-pipe-grid + * {
+    margin-top: 30px !important;   /* adjust as needed (16–32px ideal) */
+}
+
+
+/* ================================
+   3. REMOVE SECTION DEFAULT SPACING
+   ================================ */
+
+.studio-workflow-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+
+
 /* Central alignment nodes tracking bubble elements */
 
 /* Forces the section container block to completely obscure the fixed background video */
@@ -1405,85 +1389,175 @@ font-weight: 400;
     }
 }
 
-/* ==========================================================
-   WORKFLOW - CLEAN MOBILE ALIGNMENT FIX (FORCE STACK)
-   ========================================================== */
+/* ==========================================================================
+   FINAL FIXED HORIZONTAL TIMELINE LAYOUT ENGINE (MIN-WIDTH: 1025px)
+   ========================================================================== */
 
-@media screen and (max-width: 1024px){
+   
+@media screen and (min-width: 1025px) {
 
-    .workflow-pipe-grid{
-        display:flex !important;
-        flex-direction:column !important;
-        align-items:center !important;
-        justify-content:flex-start !important;
-        gap:50px !important;
+    /* Tightens the giant vertical spacing gaps above the layout header title */
+    section[class*="workflow"],
+    section[class*="process"],
+    .studio-faq-section {
+        padding: 40px 0 60px 0 !important;
+        margin: 0 !important;
+        background-color: #111412 !important;
     }
 
-    .workflow-step-node{
-        width:100% !important;
-        max-width:500px !important;
-        margin:0 auto !important;
-        display:flex !important;
-        flex-direction:column !important;
-        align-items:center !important;
-        text-align:center !important;
+   /* MASTER LANES FRAMEWORK CONTAINER WRAPPER */
+.workflow-pipe-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+
+    /* ❗ IMPORTANT: prevents vertical collision with CTA */
+    align-items: stretch !important;
+
+    width: 100% !important;
+    max-width: 1200px !important;
+
+    /* controlled spacing above & below */
+    margin: 2rem auto 6rem auto !important;
+
+    /* reduced but stable breathing space */
+    padding: 60px 0 !important;
+
+    position: relative !important;
+    gap: 1.5rem !important;
+
+    box-sizing: border-box !important;
+    height: auto !important;
+}
+
+    /* THE SOLID CRISP HORIZONTAL TIMELINE TRACK LINE */
+    .workflow-pipe-grid::before {
+        content: '' !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 50% !important; /* Locks track line exactly in the vertical center fold line */
+        transform: translateY(-50%) !important;
+        width: 100% !important;
+        height: 2px !important;
+        background: rgba(175, 146, 114, 0.35) !important; /* Solid gold brand line */
+        z-index: 2 !important;
+        pointer-events: none !important;
+        display: block !important;
     }
 
-    .workflow-meta-card{
-        width:100% !important;
-        max-width:100% !important;
-        text-align:center !important;
-        order:3 !important;
+    /* REMOVES STRAY LAYOUT BREAKERS AND LEGACY BACKDROP WRAPPERS */
+    .workflow-wavy-spine-path,
+    .workflow-pipe-grid::after,
+    [class*="spine-line"],
+    [class*="laser-line"] {
+        display: none !important;
+        content: none !important;
+        opacity: 0 !important;
     }
 
-    .workflow-img-frame{
-        width:100% !important;
-        max-width:320px !important;
-        height:220px !important;
-        order:1 !important;
-        margin-bottom:15px !important;
+    /* INDIVIDUAL COLUMN SECTIONS: FORCE INITIAL PERMANENT VISIBILITY */
+    .workflow-step-node {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 23% !important; /* Fits all 4 cards side-by-side cleanly */
+        flex: 0 0 23% !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+        height: auto !important;
+        
+        /* FIX FOR INVISIBILITY: Forces cards 01 and 03 to be permanently visible without hovering */
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
     }
 
-    .workflow-badge-bubble{
-        order:2 !important;
-        margin:10px 0 !important;
+    /* --- THE HIGH-PRECISION VISUAL POSITION MATRIX SYSTEM --- */
+
+    /* STEP 1 & STEP 3 (ODD): Shifts cards cleanly BELOW the center gold line */
+    .workflow-step-node:nth-child(odd) {
+        transform: translateY(160px) !important; /* Increased shift to prevent center overlapping */
+        margin-bottom: auto !important;
+        padding: 0 !important;
     }
 
-    .workflow-wavy-spine-path{
-        display:none !important;
+    /* STEP 2 & STEP 4 (EVEN): Shifts cards cleanly ABOVE the center gold line */
+    .workflow-step-node:nth-child(even) {
+        transform: translateY(-160px) !important; /* Increased shift to prevent center overlapping */
+        margin-top: auto !important;
+        padding: 0 !important;
+        flex-direction: column-reverse !important; /* Flips text details to sit on top of the portrait image */
+    }
+
+    /* EXPANDED IMAGE CARD SIZES: Overcomes the spacing gap and looks more premium */
+    .workflow-img-frame {
+        width: 100% !important;
+        height: 210px !important; /* Drastically increased height from 160px to fill the empty space */
+        border-radius: 14px !important;
+        overflow: hidden !important;
+        margin: 0 0 1.2rem 0 !important;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5) !important;
+        border: 1px solid rgba(255,255,255,0.03) !important;
+        position: relative !important;
+    }
+
+    /* Spacing override fix for flipped even cards */
+    .workflow-step-node:nth-child(even) .workflow-img-frame {
+        margin: 1.2rem 0 0 0 !important;
+    }
+
+    /* Forces the image inside to scale cleanly into the larger frame sizes */
+    .workflow-img-frame img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .workflow-meta-card {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* SINGLE PROPERLY ALIGNED CENTRAL INDEX BADGE SYSTEM */
+    .workflow-badge-bubble {
+        position: absolute !important;
+        left: 50% !important;
+        z-index: 100 !important;
+        margin: 0 !important;
+        background-color: #111412 !important; /* Solid dark background masks out track line line behind it */
+        border: 1px solid #AF9272 !important;
+        width: 38px !important;
+        height: 38px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        color: #FFFFFF !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+    }
+
+    /* Locks Step 1 & 3 index bubbles exactly at the top split fold line intersection point */
+    .workflow-step-node:nth-child(odd) .workflow-badge-bubble {
+        top: 0 !important;
+        transform: translate(-50%, -240%) !important; /* Adjusted perfectly for the larger image height */
+    }
+
+    /* Locks Step 2 & 4 index bubbles exactly at the bottom split fold line intersection point */
+    .workflow-step-node:nth-child(even) .workflow-badge-bubble {
+        bottom: 0 !important;
+        transform: translate(-50%, 240%) !important; /* Adjusted perfectly for the larger image height */
+    }
+
+    /* Interactive hover zoom pulse mechanics link */
+    .workflow-step-node:hover .workflow-badge-bubble {
+        background-color: #AF9272 !important;
+        color: #111412 !important;
+        box-shadow: 0 0 20px rgba(175, 146, 114, 0.4) !important;
     }
 }
 
-/* MOBILE */
-@media screen and (max-width: 768px){
-
-    .workflow-pipe-grid{
-        padding:0 16px !important;
-        gap:40px !important;
-    }
-
-    .workflow-step-node{
-        max-width:100% !important;
-    }
-
-    .workflow-img-frame{
-        width:100% !important;
-        max-width:100% !important;
-        height:200px !important;
-    }
-}
-
-/* SMALL MOBILE */
-@media screen and (max-width: 480px){
-
-    .workflow-img-frame{
-        height:180px !important;
-    }
-
-    .workflow-meta-card p{
-        font-size:0.8rem !important;
-    }
-}
 </style>
 
 <style>
