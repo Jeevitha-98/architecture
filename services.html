@@ -1,0 +1,1882 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- FIXED: Removed absolute leading slash to prevent hard drive local origin errors -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY — Premium Architecture & Interior Design</title>
+    
+    <!-- FIXED: Restored Complete Google Fonts Infrastructure Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- FIXED: Restored Secure Production FontAwesome Vector Icon Engine Link -->
+    <link rel="stylesheet" href="https://cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../architecture/css/style.css">
+  </head>
+  <body>
+    
+    <!-- 1. SYSTEM LOADING CONTAINER -->
+  <!-- 1. SYSTEM LOADING CONTAINER (FIXED STATE MODULE) -->
+<div id="app-preloader-shroud">
+  <div class="loader-centerpiece">
+    <div class="architect-spinner-zone">
+      <img 
+        src="./Assests/stackly-icon-only.webp" 
+        alt="Stackly" 
+        class="stackly-logo-vector"
+      />
+      <div class="blueprint-orbit-ring"></div>
+    </div>
+    <div class="loader-brand-label">Stackly Architecture & Design</div>
+  </div>
+</div>
+
+<!-- PLACE THIS SCRIPT AT THE VERY BOTTOM RIGHT BEFORE YOUR CLOSING </body> TAG -->
+<!-- PLACE THIS SCRIPT AT THE VERY BOTTOM RIGHT BEFORE YOUR CLOSING </body> TAG -->
+<script>
+  (function() {
+    function liftPreloader() {
+      const preloader = document.getElementById('app-preloader-shroud');
+      if (preloader) {
+        // Enforces the correct synchronized class match target
+        preloader.classList.add('shroud-clear');
+      }
+    }
+
+    // LUXURY BRAND EXPERIENCE HOLD: Forces a 1.8-second display window 
+    // This gives your CSS @keyframes 'revealText' and 'pulseIcon' time to play fully
+    function queuePreloaderLift() {
+      setTimeout(liftPreloader, 1800);
+    }
+
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      queuePreloaderLift();
+    } else {
+      document.addEventListener('DOMContentLoaded', queuePreloaderLift);
+    }
+  })();
+</script>
+
+ <header class="global-header animate-header">
+  <div class="nav-container">
+      
+    <a href="index.html" class="logo-container">
+      <div class="logo-wrapper">
+  
+    <img 
+      src="./Assests/stackly-logo-final (1).webp" 
+      alt="Stackly logo"
+      class="nav-logo-icon"
+    />
+ 
+ 
+</div>
+      
+    <!-- FIX: Attached ID handle here so your JavaScript observer can capture the toggle clock states -->
+    <nav class="nav-menu" id="mobile-nav-overlay">
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="404.html">Projects</a></li>
+            <li><a href="blog.html" >Blog</a></li>
+            <li><a href="contact.html" >Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- FIX: Swaps out the Quote button for the clean 3-line hamburger nodes dynamically on mobile screens -->
+    <div class="header-actions">
+        <a href="404.html" class="quote-cta-btn">Get Free Quote <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        
+        <button class="mobile-menu-toggle" id="menu-toggle-trigger" aria-label="Toggle Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+    </div>
+  </div>
+</header>
+<script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const menuToggleButton = document.getElementById("menu-toggle-trigger");
+          const navigationMenuOverlay = document.getElementById("mobile-nav-overlay");
+          const overlayLinksList = document.querySelectorAll(".nav-links a");
+
+          if (menuToggleButton && navigationMenuOverlay) {
+              // 1. Listen for the click action on your 3-line hamburger icon
+              menuToggleButton.addEventListener("click", function (event) {
+                  event.stopPropagation();
+                  navigationMenuOverlay.classList.toggle("mobile-menu-active");
+                  console.log("Mobile menu toggle clicked!"); // Sends verification note to developer logs
+              });
+
+              // 2. Auto-close the dark overlay screen when any menu path is clicked
+              overlayLinksList.forEach(function (link) {
+                  link.addEventListener("click", function () {
+                      navigationMenuOverlay.classList.remove("mobile-menu-active");
+                  });
+              });
+
+              // 3. Close the menu if a user clicks anywhere on the dark background mask
+              document.addEventListener("click", function (event) {
+                  if (!navigationMenuOverlay.contains(event.target) && !menuToggleButton.contains(event.target)) {
+                      navigationMenuOverlay.classList.remove("mobile-menu-active");
+                  }
+              });
+          } else {
+              console.error("Missing critical menu elements! Check your HTML IDs.");
+          }
+      });
+    </script>
+
+    <!-- =========================================================================
+         SECTION 1: THE STUDIO SERVICES HERO PANEL (FULL CANVAS BREAKOUT)
+         ========================================================================= -->
+    <!-- =========================================================================
+     SECTION 1: THE STUDIO SERVICES HERO PANEL (TEXT VISIBILITY STABILIZED)
+     ========================================================================= -->
+<section class="studio-services-hero-panel" style="background-color: #111412; padding: 130px 0 110px 0 !important; margin-top: 0 !important; position: relative; box-sizing: border-box; display: block !important; clear: both !important; float: none !important; grid-column: 1 / -1 !important; width: 100vw !important; max-width: 100vw !important; left: 50% !important; right: 50% !important; margin-left: -50vw !important; margin-right: -50vw !important; overflow: hidden; z-index: 5; border-bottom: 1px solid rgba(255, 255, 255, 0.03);">
+    
+    <!-- 1. BASE BACKGROUND IMAGE (Shutter Iris Scale Dynamics) -->
+    <div style="position: absolute; top: 0; left: 0; width: 100vw !important; height: 100% !important; z-index: 1; pointer-events: none; overflow: hidden; margin: 0 !important; padding: 0 !important;">
+        <img src="./Assests/port 3.webp" alt="Stackly Studio Architectural Planning Workspace Backdrop" style="position: absolute; top: 0; left: 0; width: 100vw !important; height: 100% !important; object-fit: cover !important; object-position: center center !important; opacity: 0; filter: brightness(0.4) contrast(1.1) grayscale(10%); animation: servicesShutterIris 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;">
+    </div>
+
+    <!-- 2. KINETIC ARCHITECTURAL WIREFRAME RADIAL BURST VECTOR -->
+    <div class="services-radial-blueprint-burst" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.6); width: 600px; height: 600px; border-radius: 50%; border: 1px dashed rgba(175, 146, 114, 0); z-index: 2; pointer-events: none; opacity: 0; animation: servicesWireframeBurst 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;"></div>
+    
+    <!-- 3. GRADIENT LINEAR SYSTEM (Symmetrical Dark Edge Protection Shield) -->
+    <div style="position: absolute; top: 0; left: 0; width: 100vw !important; height: 100%; background: linear-gradient(to bottom, #111412 0%, rgba(17, 20, 18, 0.4) 30%, rgba(17, 20, 18, 0.4) 70%, #111412 100%), linear-gradient(to right, #111412 0%, transparent 30%, transparent 70%, #111412 100%); pointer-events: none; z-index: 3;"></div>
+
+    <!-- 4. INNER MASTER BOUNDARY CONTAINER (Perfect Center Balance Frame) -->
+    <div style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 24px; box-sizing: border-box; width: 100% !important; display: block !important; position: relative; z-index: 4;">
+        
+        <!-- Coalesced Hover Chassis Frame Module -->
+        <div class="services-hover-chassis-wrapper" style="text-align: center !important; width: 100% !important; max-width: 850px; margin: 0 auto; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; overflow: visible !important; cursor: pointer; padding: 1.5rem; border-radius: 24px; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); position: relative; box-sizing: border-box;">
+            
+            <!-- Luxury Spatial Pill Badge -->
+            <div class="services-pill-entrance-badge" style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(175, 146, 114, 0.08); border: 1px solid rgba(175, 146, 114, 0.25); color: #AF9272; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.25rem; text-transform: uppercase; margin-bottom: 2.2rem; width: fit-content; font-family: 'Inter', sans-serif; box-shadow: 0 4px 15px rgba(175,146,114,0.03); opacity: 0;">
+                <span style="width: 6px; height: 6px; background-color: #AF9272; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px #AF9272;"></span>
+                Expertise Matrix
+            </div>
+            
+            <!-- Cinematic Title Definition (Optical Letter-Space Focus Expansion) -->
+            <h1 class="services-optical-header" style="font-family: 'Cinzel', serif; font-size: clamp(2rem, 4.5vw, 3.5rem); color: #FFFFFF; font-weight: 400; text-transform: uppercase; margin: 0 0 2rem 0; text-align: center !important; line-height: 1.35; text-shadow: 0 4px 15px rgba(0,0,0,0.6); opacity: 0; letter-spacing: -0.15rem;">
+                Architectural Disciplines <br><span class="services-gold-focus-string" style="color: #AF9272; font-style: italic; text-transform: lowercase; transition: all 0.4s ease;">& spatial engineering.</span>
+            </h1>
+            
+            <!-- Architectural Descriptive Sub-Narrative Tag (FIXED VISIBILITY) -->
+            <p class="services-editorial-desc" style="font-family: 'Inter', sans-serif; font-size: clamp(0.95rem, 2vw, 1.12rem); color: rgba(255, 255, 255, 0.45); max-width: 680px; margin: 0 auto; line-height: 1.76; font-weight: 300; text-align: center !important; opacity: 0;">
+                An anatomical overview of our operational capabilities. We translate visionary concepts into structural landmarks through meticulous layout development, material curation, and engineering limits [INDEX].
+            </p>
+            
+        </div>
+
+    </div>
+</section>
+
+
+
+   <style>
+
+/* =========================================================================
+   📱 MASTER MULTI-DEVICE RESPONSIVE BREAKPOINT SUITE (SERVICES HERO)
+   ========================================================================= */
+
+/* --- 1. TABLET VIEWPORTS HORIZON (Max-Width: 1024px) --- */
+@media (max-width: 1024px) {
+    .studio-services-hero-panel {
+        padding: 110px 0 90px 0 !important; /* Compresses top gap safely under navbar links */
+    }
+    
+    .services-hover-chassis-wrapper {
+        max-width: 90% !important; /* Expands width footprint to allow clean text distributions */
+        padding: 1rem !important;
+    }
+    
+    .services-optical-header {
+        font-size: 2.5rem !important; /* Drops typography scaling index slightly */
+    }
+}
+
+/* --- 2. STANDARD SMARTPHONE HORIZON (Max-Width: 768px) --- */
+@media (max-width: 768px) {
+    /* Completely shuts down heavy vector processing systems to lock device loading speed performance metrics */
+    .services-radial-blueprint-burst { 
+        display: none !important; 
+    }
+    
+    /* Stabilizes micro-depth tracking, freezing active expansions to prevent finger touch viewport errors */
+    .services-hover-chassis-wrapper:hover {
+        transform: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+    }
+    
+    .services-hover-chassis-wrapper:hover .services-optical-header {
+        letter-spacing: 0 !important; /* Kills kinetic text tracking motion loops on finger focuses */
+    }
+
+    /* Standardizes loading keyframe metrics for fluid rendering indexes on handheld phones */
+    .services-optical-header {
+        font-size: 2.1rem !important;
+        line-height: 1.4 !important;
+        letter-spacing: 0 !important;
+        animation: mobileHeroReveal 1s ease-out 0.3s forwards !important;
+    }
+    @keyframes mobileHeroReveal {
+        0% { opacity: 0; filter: blur(3px); }
+        100% { opacity: 1; filter: blur(0px); }
+    }
+
+    .services-editorial-desc {
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+        color: rgba(255, 255, 255, 0.55) !important; /* Increases paragraph text color visibility values on mobile canvas */
+    }
+}
+
+/* --- 3. COMPACT SMALL PHONE HORIZON (Max-Width: 480px) --- */
+@media (max-width: 480px) {
+    .studio-services-hero-panel {
+        padding: 100px 0 80px 0 !important; /* Pulls content tight to prevent empty canvas fields */
+    }
+
+    .services-pill-entrance-badge {
+        font-size: 0.68rem !important;
+        letter-spacing: 0.15rem !important;
+        padding: 0.4rem 1rem !important;
+        margin-bottom: 1.5rem !important; /* Tightens padding gaps above title elements */
+    }
+
+    .services-optical-header {
+        font-size: 1.65rem !important; /* Locks small device text dimensions to eliminate side-overflow line clippings */
+        line-height: 1.45 !important;
+    }
+
+    .services-editorial-desc {
+        font-size: 0.88rem !important;
+        line-height: 1.75 !important;
+        padding: 0 0.5rem !important; /* Gives subtle tracking breathing margins inside phone frames */
+    }
+}
+
+
+
+@keyframes servicesShutterIris {
+    0% { opacity: 0; transform: scale(1.12); }
+    100% { opacity: 0.32; transform: scale(1.0); }
+}
+
+@keyframes servicesWireframeBurst {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.4); border-color: rgba(175, 146, 114, 0.4); }
+    50% { opacity: 0.35; border-color: rgba(175, 146, 114, 0.2); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1.3); border-color: rgba(175, 146, 114, 0); }
+}
+
+.services-pill-entrance-badge {
+    animation: shutterPillReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+}
+@keyframes shutterPillReveal {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.services-optical-header {
+    animation: shutterHeaderFocus 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+}
+@keyframes shutterHeaderFocus {
+    0% { opacity: 0; letter-spacing: -0.15rem; filter: blur(4px); }
+    100% { opacity: 1; letter-spacing: 0.04rem; filter: blur(0px); }
+}
+
+/* FIXED SUBTEXT REVEAL: Fades opacity cleanly from 0 to 1 with no color clipping */
+.services-editorial-desc {
+    animation: shutterParagraphFade 1s ease-out 0.9s forwards;
+}
+@keyframes shutterParagraphFade {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; }
+}
+
+/* --- MOUSE HOVER TRANSFORMATIONS --- */
+.services-hover-chassis-wrapper:hover .services-optical-header {
+    letter-spacing: 0.02rem !important;
+    transition: letter-spacing 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.services-hover-chassis-wrapper:hover .services-gold-focus-string {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 20px rgba(175, 146, 114, 0.75) !important;
+}
+.services-hover-chassis-wrapper:hover .services-editorial-desc {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+@media (max-width: 991px) {
+    .services-radial-blueprint-burst { display: none !important; }
+    .services-optical-header { animation: mobileHeaderReveal 1s ease-out 0.4s forwards !important; }
+    @keyframes mobileHeaderReveal { 0% { opacity: 0; letter-spacing: 0; } 100% { opacity: 1; letter-spacing: 0; } }
+}
+
+</style>
+
+
+<!-- =========================================================================
+     SECTION 2: CHRONO ARCHITECTURAL EXPERTISE GRID (IMAGE BACKDROP PACK)
+     ========================================================================= -->
+<!-- =========================================================================
+     SECTION 2: CHRONO ARCHITECTURAL EXPERTISE GRID (TITLE & CONTENT INTEGRATED)
+     ========================================================================= -->
+<section class="studio-services-matrix-panel" style="position: relative; padding: 100px 0 140px 0; background-color: transparent !important; overflow: visible !important; width: 100vw !important; max-width: 100vw !important; left: 50% !important; right: 50% !important; margin-left: -50vw !important; margin-right: -50vw !important; box-sizing: border-box; z-index: 6;">
+    
+    <!-- 1. BASE BACKGROUND IMAGE PARALLAX ENGINE (Forces true full-bleed edge-to-edge coverage) -->
+    <div style="position: absolute; top: 0; left: -5%; width: 110vw !important; height: 100% !important; z-index: -2; pointer-events: none; overflow: hidden; margin: 0 !important; padding: 0 !important; background-color: #111412;">
+        <img src="./Assests/3rd section - about us.webp" alt="Stackly Architecture Studio Space Backdrop" style="position: absolute; top: 0; left: 0; width: 100vw !important; height: 100% !important; object-fit: cover !important; object-position: center center !important; opacity: 0.35 !important; filter: brightness(0.55) contrast(1.1) grayscale(10%); animation: servicesSectionTwoDrift 30s ease-in-out infinite alternate;">
+    </div>
+
+    <!-- 2. DIAGRAM SCHEMATIC COMPASS BLUEPRINT OVERLAY SHEET -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(175, 146, 114, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(175, 146, 114, 0.015) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: -1;"></div>
+    
+    <!-- 3. GRADIENT LINEAR SYSTEM SHIELD (Fades image edges cleanly into your dark site canvas) -->
+    <div style="position: absolute; top: 0; left: 0; width: 100vw !important; height: 100%; background: linear-gradient(to bottom, #111412 0%, rgba(17, 20, 18, 0.4) 20%, rgba(17, 20, 18, 0.4) 80%, #111412 100%), linear-gradient(to right, #111412 0%, transparent 20%, transparent 80%, #111412 100%); pointer-events: none; z-index: -1;"></div>
+
+    <!-- MASTER SYMMETRICAL WRAP CONTAINER -->
+    <div style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 24px; box-sizing: border-box; width: 100% !important;">
+        
+        <!-- =========================================================================
+             A. HIGH-CONTRAST SECTION HEADER & INTRODUCTORY CONTENT
+             ========================================================================= -->
+        <div class="services-index-header-bar" style="text-align: left !important; margin-bottom: 5.5rem !important; width: 100% !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; position: relative; z-index: 10; box-sizing: border-box;">
+            
+            <!-- Ultra-Sleek Pill Badge -->
+            <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(175, 146, 114, 0.08); border: 1px solid rgba(175, 146, 114, 0.25); color: #AF9272; padding: 0.45rem 1.1rem; border-radius: 20px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2rem; text-transform: uppercase; font-family: 'Inter', sans-serif; margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.25);">
+                <span style="width: 5px; height: 5px; background-color: #AF9272; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px #AF9272;"></span>
+                Capabilities Index
+            </div>
+            
+            <!-- Clean Structured Heading Matrix with High-Contrast Text Shadows -->
+            <h2 style="font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: #FFFFFF; font-weight: 400; text-transform: uppercase; margin: 0 0 1.2rem 0; padding: 0; letter-spacing: 0.04rem; line-height: 1.25; text-shadow: 0 4px 20px rgba(0,0,0,0.8);">
+                Bespoke Studio <span style="color: #AF9272; font-style: italic; text-transform: lowercase;">provisions.</span>
+            </h2>
+
+            <!-- Editorial Intro Content Paragraph -->
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255, 255, 255, 0.45); max-width: 580px; margin: 0; line-height: 1.7; font-weight: 300; text-align: left;">
+                We coordinate complex turnkey structural programs across three primary divisions [INDEX]. Review our operational frameworks for blueprints, international material logistics, and fine timber staging.
+            </p>
+
+            <!-- Delicate Underline Alignment Tracker Line -->
+            <div style="width: 60px; height: 2px; background-color: #AF9272; margin-top: 1.5rem; box-shadow: 0 0 10px rgba(175,146,114,0.5);"></div>
+        </div>
+
+
+        <!-- =========================================================================
+             B. THE 3-COLUMN PREMIUM SPECIFICATION BLOCK MATRIX
+             ========================================================================= -->
+<div class="services-spec-deck-grid"
+style="
+width: 100% !important;
+box-sizing: border-box;">            
+            <!-- CAPABILITY 01: SPATIAL BLUEPRINTING -->
+            <article class="services-spec-card services-scroll-node" style="background: rgba(20, 24, 22, 0.45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: auto; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 20px 45px rgba(0,0,0,0.4);">
+                <div>
+                    <div class="services-vector-shield" style="width: 46px; height: 46px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; transition: all 0.4s ease;">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; color: #AF9272; letter-spacing: 0.15rem; text-transform: uppercase; margin-bottom: 0.8rem;">Discipline / 01</div>
+                    <h3 class="services-card-title" style="font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 500; color: #FFFFFF; text-transform: uppercase; margin: 0 0 1.2rem 0; letter-spacing: 0.02rem; line-height: 1.35; transition: color 0.3s ease;">Spatial Architecture & Mapping</h3>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255, 255, 255, 0.45); line-height: 1.7; margin: 0 0 2rem 0; font-weight: 300; text-align: left;">
+                        Bespoke schematic layout formulation engineering. We develop volumetric light mapping footprints, cross-ventilation lines, and strict partition boundaries optimized for luxury master residential configurations [INDEX].
+                    </p>
+                </div>
+                <a href="404.html" class="services-action-trigger" style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; color: #AF9272; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08rem; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; transition: color 0.3s ease;">
+                    Request Brief <span class="services-arrow" style="font-size: 1rem; display: inline-block; transition: transform 0.3s ease;">&rarr;</span>
+                </a>
+            </article>
+
+            <!-- CAPABILITY 02: MATERIAL PROCUREMENT -->
+            <article class="services-spec-card services-scroll-node" style="background: rgba(20, 24, 22, 0.45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: auto; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 20px 45px rgba(0,0,0,0.4);">
+                <div>
+                    <!-- Sun / Beam Illuminance Matrix Vector -->
+                    <div class="services-vector-shield" style="width: 46px; height: 46px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; transition: all 0.4s ease;">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </div>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; color: #AF9272; letter-spacing: 0.15rem; text-transform: uppercase; margin-bottom: 0.8rem;">Discipline / 02</div>
+                    <h3 class="services-card-title" style="font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 500; color: #FFFFFF; text-transform: uppercase; margin: 0 0 1.2rem 0; letter-spacing: 0.02rem; line-height: 1.35; transition: color 0.3s ease;">Luminance & Lighting Layouts</h3>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255, 255, 255, 0.45); line-height: 1.7; margin: 0 0 2rem 0; font-weight: 300; text-align: left;">
+                        Bespoke architectural light mapping calculations. We position flush-mount laser apertures, hidden ceiling linear channels, and computational shadow barriers to enhance raw material textures seamlessly at night.
+                    </p>
+                </div>
+                <a href="404.html" class="services-action-trigger" style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; color: #AF9272; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08rem; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; transition: color 0.3s ease;">
+                    Request Brief <span class="services-arrow" style="font-size: 1rem; display: inline-block; transition: transform 0.3s ease;">&rarr;</span>
+                </a>
+            </article>
+
+               <article class="services-spec-card services-scroll-node" style="background: rgba(20, 24, 22, 0.45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: auto; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 20px 45px rgba(0,0,0,0.4);">
+                <div>
+                    <!-- Eco Canopy Structure Leaf Vector -->
+                    <div class="services-vector-shield" style="width: 46px; height: 46px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; transition: all 0.4s ease;">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22s13.5-1.5 18-6.5S22 2 22 2s-11.5.5-16.5 5S2 22 2 22z"/><line x1="2" y1="22" x2="14" y2="10"/></svg>
+                    </div>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; color: #AF9272; letter-spacing: 0.15rem; text-transform: uppercase; margin-bottom: 0.8rem;">Discipline / 03</div>
+                    <h3 class="services-card-title" style="font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 500; color: #FFFFFF; text-transform: uppercase; margin: 0 0 1.2rem 0; letter-spacing: 0.02rem; line-height: 1.35; transition: color 0.3s ease;">High-Performance Sustainable Systems</h3>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255, 255, 255, 0.45); line-height: 1.7; margin: 0 0 2rem 0; font-weight: 300; text-align: left;">
+                        Net-zero mechanical plan integration. We position structural solar canopies, geothermal ground loop tracks, and rainwater staging containment cells hidden within architectural concrete bases.
+                    </p>
+                </div>
+                <a href="404.html" class="services-action-trigger" style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; color: #AF9272; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08rem; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; transition: color 0.3s ease;">
+                    Request Brief <span class="services-arrow" style="font-size: 1rem; display: inline-block; transition: transform 0.3s ease;">&rarr;</span>
+                </a>
+            </article>
+
+             <article class="services-spec-card services-scroll-node" style="background: rgba(20, 24, 22, 0.45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: auto; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 20px 45px rgba(0,0,0,0.4);">
+                <div>
+                    <div class="services-vector-shield" style="width: 46px; height: 46px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; transition: all 0.4s ease;">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; color: #AF9272; letter-spacing: 0.15rem; text-transform: uppercase; margin-bottom: 0.8rem;">Discipline / 04</div>
+                    <h3 class="services-card-title" style="font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 500; color: #FFFFFF; text-transform: uppercase; margin: 0 0 1.2rem 0; letter-spacing: 0.02rem; line-height: 1.35; transition: color 0.3s ease;">Bespoke Landscape Curation</h3>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255, 255, 255, 0.45); line-height: 1.7; margin: 0 0 2rem 0; font-weight: 300; text-align: left;">
+Exterior spatial ecosystem mapping [INDEX]. We orchestrate topographic leveling plans, stone patio layouts, and architectural water feature channels that merge your custom estate footprint into the surrounding terrain [INDEX].
+                    </p>
+                </div>
+                <a href="404.html" class="services-action-trigger" style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; color: #AF9272; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08rem; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; transition: color 0.3s ease;">
+                    Request Brief <span class="services-arrow" style="font-size: 1rem; display: inline-block; transition: transform 0.3s ease;">&rarr;</span>
+                </a>
+            </article>
+
+            <article class="services-spec-card services-scroll-node" style="background: rgba(20, 24, 22, 0.45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: auto; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 20px 45px rgba(0,0,0,0.4);">
+                <div>
+                    <!-- Fluid Airflow Vent Thermal Vector -->
+                    <div class="services-vector-shield" style="width: 46px; height: 46px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; transition: all 0.4s ease;">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 12c2 0 4-2 4-4s-2-4-4-4M12 12c-2 0-4 2-4 4s2 4 4 4"/></svg>
+                    </div>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; color: #AF9272; letter-spacing: 0.15rem; text-transform: uppercase; margin-bottom: 0.8rem;">Discipline / 05</div>
+                    <h3 class="services-card-title" style="font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 500; color: #FFFFFF; text-transform: uppercase; margin: 0 0 1.2rem 0; letter-spacing: 0.02rem; line-height: 1.35; transition: color 0.3s ease;">Thermal Comfort Layouts</h3>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255, 255, 255, 0.45); line-height: 1.7; margin: 0 0 2rem 0; font-weight: 300; text-align: left;">
+                        High-efficiency microclimate airflow drafting [INDEX]. We hide slot-diffuser climate vents, energy-recovery ventilators, and radiant underfloor layout systems behind wall paneling joints [INDEX].
+                    </p>
+                </div>
+                <a href="404.html" class="services-action-trigger" style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; color: #AF9272; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08rem; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; transition: color 0.3s ease;">
+                    Request Brief <span class="services-arrow" style="font-size: 1rem; display: inline-block; transition: transform 0.3s ease;">&rarr;</span>
+                </a>
+            </article>
+
+            <article class="services-spec-card services-scroll-node" style="background: rgba(20, 24, 22, 0.45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; min-height: auto; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 20px 45px rgba(0,0,0,0.4);">
+                <div>
+                    <!-- Structural Integrity Scale / Diamond Vector -->
+                    <div class="services-vector-shield" style="width: 46px; height: 46px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; transition: all 0.4s ease;">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; color: #AF9272; letter-spacing: 0.15rem; text-transform: uppercase; margin-bottom: 0.8rem;">Discipline / 06</div>
+                    <h3 class="services-card-title" style="font-family: 'Cinzel', serif; font-size: 1.35rem; font-weight: 500; color: #FFFFFF; text-transform: uppercase; margin: 0 0 1.2rem 0; letter-spacing: 0.02rem; line-height: 1.35; transition: color 0.3s ease;">Structural Lifecycle Audits</h3>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255, 255, 255, 0.45); line-height: 1.7; margin: 0 0 2rem 0; font-weight: 300; text-align: left;">
+                        Post-handover integrity tracking. We conduct laser-scanning foundation checks and material wear evaluations over time, making sure your landmark asset retains its value [INDEX].
+                    </p>
+                </div>
+                <a href="404.html" class="services-action-trigger" style="font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; color: #AF9272; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08rem; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; transition: color 0.3s ease;">
+                    Request Brief <span class="services-arrow" style="font-size: 1rem; display: inline-block; transition: transform 0.3s ease;">&rarr;</span>
+                </a>
+            </article>
+
+                    <style>
+
+
+
+/* ==========================================
+   SERVICES SECTION RESPONSIVE ADD-ON
+   ========================================== */
+
+/* Desktop */
+.services-spec-deck-grid{
+    display:grid !important;
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:3rem !important;
+}
+
+/* Tablet */
+@media (max-width:1024px){
+
+    .services-spec-deck-grid{
+        grid-template-columns:repeat(2,1fr) !important;
+        gap:2rem !important;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .services-index-header-bar{
+        text-align:center !important;
+        align-items:center !important;
+    }
+
+    .services-index-header-bar p{
+        text-align:center !important;
+    }
+
+    .services-spec-deck-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:1.5rem !important;
+        width:100% !important;
+        max-width:100% !important;
+    }
+
+    .services-spec-card{
+        width:100% !important;
+        max-width:100% !important;
+        min-height:auto !important;
+        padding:1.75rem !important;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+
+    .services-spec-card{
+        padding:1.5rem !important;
+    }
+
+    .services-card-title{
+        font-size:1.2rem !important;
+    }
+
+}
+
+
+
+
+                        @keyframes servicesBackgroundDrift {
+    0% {
+        transform: scale(1.05) translateX(-2%) translateY(0px);
+    }
+    50% {
+        transform: scale(1.08) translateX(2%) translateY(-10px);
+    }
+    100% {
+        transform: scale(1.05) translateX(-2%) translateY(5px);
+    }
+}
+
+/* enhance your background image */
+.studio-services-matrix-panel img {
+    animation: servicesBackgroundDrift 35s ease-in-out infinite alternate;
+    will-change: transform;
+}
+/* ================================
+   LUXURY CARD HOVER SYSTEM
+   ================================ */
+
+.services-spec-card {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, box-shadow;
+}
+
+/* MAIN HOVER LIFT */
+.services-spec-card:hover {
+    transform: translateY(-14px) scale(1.03);
+    background: rgba(25, 28, 26, 0.65) !important;
+    border-color: rgba(175, 146, 114, 0.6) !important;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.55);
+}
+
+/* ================================
+   GOLD EDGE GLOW
+   ================================ */
+
+.services-spec-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(175, 146, 114, 0.18),
+        transparent 60%
+    );
+}
+
+.services-spec-card:hover::after {
+    opacity: 1;
+}
+
+/* ================================
+   ICON LIFT + ROTATION
+   ================================ */
+
+.services-vector-shield {
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.services-spec-card:hover .services-vector-shield {
+    transform: rotate(8deg) scale(1.15);
+    background: #AF9272 !important;
+    box-shadow: 0 10px 25px rgba(175,146,114,0.25);
+}
+
+.services-spec-card:hover .services-vector-shield svg {
+    stroke: #111412 !important;
+}
+
+/* ================================
+   TITLE LIFT
+   ================================ */
+
+.services-card-title {
+    transition: all 0.4s ease;
+}
+
+.services-spec-card:hover .services-card-title {
+    color: #AF9272 !important;
+    transform: translateX(4px);
+    letter-spacing: 0.04rem;
+}
+
+/* ================================
+   TEXT BRIGHTEN ON HOVER
+   ================================ */
+
+.services-spec-card p {
+    transition: color 0.4s ease;
+}
+
+.services-spec-card:hover p {
+    color: rgba(255, 255, 255, 0.78) !important;
+}
+
+/* ================================
+   CTA ARROW MOTION
+   ================================ */
+
+.services-arrow {
+    transition: transform 0.4s ease;
+}
+
+.services-spec-card:hover .services-arrow {
+    transform: translateX(6px);
+}
+
+/* ================================
+   SOFT BORDER LIGHT SWEEP
+   ================================ */
+
+.services-spec-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 40%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(175,146,114,0.18),
+        transparent
+    );
+    transform: rotate(25deg);
+    opacity: 0;
+}
+
+.services-spec-card:hover::before {
+    left: 120%;
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+      </style>
+</section>
+
+<!-- =========================================================================
+     SECTION 3: PREMIUM STUDIO METRIC DECK & CONSULTATION HUBS (DISTINCT CANVASES)
+     ========================================================================= -->
+<section class="studio-metric-breakout-panel" style="background-color: #0D0F0E !important; padding: 140px 0; position: relative; box-sizing: border-box; display: block !important; clear: both !important; float: none !important; grid-column: 1 / -1 !important; width: 100vw !important; max-width: 100vw !important; left: 50% !important; right: 50% !important; margin-left: -50vw !important; margin-right: -50vw !important; overflow: hidden; z-index: 7; border-top: 1px solid rgba(175, 146, 114, 0.15); border-bottom: 1px solid rgba(175, 146, 114, 0.05);">
+    
+    <!-- 1. KINETIC MESH BACKGROUND LINES LAYER (Moving geometric network) -->
+    <div class="metric-kinetic-wireframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.04;"></div>
+
+    <!-- 2. LUXURY RADIAL ILLUMINANCE SHIELD (Soft ambient center lighting track) -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(175, 146, 114, 0.04) 0%, transparent 70%); pointer-events: none; z-index: 2;"></div>
+
+    <!-- MASTER CONTAINER -->
+    <div style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 24px; box-sizing: border-box; width: 100% !important; position: relative; z-index: 4;">
+        
+        <!-- TWO-COLUMN EQUILIBRIUM HORIZON WRAP -->
+<div class="metric-split-layout"
+style="
+display: flex !important;
+flex-direction: row !important;
+align-items: center !important;
+justify-content: space-between !important;
+gap: 6rem;
+width: 100% !important;
+box-sizing: border-box;
+flex-wrap: wrap !important;
+">            
+            <!-- LEFT MODULE: ARCHITECTURAL BRIEF DECK (45% Width) -->
+<div class="metric-brief-text-panel scroll-rise-fade-left"
+style="
+flex: 1 !important;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+text-align: left;
+box-sizing: border-box;
+">                
+                <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(175, 146, 114, 0.08); border: 1px solid rgba(175, 146, 114, 0.25); color: #AF9272; padding: 0.45rem 1.1rem; border-radius: 20px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2rem; text-transform: uppercase; font-family: 'Inter', sans-serif; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                    <span style="width: 5px; height: 5px; background-color: #AF9272; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px #AF9272;"></span>
+                    Studio Scale
+                </div>
+                
+                <h2 style="font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: #FFFFFF; font-weight: 400; text-transform: uppercase; margin: 0 0 1.5rem 0; letter-spacing: 0.04rem; line-height: 1.25;">
+                    Engineered to <br><span style="color: #AF9272; font-style: italic; text-transform: lowercase;">endure thresholds.</span>
+                </h2>
+                
+                <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #FFFFFF; opacity: 0.8; line-height: 1.75; margin: 0 0 2.5rem 0; font-weight: 300;">
+                    Every blueprint iteration runs through rigorous structural index loading, path tracking computations, and volume natural lighting simulation tests. This deliberate engineering framework guarantees zero error parameters at layout delivery across regional coordinates [INDEX].
+                </p>
+
+                <a href="404.html" class="metric-consultation-btn" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; background: #AF9272; color: #111412; padding: 1.1rem 3.2rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1rem; text-decoration: none; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(175,146,114,0.25); box-sizing: border-box; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);">
+                    Request Technical Curation &rarr;
+                </a>
+            </div>
+
+            <!-- RIGHT MODULE: DYNAMIC KINETIC COUNTER GRID METRIC DECK (50% Width) -->
+<div class="metric-numerical-deck scroll-rise-fade-right"
+style="
+flex: 1.1 !important;
+width: 100% !important;
+box-sizing: border-box;
+">          
+                <!-- METRIC BLOCK 1 -->
+                <div class="metric-glass-counter-card">
+                    <div class="counter-number-row"><span class="chrono-counter" data-target="14">14</span><span class="gold-suffix">M+</span></div>
+                    <div class="counter-label-row">Structural Footprints mapped</div>
+                </div>
+
+                <!-- METRIC BLOCK 2 -->
+                <div class="metric-glass-counter-card" style="animation-delay: 0.1s;">
+                    <div class="counter-number-row"><span class="chrono-counter" data-target="100">100</span><span class="gold-suffix">%</span></div>
+                    <div class="counter-label-row">Density Inspection passing</div>
+                </div>
+
+                <!-- METRIC BLOCK 3 -->
+                <div class="metric-glass-counter-card" style="animation-delay: 0.2s;">
+                    <div class="counter-number-row"><span class="chrono-counter" data-target="48">48</span><span class="gold-suffix"></span></div>
+                    <div class="counter-label-row">Global Quarry Access Hubs</div>
+                </div>
+
+                <!-- METRIC BLOCK 4 -->
+                <div class="metric-glass-counter-card" style="animation-delay: 0.3s;">
+                    <div class="counter-number-row"><span class="chrono-counter" data-target="11">11</span><span class="gold-suffix">k</span></div>
+                    <div class="counter-label-row">Volumetric lighting calculations</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+
+    /* =========================================================================
+   📱 MASTER MULTI-DEVICE RESPONSIVE BREAKPOINT SUITE (METRIC DECK)
+   ========================================================================= */
+
+/* DESKTOP */
+.metric-numerical-deck{
+    display:grid !important;
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:2rem !important;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+    .metric-numerical-deck{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:1.5rem !important;
+        width:100% !important;
+        max-width:100% !important;
+    }
+
+    .metric-glass-counter-card{
+        width:100% !important;
+    }
+}
+
+
+
+
+
+
+
+/* --- 1. CONTINUOUS MOVING GEOMETRIC BACKGROUND GRID --- */
+.metric-kinetic-wireframe {
+    background-image: linear-gradient(rgba(175, 146, 114, 0.2) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(175, 146, 114, 0.2) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: wireframeGridGlide 25s linear infinite;
+}
+@keyframes wireframeGridGlide {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(60px, 60px) rotate(0.5deg); }
+}
+
+/* --- 2. GLASS DATA CELL BLOCKS INTERACTION LAWS --- */
+.metric-glass-counter-card {
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    border-radius: 16px;
+    padding: 2.2rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: left;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Hover Physics: Expands card box and injects an active gold boundary line glow */
+.metric-glass-counter-card:hover {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-color: rgba(175, 146, 114, 0.4) !important;
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(175, 146, 114, 0.04) !important;
+}
+
+.counter-number-row {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 1;
+}
+.gold-suffix {
+    color: #AF9272;
+    margin-left: 2px;
+}
+.counter-label-row {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    line-height: 1.4;
+}
+
+/* Action button micro-pressures curves */
+.metric-consultation-btn:hover {
+    background-color: #FFFFFF !important;
+    color: #111412 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(175, 146, 114, 0.35) !important;
+}
+
+/* --- 3. SCROLL REVEAL VIEWPORT SHUTTERS TIMELINES --- */
+.metric-brief-text-panel.scroll-rise-fade-left {
+    animation: metricFadeLeft linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
+}
+@keyframes metricFadeLeft {
+    0% { opacity: 0; transform: translateX(-50px) scale(0.98); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+.metric-numerical-deck.scroll-rise-fade-right {
+    animation: metricFadeRight linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
+}
+@keyframes metricFadeRight {
+    0% { opacity: 0; transform: translateX(50px) scale(0.98); }
+    100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+/* --- 4. 📟 DEVICE OVERRIDES RESPONSIVE FILTERS --- */
+@media (max-width: 991px) {
+    .metric-brief-text-panel.scroll-rise-fade-left,
+    .metric-numerical-deck.scroll-rise-fade-right {
+        animation: none !important; transform: none !important; opacity: 1 !important;
+    }
+    .metric-split-layout {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 4.5rem !important;
+    }
+    .metric-brief-text-panel,
+    .metric-numerical-deck {
+        width: 100% !important;
+        max-width: 520px !important;
+    }
+}
+@media (max-width: 480px) {
+    .metric-numerical-deck {
+        grid-template-columns: 1fr !important; /* Stacks data rows vertically on small screens */
+    }
+    .metric-consultation-btn { width: 100% !important; text-align: center; }
+}
+</style>
+
+<!-- =========================================================================
+     JAVASCRIPT PROGRESSIVE LOG COUNTER ENGINE
+     ========================================================================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".chrono-counter");
+    
+    const runCounterAnimation = (entry) => {
+        const target = +entry.getAttribute("data-target");
+        const duration = 2000; // Counter runtime locked to exactly 2 seconds
+        const stepTime = Math.max(Math.floor(duration / target), 15);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += Math.ceil(target / (duration / stepTime));
+            if (current >= target) {
+                entry.innerText = target;
+                clearInterval(timer);
+            } else {
+                entry.innerText = current;
+            }
+        }, stepTime);
+    };
+
+    // Scroll trigger observer tracker
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                runCounterAnimation(entry.target);
+                observer.unobserve(entry.target); // Deactivates trigger loop upon successful run
+            }
+        });
+    }, { threshold: 0.15 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+});
+</script>
+</section>
+
+<!-- =========================================================================
+     SECTION 4: CORE ARCHITECTURAL FEATURES MATRIX (BRIGHT CANVAS BREAKOUT)
+     ========================================================================= -->
+<!-- =========================================================================
+     SECTION 4: CORE ARCHITECTURAL FEATURES MATRIX (GOLD CORE FILTERS)
+     ========================================================================= -->
+<section class="studio-features-dark-panel" style="background-color: #111412 !important; padding: 120px 0; position: relative; box-sizing: border-box; display: block !important; clear: both !important; float: none !important; grid-column: 1 / -1 !important; width: 100vw !important; max-width: 100vw !important; left: 50% !important; right: 50% !important; margin-left: -50vw !important; margin-right: -50vw !important; overflow: hidden; z-index: 7; border-top: 1px solid rgba(255, 255, 255, 0.03); border-bottom: 1px solid rgba(255, 255, 255, 0.03);">
+    
+    <!-- 1. BASE BACKGROUND MESH OVERLAY SHEET -->
+    <div style="position: absolute; top: 0; left: 0; width: 100vw !important; height: 100%; background-image: linear-gradient(rgba(175, 146, 114, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(175, 146, 114, 0.015) 1px, transparent 1px); background-size: 55px 45px; pointer-events: none; z-index: 2;"></div>
+
+    <!-- MASTER CONTAINER -->
+    <div style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 24px; box-sizing: border-box; width: 100% !important; position: relative; z-index: 5;">
+        
+        <!-- Section Header Elements -->
+        <div style="text-align: center !important; margin-bottom: 5.5rem; width: 100% !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important;">
+            <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(175, 146, 114, 0.08); border: 1px solid rgba(175, 146, 114, 0.25); color: #AF9272; padding: 0.45rem 1.1rem; border-radius: 20px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2rem; text-transform: uppercase; font-family: 'Inter', sans-serif; margin-bottom: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.25);">
+                <span style="width: 5px; height: 5px; background-color: #AF9272; border-radius: 50%; display: inline-block; box-shadow: 0 0 6px #AF9272;"></span>
+                Studio Values
+            </div>
+            <h2 style="font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: #FFFFFF; font-weight: 400; text-transform: uppercase; margin: 0 0 1rem 0; letter-spacing: 0.04rem; line-height: 1.25;">
+                Uncompromised <span style="color: #AF9272; font-style: italic; text-transform: lowercase;">structural metrics.</span>
+            </h2>
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.45); max-width: 560px; margin: 0; line-height: 1.65; font-weight: 300;">
+                How we govern client mandates. Every building program interfaces with three non-negotiable operational principles to guarantee enduring architectural landmarks.
+            </p>
+        </div>
+
+        <!-- UNIFORM BALANCED VERTICAL GRID MATRIX -->
+<div class="features-dark-grid">            
+            <!-- FEATURE CARD 01: SPATIAL TWINS -->
+            <div class="feature-image-showcase-card feature-dark-scroll-reveal" style="position: relative; border-radius: 16px; padding: 3rem 2.2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.8rem; overflow: hidden; min-height: 420px !important; max-height: 440px !important; border: 1px solid rgba(255, 255, 255, 0.04); box-shadow: 0 20px 45px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);">
+                <img src="./Assests/About us - hero.webp" alt="Spatial Twin Realtime Simulation Modelling Grid" class="f-card-bg-picture" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0.15; filter: brightness(0.4) contrast(1.1) grayscale(10%); transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);" />
+                <div class="f-card-curtain-shader" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(11,13,12,0.92) 0%, rgba(17,20,18,0.7) 60%, rgba(11,13,12,0.85) 100%); z-index: 2; transition: all 0.5s ease;"></div>
+                
+                <div class="f-card-interactive-content" style="position: relative; z-index: 3; text-align: center !important; display: flex; flex-direction: column; align-items: center !important; justify-content: center !important; gap: 1.5rem; height: 100%; width: 100%;">
+                    <div class="f-dark-icon-shield" style="width: 44px; height: 44px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease; margin: 0 auto;">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <div style="text-align: center !important; width: 100%;">
+                        <!-- FIXED DEFAULT HEADER GOLD FORMAT -->
+                        <h3 class="f-dark-card-title" style="font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 600; color: #AF9272 !important; text-transform: uppercase; margin: 0 0 0.8rem 0; letter-spacing: 0.04rem; line-height: 1.4; text-align: center !important; text-shadow: 0 2px 4px rgba(0,0,0,0.5); transition: color 0.4s ease;">01 / Spatial Twins</h3>
+                        <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: #FFFFFF !important; line-height: 1.65; margin: 0; font-weight: 400; text-shadow: 0 2px 10px rgba(0,0,0,0.9); opacity: 1 !important; text-align: center !important; padding: 0 0.5rem;">
+                            We develop real-time digital structural twins to stress-test layout coordinates against seismic tracks, wind density friction, and thermal loading index scales before site construction begins.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURE CARD 02: MATERIAL TRACE -->
+            <div class="feature-image-showcase-card feature-dark-scroll-reveal" style="position: relative; border-radius: 16px; padding: 3rem 2.2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.8rem; overflow: hidden; min-height: 420px !important; max-height: 440px !important; border: 1px solid rgba(255, 255, 255, 0.04); box-shadow: 0 20px 45px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); animation-delay: 0.15s;">
+                <img src="./Assests/Who we are - about us.webp" alt="Global Quarry Sourcing Stone Logistics Inspection" class="f-card-bg-picture" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0.15; filter: brightness(0.4) contrast(1.1) grayscale(10%); transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);" />
+                <div class="f-card-curtain-shader" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(11,13,12,0.92) 0%, rgba(17,20,18,0.7) 60%, rgba(11,13,12,0.85) 100%); z-index: 2; transition: all 0.5s ease;"></div>
+                
+                <div class="f-card-interactive-content" style="position: relative; z-index: 3; text-align: center !important; display: flex; flex-direction: column; align-items: center !important; justify-content: center !important; gap: 1.5rem; height: 100%; width: 100%;">
+                    <div class="f-dark-icon-shield" style="width: 44px; height: 44px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease; margin: 0 auto;">
+                        <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div style="text-align: center !important; width: 100%;">
+                        <h3 class="f-dark-card-title" style="font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 600; color: #AF9272 !important; text-transform: uppercase; margin: 0 0 0.8rem 0; letter-spacing: 0.04rem; line-height: 1.4; text-align: center !important; text-shadow: 0 2px 4px rgba(0,0,0,0.5); transition: color 0.4s ease;">02 / Material Trace</h3>
+                        <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: #FFFFFF !important; line-height: 1.65; margin: 0; font-weight: 400; text-shadow: 0 2px 10px rgba(0,0,0,0.85); opacity: 1 !important; text-align: center !important; padding: 0 0.5rem;">
+                            Every slab of raw Carrara marble or solid European timber is tagged and indexed live from origin. Our procurement directors inspect grain continuity indices directly at mountain yards for absolute material excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURE CARD 03: ERROR BOUNDS -->
+<!-- FEATURE CARD 03: PRECISION EXECUTION -->
+<div class="feature-image-showcase-card feature-dark-scroll-reveal" style="position: relative; border-radius: 16px; padding: 3rem 2.2rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.8rem; overflow: hidden; min-height: 420px !important; max-height: 440px !important; border: 1px solid rgba(255, 255, 255, 0.04); box-shadow: 0 20px 45px rgba(0,0,0,0.5); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); animation-delay: 0.3s;">
+    <img src="./Assests/leaders - about us.webp" alt="Turnkey Blueprint Site Architecture Precision Execution" class="f-card-bg-picture" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0.15; filter: brightness(0.4) contrast(1.1) grayscale(10%); transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);" />
+    <div class="f-card-curtain-shader" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(11,13,12,0.92) 0%, rgba(17,20,18,0.7) 60%, rgba(11,13,12,0.85) 100%); z-index: 2; transition: all 0.5s ease;"></div>
+    
+    <div class="f-card-interactive-content" style="position: relative; z-index: 3; text-align: center !important; display: flex; flex-direction: column; align-items: center !important; justify-content: center !important; gap: 1.5rem; height: 100%; width: 100%;">
+        <div class="f-dark-icon-shield" style="width: 44px; height: 44px; background: rgba(175, 146, 114, 0.12); border: 1px solid rgba(175, 146, 114, 0.25); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease; margin: 0 auto;">
+            <!-- Vector Compass / Precision Blueprint Rule Icon -->
+            <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div style="text-align: center !important; width: 100%;">
+            <h3 class="f-dark-card-title" style="font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 600; color: #AF9272 !important; text-transform: uppercase; margin: 0 0 0.8rem 0; letter-spacing: 0.04rem; line-height: 1.4; text-align: center !important; text-shadow: 0 2px 4px rgba(0,0,0,0.5); transition: color 0.4s ease;">03 / Turnkey Curation</h3>
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: #FFFFFF !important; line-height: 1.65; margin: 0; font-weight: 400; text-shadow: 0 2px 10px rgba(0,0,0,0.85); opacity: 1 !important; text-align: center !important; padding: 0 0.5rem;">
+                Our construction handlers map spatial layouts with absolute error tolerances down to the millimeter. We coordinate turnkey installations combining architectural frameworks, volumetric lighting balance, and stone procurement for high-end ecosystems.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+                        <style>
+
+
+
+                            /* =========================================================================
+   📱 MASTER MULTI-DEVICE RESPONSIVE BREAKPOINT SUITE (IMAGE FEATURES GRID)
+   ========================================================================= */
+
+
+@media (max-width: 1024px) {
+    .features-dark-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+    .features-dark-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+    }
+
+    .feature-image-showcase-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        max-height: none !important;
+        padding: 2rem 1.25rem !important;
+        margin: 0 !important;
+    }
+}
+
+/* --- 2. STANDARD SMARTPHONE HORIZON (Max-Width: 768px) --- */
+
+
+ 
+
+    /* Equalizes mobile sizing parameters to prevent any side line overflows */
+    div.feature-image-showcase-card {
+        width: 100% !important;
+        max-width: 440px !important; /* Centers and unifies boxes nicely on phone chasses */
+        margin: 0 auto !important;
+        min-height: unset !important;
+        max-height: unset !important; /* Allows text elements to expand naturally without clipping box borders */
+        padding: 2.5rem 1.75rem !important; /* Optimizes compact cozy internal spacing padding */
+    }
+
+    /* FIXES TOUCH INTERACTIONS: Stabilizes image overlay values to prevent glitching on scroll taps */
+    .feature-image-showcase-card:hover {
+        transform: none !important; /* Stops container from drifting or rocking when fingers press down */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5) !important;
+    }
+    
+    /* Locks a highly sharp, clear static visibility profile for images on handheld displays */
+    .feature-image-showcase-card .f-card-bg-picture {
+        opacity: 0.28 !important; /* Keeps the background photo clear by default on smart viewports */
+        filter: brightness(0.4) contrast(1.2) grayscale(0%) !important;
+        transform: none !important;
+    }
+    
+    .feature-image-showcase-card .f-card-curtain-shader {
+        background: linear-gradient(to top, rgba(11,13,12,0.95) 0%, rgba(17,20,18,0.5) 60%, rgba(11,13,12,0.6) 100%) !important;
+    }
+
+/* --- 3. COMPACT SMALL PHONE HORIZON (Max-Width: 480px) --- */
+@media (max-width: 480px) {
+    div.feature-image-showcase-card {
+        padding: 2.2rem 1.25rem !important; /* Further optimizes internal cell cushion limits */
+    }
+
+    .feature-image-showcase-card h3.f-dark-card-title {
+        font-size: 1.05rem !important; /* Downscales header typography index safely to eliminate word splits */
+        line-height: 1.4 !important;
+    }
+
+    .feature-image-showcase-card p {
+        font-size: 0.85rem !important; /* Fine-tunes mobile paragraph reading dimensions */
+        line-height: 1.65 !important;
+        padding: 0 !important;
+    }
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+.features-dark-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 3rem !important;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 991px) {
+    .features-dark-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+    .features-dark-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .feature-image-showcase-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        max-height: none !important;
+        padding: 2rem 1.5rem !important;
+    }
+}
+
+
+
+
+
+
+/* --- THE HOVER POP PROPAGATION MODULE --- */
+.feature-image-showcase-card:hover {
+    border-color: #AF9272 !important;
+    transform: translateY(-8px) scale(1.015) !important;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.65), 0 0 25px rgba(175, 146, 114, 0.15) !important;
+}
+
+/* HIGH VISIBILITY HOVER LENS: Boosts opacity to 60% and strips down grayscale blockers */
+.feature-image-showcase-card:hover .f-card-bg-picture {
+    opacity: 0.60 !important; /* Forces background image to appear highly clear and sharp */
+    transform: scale(1.05) !important; /* Cinematic camera loop inward zoom */
+    filter: brightness(0.65) contrast(1.3) grayscale(0%) !important; /* Fully releases stone and wood textures */
+}
+
+/* Thins the dark mask curtain shroud on hover to make graphics fully transparent */
+.feature-image-showcase-card:hover .f-card-curtain-shader {
+    background: linear-gradient(to top, rgba(11,13,12,0.9) 0%, rgba(17,20,18,0.2) 60%, rgba(11,13,12,0.3) 100%) !important;
+}
+
+/* flips title text to pure high-contrast white layout on active focus */
+.feature-image-showcase-card:hover .f-dark-card-title {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 15px rgba(255,255,255,0.4) !important;
+}
+
+.feature-image-showcase-card:hover .f-dark-icon-shield {
+    background-color: #AF9272 !important;
+    border-color: #AF9272 !important;
+}
+.feature-image-showcase-card:hover .f-dark-icon-shield svg {
+    stroke: #111412 !important;
+}
+
+
+                        </style>
+                        </section>
+
+
+                        <!-- =========================================================================
+     SECTION 5: THE KINETIC FLOATING BANNER INSTANCE (ENTIRE CONTEXT SWAY ENGINE)
+     ========================================================================= -->
+<section class="studio-gold-cta-banner master-floating-banner-loop" style="background-color: #AF9272 !important; padding: 60px 0 !important; position: relative; box-sizing: border-box; display: block !important; clear: both !important; float: none !important; grid-column: 1 / -1 !important; width: 100vw !important; max-width: 100vw !important; left: 50% !important; right: 50% !important; margin-left: -50vw !important; margin-right: -50vw !important; overflow: hidden; z-index: 10; box-shadow: inset 0 0 40px rgba(0,0,0,0.12), 0 25px 60px rgba(0,0,0,0.45); transform-origin: center center;">
+    
+    <!-- 1. KINETIC MESH BACKGROUND LINES LAYER -->
+    <div class="gold-banner-wireframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.08;"></div>
+
+    <!-- 2. AMBIENT LIGHT SHIELD -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 65%); pointer-events: none; z-index: 2;"></div>
+
+    <!-- MASTER CONTAINER -->
+    <div style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 24px; box-sizing: border-box; width: 100% !important; position: relative; z-index: 4;">
+        
+        <!-- HOVER FRAME WRAPPER -->
+<div class="gold-banner-hover-chassis">            
+            <!-- LEFT MODULE: CALL TO LANDMARK TEXTS -->
+            <div class="gold-banner-text" style="flex: 1.6 !important; max-width: 70% !important; display: flex; flex-direction: column; align-items: flex-start; text-align: left; box-sizing: border-box;">
+                
+                <div class="gold-banner-pill-badge" style="display: inline-flex; align-items: center; gap: 0.6rem; background: #111412; color: #AF9272; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15rem; text-transform: uppercase; margin-bottom: 0.8rem; box-shadow: 0 4px 15px rgba(17,20,18,0.12); opacity: 0;">
+                    <span style="width: 5px; height: 5px; background-color: #AF9272; border-radius: 50%; display: inline-block;"></span>
+                    Project Kickoff
+                </div>
+                
+                <h2 class="gold-banner-optical-header" style="font-family: 'Cinzel', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #111412 !important; font-weight: 600; text-transform: uppercase; margin: 0 0 0.5rem 0; letter-spacing: -0.1rem; line-height: 1.25; opacity: 0;">
+                    Ready to materialize your spatial <span class="gold-banner-italic-string" style="color: #FFFFFF; font-style: italic; text-transform: lowercase; transition: all 0.4s ease;">blueprint?</span>
+                </h2>
+                
+                <p class="gold-banner-editorial-desc" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #111412 !important; opacity: 0; line-height: 1.6; margin: 0; font-weight: 400; max-width: 720px; transform: translateY(15px);">
+                    Connect directly with our drafting directors. We translate luxury residential constraints into uncompromised monolithic realities.
+                </p>
+            </div>
+
+            <!-- RIGHT MODULE: THE ACTION PILL BUTTON -->
+            <div class="gold-banner-action" style="flex: 0.7 !important; max-width: 25% !important; display: flex; justify-content: flex-end; width: 100%; box-sizing: border-box; align-self: center;">
+                <a href="contect.html" class="gold-banner-obsidian-cta" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 0.8rem; background: #111412; color: #FFFFFF; padding: 1.1rem 3rem; font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1rem; text-decoration: none; border-radius: 50px; border: 2px solid #111412; cursor: pointer; box-shadow: 0 10px 25px rgba(17,20,18,0.2); box-sizing: border-box; white-space: nowrap !important; width: auto !important;">
+                    <span>Initiate Intake</span>
+                    <span class="banner-arrow" style="font-size: 1.1rem; line-height: 1; display: inline-block; transition: transform 0.3s ease; transform: translateY(-1px);">&rarr;</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* =========================================================================
+   EXCLUSIVE MASTER CONTEXT BANNER SWAY & KINETIC DANCE ENGINE
+   ========================================================================= */
+
+   /* =========================
+   DESKTOP
+   ========================= */
+.gold-banner-hover-chassis{
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:4rem !important;
+}
+
+.gold-banner-text{
+    flex:1.6 !important;
+    max-width:70% !important;
+}
+
+.gold-banner-action{
+    flex:0.7 !important;
+    max-width:25% !important;
+    display:flex !important;
+    justify-content:flex-end !important;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media only screen and (max-width:768px){
+
+    .gold-banner-hover-chassis{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:center !important;
+        gap:24px !important;
+    }
+
+    .gold-banner-text{
+        width:100% !important;
+        max-width:100% !important;
+        text-align:center !important;
+        align-items:center !important;
+        flex:none !important;
+    }
+
+    .gold-banner-action{
+        width:100% !important;
+        max-width:100% !important;
+        justify-content:center !important;
+        flex:none !important;
+        margin-top:10px !important;
+    }
+
+    .gold-banner-obsidian-cta{
+        width:100% !important;
+        max-width:320px !important;
+    }
+}
+
+
+
+
+
+
+   .gold-banner-hover-chassis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+
+@media (max-width: 768px) {
+  .gold-banner-hover-chassis {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
+  .gold-banner-text,
+  .gold-banner-action {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .gold-banner-action {
+    justify-content: center !important;
+  }
+}
+
+
+/* THE ENTIRE CONTAINER ANIMATION HOOK: Runs an autonomous landscape floating wave */
+.studio-gold-cta-banner.master-floating-banner-loop {
+    animation: globalBannerDance 5.5s ease-in-out infinite alternate !important;
+    will-change: transform, box-shadow; /* Instructs hardware acceleration */
+}
+
+@keyframes globalBannerDance {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        box-shadow: inset 0 0 40px rgba(0,0,0,0.12), 0 20px 45px rgba(0,0,0,0.4);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.005) rotate(0.15deg); /* Gentle diagonal floating wave */
+        box-shadow: inset 0 0 40px rgba(0,0,0,0.15), 0 35px 65px rgba(0,0,0,0.5); /* Shadow deepens as it hovers higher */
+    }
+    100% {
+        transform: translateY(-4px) scale(0.998) rotate(-0.15deg); /* Secondary kinetic counter balance sway */
+        box-shadow: inset 0 0 40px rgba(0,0,0,0.12), 0 28px 55px rgba(0,0,0,0.45);
+    }
+}
+
+/* INTERACTION LAW: Accelerates and expands the movement scale further on section cursor hover */
+.studio-gold-cta-banner.master-floating-banner-loop:hover {
+    animation-duration: 3s !important; /* Speeds up the floating wave cadence to show excitement */
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.2), 0 40px 80px rgba(175, 146, 114, 0.25) !important; /* Emits a rich architectural gold glow */
+}
+
+/* Button hover dynamics */
+.gold-banner-obsidian-cta {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.gold-banner-obsidian-cta:hover {
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    color: #111412 !important;
+    transform: scale(1.05) !important;
+}
+.gold-banner-obsidian-cta:hover .banner-arrow {
+    transform: translateX(5px) translateY(-1px) !important;
+}
+
+/* --- SCROLL TIMELINES MATRIX (PRESERVING VIEWPORT CONSTRAINTS) --- */
+.gold-banner-pill-badge { animation: goldPillReveal linear both; animation-timeline: view(); animation-range: entry 5% cover 25%; }
+@keyframes goldPillReveal { 0% { opacity: 0; transform: scale(0.9) translateY(10px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+
+.gold-banner-optical-header { animation: goldHeaderFocus linear both; animation-timeline: view(); animation-range: entry 5% cover 25%; }
+@keyframes goldHeaderFocus { 0% { opacity: 0; letter-spacing: -0.1rem; filter: blur(3px); } 100% { opacity: 1; letter-spacing: 0.03rem; filter: blur(0px); } }
+
+.gold-banner-editorial-desc { animation: goldParagraphFade linear both; animation-timeline: view(); animation-range: entry 8% cover 28%; }
+@keyframes goldParagraphFade { 0% { opacity: 0; transform: translateY(15px); } 100% { opacity: 0.85; transform: translateY(0); } }
+
+.gold-banner-hover-chassis:hover .gold-banner-italic-string { color: #111412 !important; text-shadow: 0 0 20px rgba(17, 20, 18, 0.15) !important; }
+
+.gold-banner-wireframe { background-image: linear-gradient(rgba(17, 20, 18, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(17, 20, 18, 0.15) 1px, transparent 1px); background-size: 50px 50px; animation: goldGridCrawl 20s linear infinite; }
+@keyframes goldGridCrawl { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+
+/* 📱 MOBILE SCREEN PROTECTION SAFETY OVERRIDES */
+@media (max-width: 991px) {
+    .gold-banner-wireframe { display: none !important; }
+    
+    /* SHUTS DOWN HEAVY CONTAINER FLOATING DANCE ON PHONES TO PRESERVE MOBILE SPEED */
+    .studio-gold-cta-banner.master-floating-banner-loop {
+        animation: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+    
+    .gold-banner-pill-badge, .gold-banner-optical-header, .gold-banner-editorial-desc { animation: none !important; opacity: 1 !important; transform: none !important; }
+    .gold-banner-optical-header { letter-spacing: 0 !important; }
+    div.gold-banner-flex { flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 2.2rem !important; width: 100% !important; }
+    .gold-banner-hover-chassis { padding: 0.2rem !important; }
+    .gold-banner-hover-chassis:hover { background: transparent !important; }
+    .gold-banner-hover-chassis:hover .gold-banner-italic-string { color: #FFFFFF !important; }
+    div.gold-banner-text { width: 100% !important; max-width: 100% !important; align-items: center !important; text-align: center !important; }
+    div.gold-banner-action { width: 100% !important; max-width: 100% !important; justify-content: center !important; }
+    a.gold-banner-obsidian-cta { width: 100% !important; max-width: 420px !important; }
+}
+@media (max-width: 480px) {
+    .studio-gold-cta-banner { padding: 50px 0 !important; }
+    div.gold-banner-text h2 { font-size: 1.5rem !important; }
+}
+
+
+@media (max-width: 768px) {
+
+  .gold-banner-hover-chassis {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .gold-banner-text,
+  .gold-banner-action {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .gold-banner-action {
+    margin-top: 20px !important;
+    justify-content: center !important;
+    display: flex !important;
+  }
+
+  .gold-banner-text {
+    text-align: center !important;
+    align-items: center !important;
+  }
+}
+
+</style>
+
+</section>
+
+<style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #111412; }
+
+        .studio-premium-footer {
+            background-color: #111412;
+            padding: 6rem 6% 0 6%;
+            width: 100%;
+            position: relative;
+            display: block;
+            clear: both;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* MASTER GRID: left brand panel + right directory panel side by side */
+        .footer-master-grid {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr 1.4fr;
+    gap: 4rem;
+    padding-bottom: 1.5rem !important; /* Reduced from 4rem/5rem to close the gap */
+    align-items: flex-start;
+}
+
+        /* LEFT: logo, description, socials stacked vertically */
+        .footer-left-brand-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 0 0 300px;
+            width: 300px;
+        }
+
+        .footer-identity-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-identity-title {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            letter-spacing: 0.05rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .footer-editorial-summary {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 300px;
+            margin: 0 0 2rem 0;
+            text-align: left;
+            font-weight: 300;
+        }
+
+        .footer-social-deck {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .footer-social-deck .social-metric-circle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.4s ease;
+        }
+
+        .footer-social-deck .social-metric-circle:hover {
+            background-color: #AF9272;
+            border-color: #AF9272;
+            transform: translateY(-4px);
+        }
+
+        .footer-social-deck .social-metric-circle:hover svg {
+            fill: #111412;
+        }
+
+        /* RIGHT: 3 columns side by side */
+        .footer-right-directory-panel {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.2fr;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .footer-brick-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .footer-section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: #FFFFFF;
+            font-weight: 500;
+            margin: 0 0 2rem 0;
+            text-transform: uppercase;
+            letter-spacing: 0.02rem;
+        }
+
+        .footer-menu-index,
+        .footer-contact-matrix {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            text-align: left;
+        }
+
+        .footer-menu-index li a {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+
+        .footer-menu-index li a:hover { color: #AF9272; }
+
+        .footer-contact-matrix li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-contact-matrix li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .footer-contact-matrix li a:hover { color: #AF9272; }
+
+        .contact-dot-gold {
+            width: 5px;
+            height: 5px;
+            background-color: #AF9272;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        .footer-cta-container-row { margin-top: 2.25rem; }
+
+        .footer-gold-pill-btn {
+            background-color: #AF9272;
+            color: #111412;
+            padding: 0.9rem 2.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            text-decoration: none;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 8px 25px rgba(175, 146, 114, 0.2);
+        }
+
+        .footer-bottom-shroud-cap {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2.5rem 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-bottom-shroud-cap p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin: 0;
+        }
+
+        @media (max-width: 1150px) {
+            .footer-master-grid {
+                flex-direction: column;
+                gap: 4rem;
+            }
+            .footer-left-brand-panel {
+                flex: none;
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            .footer-right-directory-panel {
+                grid-template-columns: 1fr;
+                gap: 3.5rem;
+            }
+        }
+
+        /* ==========================================================================
+   TARGETED COPYRIGHT SHROUD LAYER STYLING
+   ========================================================================== */
+
+.footer-bottom-shroud-cap {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 0.5rem 0 !important; /* Reduced from 2.5rem to pull the links up closer */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.footer-bottom-shroud-cap p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0;
+    text-align: left;
+}
+
+/* Horizontal alignment setup for legal directory paths */
+.footer-legal-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2.25rem;
+    align-items: center;
+}
+
+.footer-legal-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+    color: #AF9272; /* Refined signature gold focus shift */
+}
+
+/* Orange circular anchor motion engine */
+.scroll-to-top-btn {
+    width: 44px;
+    height: 44px;
+    background-color: #FFAE34; /* Vibrant orange hue matched to image blueprint */
+    color: #111412;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 12px rgba(255, 174, 52, 0.2);
+}
+
+.scroll-to-top-btn:hover {
+    transform: translateY(-4px);
+    background-color: #FFC05A;
+    box-shadow: 0 6px 18px rgba(255, 174, 52, 0.4);
+}
+
+/* Mobile viewport layout break parameters */
+@media (max-width: 768px) {
+    .footer-bottom-shroud-cap {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+    }
+    .footer-bottom-shroud-cap p {
+        text-align: center;
+    }
+    .footer-legal-links {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+    </style>
+
+
+<footer class="studio-premium-footer">
+    <div class="footer-master-grid">
+
+        <!-- LEFT: Logo + Description + Socials -->
+        <div class="footer-left-brand-panel">
+           
+        
+            
+  <div class="footer-identity-wrapper">
+     <a href="#" style="display: inline-block; text-decoration: none; cursor: pointer;" aria-label="Back to top">
+    <img 
+      src="./Assests/stackly-logo-final (1).webp" 
+      alt="Stackly logo"
+      class="footer-logo-img"
+    />
+   
+  </div>
+   </a>
+            <p class="footer-editorial-summary">
+                We deliver modern residential blueprints and commercial ecosystems focused on volumetric natural light mapping, high-end stone procurement, and structural integrity.
+            </p>
+
+            <div class="footer-social-deck">
+                <a href="404.html" class="social-metric-circle" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="#FFFFFF"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.95z"/></svg>
+                </a>
+                <a href="404.html" class="social-metric-circle" aria-label="X (Twitter)">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="#FFFFFF"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="404.html" class="social-metric-circle" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="#FFFFFF"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="404.html" class="social-metric-circle" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="#FFFFFF"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT: Quick Links | Services | Contact Info -->
+        <div class="footer-right-directory-panel">
+
+            <div class="footer-brick-column">
+                <h3 class="footer-section-title">Quick Links</h3>
+                <ul class="footer-menu-index">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-brick-column">
+                <h3 class="footer-section-title">Services</h3>
+                <ul class="footer-menu-index">
+                    <li><a href="404.html">Residential Curation</a></li>
+                    <li><a href="404.html">Commercial Ecosystems</a></li>
+                    <li><a href="404.html">Turnkey Procurement</a></li>
+                    <li><a href="404.html">Spatial Blueprinting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-brick-column">
+                <h3 class="footer-section-title">Contact Info</h3>
+                <ul class="footer-contact-matrix">
+                    <li><span class="contact-dot-gold"></span> Salem, India</li>
+                    <li><span class="contact-dot-gold"></span> <a href="tel:+911234567890">+91 1234567890</a></li>
+                    <li><span class="contact-dot-gold"></span> <a href="mailto:info@stackly.com">info@stackly.com</a></li>
+                </ul>
+                <div class="footer-cta-container-row">
+                    <a href="404.html" class="footer-gold-pill-btn">Subscribe</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+  <!-- COPYRIGHT BAR -->
+<div class="footer-bottom-shroud-cap">
+    <p>&copy; 2026 Stackly. All rights reserved.</p>
+    <div class="footer-legal-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Use</a>
+        <a href="404.html">Sitemap</a>
+    </div>
+    <a href="#" class="scroll-to-top-btn" aria-label="Scroll back to top">↑</a>
+</div>
+
+</footer>
+
+</body>
+</html>
