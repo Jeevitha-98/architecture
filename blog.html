@@ -134,39 +134,7 @@
           }
       });
     </script>
-   
-<script>
-      document.addEventListener("DOMContentLoaded", function () {
-          const menuToggleButton = document.getElementById("menu-toggle-trigger");
-          const navigationMenuOverlay = document.getElementById("mobile-nav-overlay");
-          const overlayLinksList = document.querySelectorAll(".nav-links a");
 
-          if (menuToggleButton && navigationMenuOverlay) {
-              // 1. Listen for the click action on your 3-line hamburger icon
-              menuToggleButton.addEventListener("click", function (event) {
-                  event.stopPropagation();
-                  navigationMenuOverlay.classList.toggle("mobile-menu-active");
-                  console.log("Mobile menu toggle clicked!"); // Sends verification note to developer logs
-              });
-
-              // 2. Auto-close the dark overlay screen when any menu path is clicked
-              overlayLinksList.forEach(function (link) {
-                  link.addEventListener("click", function () {
-                      navigationMenuOverlay.classList.remove("mobile-menu-active");
-                  });
-              });
-
-              // 3. Close the menu if a user clicks anywhere on the dark background mask
-              document.addEventListener("click", function (event) {
-                  if (!navigationMenuOverlay.contains(event.target) && !menuToggleButton.contains(event.target)) {
-                      navigationMenuOverlay.classList.remove("mobile-menu-active");
-                  }
-              });
-          } else {
-              console.error("Missing critical menu elements! Check your HTML IDs.");
-          }
-      });
-    </script>
 
     <!-- =========================================================================
      SECTION 1: THE STUDIO JOURNAL HERO CONTAINER (FULL CANVAS BREAKOUT)
