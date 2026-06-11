@@ -319,8 +319,7 @@
     <div style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 24px; box-sizing: border-box; width: 100% !important;">
         
         <!-- A. FILTER DECK MENUBAR AREA -->
-        <div class="journal-filter-deck" style="display: flex; justify-content: space-between; align-items: center; gap: 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 1.5rem; margin-bottom: 5.5rem; width: 100%; box-sizing: border-box;">
-            
+<div class="journal-filter-deck">            
             <!-- Structural Filter Links Left -->
             <div class="journal-filter-tabs" style="display: flex; gap: 2.2rem; align-items: center;">
                 <a href="#" class="j-tab active-j-tab">All Logbooks</a>
@@ -339,8 +338,7 @@
         </div>
 
         <!-- B. 3-COLUMN COMPACT JOURNAL REVEAL DECK MATRIX -->
-        <div class="journal-cards-grid" style="display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 3rem; width: 100% !important; box-sizing: border-box;">
-            
+<div class="journal-cards-grid">            
             <!-- LOG 01: ARCHITECTURE MAPPING -->
             <article class="journal-post-card journal-scroll-reveal" style="background: rgba(20, 24, 22, 0.65); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 1.5rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 20px 45px rgba(0,0,0,0.45);">
                 <div>
@@ -630,6 +628,52 @@
    ========================================================================== */
 
 /* Tablet */
+/* ==========================================
+   MOBILE FILTER BAR FIX
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    .journal-filter-deck {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        gap: 20px !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .journal-filter-tabs {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        width: 100% !important;
+        gap: 15px !important;
+        padding-bottom: 10px !important;
+        scrollbar-width: none;
+    }
+
+    .journal-filter-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .j-tab {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .journal-search-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .journal-search-wrapper input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
 @media (max-width:1024px){
 
     .journal-cards-grid{
@@ -807,90 +851,50 @@
 
 }
 
-/* ==========================================================================
-   BLOG CARDS - ONE BY ONE VERTICAL STACK RESPONSIVE SYSTEM
-========================================================================== */
 
-/* 1. TABLET VIEWPORTS (Max-Width: 1024px) */
-@media screen and (max-width: 1024px) {
-    /* Clears multi-column properties and forces vertical block arrangement */
+
+@media screen and (max-width: 768px) {
+
     .journal-cards-grid {
         display: flex !important;
-        flex-direction: column !important; /* Drops cards one below the other */
-        grid-template-columns: none !important; /* Strips structural grid tracks */
-        grid-template-areas: none !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        gap: 24px !important;
+        padding: 0 16px !important;
+        margin: 0 !important;
+    }
+
+    .journal-post-card {
         width: 100% !important;
         max-width: 100% !important;
-        gap: 3rem !important; /* Uniform breathing room gap between cards */
-        padding: 0 30px !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        flex: 0 0 100% !important;
         box-sizing: border-box !important;
     }
 
-    .journal-post-card {
-        width: 100% !important;
-        max-width: 650px !important; /* Balanced container footprint for tablet size */
-        margin: 0 auto !important;
-        float: none !important;
-        flex: none !important;
-    }
-}
-
-/* 2. STANDARD MOBILE PHONE VIEWP_ORTS (Max-Width: 768px) */
-@media screen and (max-width: 768px) {
-    .journal-cards-grid {
-        display: flex !important;
-        flex-direction: column !important; /* Keeps cards stacked vertically */
-        grid-template-columns: none !important;
-        gap: 2.5rem !important;
-        padding: 0 20px !important;
-    }
-
-    .journal-post-card {
-        width: 100% !important;
-        max-width: 360px !important; /* Symmetrically scales the card footprint on mobile */
-        margin: 0 auto !important;
-        padding: 1.25rem !important; /* Compracts inner card breathing area */
-    }
-
     .j-img-frame {
-        height: 220px !important; /* Golden ratio aspect for layout photos */
         width: 100% !important;
-        margin-bottom: 1.25rem !important;
-    }
-
-    /* Fixed typography layout tracks to prevent titles from overflowing containers */
-    .j-title {
-        font-size: 1.15rem !important; /* Downscales header fonts slightly */
-        line-height: 1.4 !important;
-        white-space: normal !important; /* Softens strings to wrap on line tracks */
-        word-wrap: break-word !important;
+        height: 220px !important;
     }
 }
 
-/* 3. SMALL HANDHELD SMARTPHONES (Max-Width: 480px) */
 @media screen and (max-width: 480px) {
+
     .journal-cards-grid {
-        padding: 0 16px !important; /* Maximizes horizontal space on tiny devices */
-        gap: 2.25rem !important;
+        padding: 0 12px !important;
+        gap: 20px !important;
     }
 
     .journal-post-card {
+        width: 100% !important;
         max-width: 100% !important;
-        padding: 1rem !important;
+        min-width: 100% !important;
     }
 
     .j-img-frame {
-        height: 190px !important; /* Slightly shortens photo blocks to match frame bounds */
-    }
-
-    /* Adjusts categories and links text sizes so characters don't crunch */
-    .j-category-tag {
-        font-size: 0.6rem !important;
-        padding: 0.35rem 0.75rem !important;
-    }
-
-    .j-title {
-        font-size: 1.05rem !important;
+        height: 200px !important;
     }
 }
 
@@ -951,7 +955,7 @@ font-weight: 400;
         </div>
 
         <!-- 3-Column Featured Article Grid Deck Matrix -->
-        <div class="featured-picks-grid" style="display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 3rem; width: 100% !important; box-sizing: border-box;">
+        <div class="featured-picks-grid">
             
             <!-- CURATED CARD 1 -->
             <article class="featured-pick-card pick-scroll-reveal" style="background: rgba(20, 24, 22, 0.65); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 1.5rem; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 20px 45px rgba(0,0,0,0.45);">
@@ -1078,6 +1082,91 @@ font-weight: 400;
 .featured-pick-card:hover .pick-action-link{
     color:#FFFFFF !important;
 }
+
+/* ==========================================================
+   EDITOR PICKS RESPONSIVE SYSTEM
+   ========================================================== */
+
+/* Laptop */
+@media screen and (max-width: 1024px){
+
+    .featured-picks-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:30px !important;
+        width:100% !important;
+    }
+
+    .featured-pick-card{
+        width:100% !important;
+        max-width:700px !important;
+        margin:0 auto !important;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px){
+
+    .journal-editors-picks-section{
+        padding:80px 0 !important;
+    }
+
+    .featured-picks-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:24px !important;
+        padding:0 16px !important;
+        width:100% !important;
+        box-sizing:border-box !important;
+    }
+
+    .featured-pick-card{
+        width:100% !important;
+        max-width:100% !important;
+        margin:0 !important;
+        padding:1.25rem !important;
+        box-sizing:border-box !important;
+    }
+
+    .pick-img-box{
+        height:220px !important;
+    }
+
+    .pick-title{
+        font-size:1.1rem !important;
+        line-height:1.4 !important;
+    }
+}
+
+/* Small Phones */
+@media screen and (max-width: 480px){
+
+    .journal-editors-picks-section{
+        padding:60px 0 !important;
+    }
+
+    .featured-picks-grid{
+        padding:0 12px !important;
+        gap:20px !important;
+    }
+
+    .featured-pick-card{
+        padding:1rem !important;
+    }
+
+    .pick-img-box{
+        height:190px !important;
+    }
+
+    .pick-title{
+        font-size:1rem !important;
+    }
+
+    .pick-category-pill{
+        font-size:0.6rem !important;
+        padding:0.35rem 0.7rem !important;
+    }
+}
                 </style>
 
             </section>
@@ -1085,12 +1174,7 @@ font-weight: 400;
         <!-- =========================================================================
      SECTION 4: THE STUDIO ARCHITECTURAL WORKFLOW PIPELINE
      ========================================================================= -->
-<!-- =========================================================================
-     SECTION 4: THE STUDIO ARCHITECTURAL WORKFLOW PIPELINE (ZIGZAG FIX EDITION)
-     ========================================================================= -->
-<!-- =========================================================================
-     SECTION 4: THE STUDIO ARCHITECTURAL WORKFLOW PIPELINE (SOLID BLACK EDITION)
-     ========================================================================= -->
+
 <section class="studio-workflow-section" style="background-color: #111412 !important; background: #111412 !important; position: relative; padding: 120px 0; box-sizing: border-box; display: block !important; clear: both !important; float: none !important; grid-column: 1 / -1 !important; width: 100vw !important; max-width: 100vw !important; left: 50% !important; right: 50% !important; margin-left: -50vw !important; margin-right: -50vw !important; overflow: hidden; z-index: 7;">
     
     <!-- Symmetrical Parent Content Grid Frame -->
@@ -1108,8 +1192,7 @@ font-weight: 400;
         </div>
 
         <!-- THE ALTERNATING WORKFLOW CORE GRID PANEL -->
-        <div class="workflow-pipe-grid" style="display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 2rem; width: 100% !important; position: relative; box-sizing: border-box; margin-bottom: 7rem; align-items: start;">
-            
+<div class="workflow-pipe-grid">            
             <!-- BACKGROUND CONTINUOUS WAVY LASER TRACKING PATH (Desktop Only) -->
             <div class="workflow-wavy-spine-path" style="position: absolute; top: 250px; left: 5%; width: 90%; height: 2px; background: repeating-linear-gradient(90deg, rgba(175,146,114,0.3) 0px, rgba(175,146,114,0.3) 8px, transparent 8px, transparent 16px); z-index: 1;"></div>
 
@@ -1164,8 +1247,8 @@ font-weight: 400;
         </div>
 
         <!-- CENTRAL ANCHORED CTA BUTTON CONTAINER -->
-        <div style="text-align: center !important; width: 100% !important; display: flex !important; justify-content: center !important; position: relative; z-index: 10;">
-            <a href="404.html" class="workflow-capsule-cta" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; background: #FFFFFF; color: #111412; padding: 1.1rem 3.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1rem; text-decoration: none; border-radius: 50px; border: 2px solid #FFFFFF; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.25);">
+<div style="text-align: center; width: 100%; display: flex; justify-content: center; margin-top: 4rem;">
+                <a href="404.html" class="workflow-capsule-cta" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; background: #FFFFFF; color: #111412; padding: 1.1rem 3.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1rem; text-decoration: none; border-radius: 50px; border: 2px solid #FFFFFF; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.25);">
                 Initiate Project Intake
             </a>
         </div>
@@ -1319,6 +1402,86 @@ font-weight: 400;
     .workflow-capsule-cta {
         width: 100% !important;
         max-width: 440px !important;
+    }
+}
+
+/* ==========================================================
+   WORKFLOW - CLEAN MOBILE ALIGNMENT FIX (FORCE STACK)
+   ========================================================== */
+
+@media screen and (max-width: 1024px){
+
+    .workflow-pipe-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:flex-start !important;
+        gap:50px !important;
+    }
+
+    .workflow-step-node{
+        width:100% !important;
+        max-width:500px !important;
+        margin:0 auto !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        text-align:center !important;
+    }
+
+    .workflow-meta-card{
+        width:100% !important;
+        max-width:100% !important;
+        text-align:center !important;
+        order:3 !important;
+    }
+
+    .workflow-img-frame{
+        width:100% !important;
+        max-width:320px !important;
+        height:220px !important;
+        order:1 !important;
+        margin-bottom:15px !important;
+    }
+
+    .workflow-badge-bubble{
+        order:2 !important;
+        margin:10px 0 !important;
+    }
+
+    .workflow-wavy-spine-path{
+        display:none !important;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px){
+
+    .workflow-pipe-grid{
+        padding:0 16px !important;
+        gap:40px !important;
+    }
+
+    .workflow-step-node{
+        max-width:100% !important;
+    }
+
+    .workflow-img-frame{
+        width:100% !important;
+        max-width:100% !important;
+        height:200px !important;
+    }
+}
+
+/* SMALL MOBILE */
+@media screen and (max-width: 480px){
+
+    .workflow-img-frame{
+        height:180px !important;
+    }
+
+    .workflow-meta-card p{
+        font-size:0.8rem !important;
     }
 }
 </style>
