@@ -92,16 +92,24 @@
     </nav>
     
     <!-- FIX: Swaps out the Quote button for the clean 3-line hamburger nodes dynamically on mobile screens -->
-    <div class="header-actions">
-        <a href="404.html" class="quote-cta-btn">Get Free Quote <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        
-        <button class="mobile-menu-toggle" id="menu-toggle-trigger" aria-label="Toggle Menu">
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-        </button>
-    </div>
-  </div>
+    <!-- =========================================================================
+     UPDATED HEADER ACTION DOCK (PERMANENT CORES VISIBILITY EDITION)
+     ========================================================================= -->
+<div class="header-actions">
+    <!-- Inline styles shifted to display the architectural gold profile as the permanent base state -->
+    <a href="login.html" class="quote-cta-btn" style="color: #AF9272 !important; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.4rem; border-radius: 30px; border: 1px solid #AF9272 !important; background: rgba(175, 146, 114, 0.05); transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important; box-shadow: 0 0 15px rgba(175, 146, 114, 0.45) !important; text-shadow: 0 0 8px rgba(175, 146, 114, 0.35);" 
+       onmouseover="this.style.color='#FFFFFF'; this.style.borderColor='#FFFFFF'; this.style.boxShadow='0 0 15px rgba(255, 255, 255, 0.25)'; this.style.textShadow='none';" 
+       onmouseout="this.style.color='#AF9272'; this.style.borderColor='#AF9272'; this.style.boxShadow='0 0 15px rgba(175, 146, 114, 0.45)'; this.style.textShadow='0 0 8px rgba(175, 146, 114, 0.35)';">
+        Log in <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+    </a>
+    
+    <button class="mobile-menu-toggle" id="menu-toggle-trigger" aria-label="Toggle Menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+    </button>
+</div>
+
 </header>
 
  <script>
@@ -160,8 +168,8 @@
                       We transform premium residential spaces and commercial ecosystems into architectural masterworks using high-end materials, structural integration, and timeless interior staging layout designs.
                   </p>
                   <div class="hero-button-row animate-fade-up-delayed">
-                      <a href="404.html" class="cta-primary">Explore Spaces <i class="fa-solid fa-arrow-right-long"></i></a>
-                      <a href="404.html" class="cta-secondary">Contact Our Experts <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                      <a href="login.html" class="cta-primary">Explore Spaces <i class="fa-solid fa-arrow-right-long"></i></a>
+                      <a href="login.html" class="cta-secondary">Contact Our Experts <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                   </div>
               </div>
 
@@ -261,7 +269,7 @@
             </ul>
             
             <div class="about-action-deck">
-                <a href="404.html" class="about-pill-cta">
+                <a href="login.html" class="about-pill-cta">
                     Discover More <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
             </div>
@@ -527,7 +535,7 @@
             
             <!-- PREMIUM CTAs -->
             <div class="pillars-action-deck">
-                <a href="404.html" class="pillars-pill-cta">
+                <a href="about.html" class="pillars-pill-cta">
                     Learn More About Us <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
             </div>
@@ -712,7 +720,7 @@
 
         <!-- NEW: INTERACTIVE ROTATING CATALOG CTA ANCHOR FRAME LINK -->
         <div class="cinema-trigger-column vid-run-trigger">
-            <a href="404.html" class="catalog-interactive-anchor-btn" aria-label="Navigate to digital catalog folder profile">
+            <a href="projects.html" class="catalog-interactive-anchor-btn" aria-label="Navigate to digital catalog folder profile">
                 <div class="catalog-btn-pulse-ring-1"></div>
                 <div class="catalog-btn-pulse-ring-2"></div>
                 <div class="catalog-btn-core-circle">
@@ -799,7 +807,7 @@
             </div>
 
             <div class="proof-action-deck">
-                <a href="404.html" class="proof-pill-cta">
+                <a href="login.html" class="proof-pill-cta">
                     Start Your Project <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
             </div>
@@ -1119,7 +1127,7 @@
             
             <!-- LUXURY CTA PILL MODULE -->
             <div class="blueprint-action-deck cta-reveal-zoom">
-                <a href="404.html" class="blueprint-pill-btn" aria-label="Book a free architectural consultation session">
+                <a href="login.html" class="blueprint-pill-btn" aria-label="Book a free architectural consultation session">
                     Book Free Consultation <i class="fa-solid fa-arrow-right-long blueprint-btn-arrow"></i>
                 </a>
             </div>
@@ -1161,18 +1169,7 @@
   animatedSections.forEach(s => { if (s) masterScrollObserver.observe(s); });
 </script>
 
-<!-- ==========================================
-     THE CENTRAL ARCHITECTURAL FOOTER SYSTEM
-     ========================================== -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly Footer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
+<style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #111412; }
 
@@ -1190,16 +1187,16 @@
 
         /* MASTER GRID: left brand panel + right directory panel side by side */
         .footer-master-grid {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 6rem;
-            padding-bottom: 5rem;
-        }
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr 1.4fr;
+    gap: 4rem;
+    padding-bottom: 1.5rem !important; /* Reduced from 4rem/5rem to close the gap */
+    align-items: flex-start;
+}
 
         /* LEFT: logo, description, socials stacked vertically */
         .footer-left-brand-panel {
@@ -1386,9 +1383,95 @@
                 gap: 3.5rem;
             }
         }
+
+        /* ==========================================================================
+   TARGETED COPYRIGHT SHROUD LAYER STYLING
+   ========================================================================== */
+
+.footer-bottom-shroud-cap {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 0.5rem 0 !important; /* Reduced from 2.5rem to pull the links up closer */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.footer-bottom-shroud-cap p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0;
+    text-align: left;
+}
+
+/* Horizontal alignment setup for legal directory paths */
+.footer-legal-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2.25rem;
+    align-items: center;
+}
+
+.footer-legal-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+    color: #AF9272; /* Refined signature gold focus shift */
+}
+
+/* Orange circular anchor motion engine */
+.scroll-to-top-btn {
+    width: 44px;
+    height: 44px;
+    background-color: #FFAE34; /* Vibrant orange hue matched to image blueprint */
+    color: #111412;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 12px rgba(255, 174, 52, 0.2);
+}
+
+.scroll-to-top-btn:hover {
+    transform: translateY(-4px);
+    background-color: #FFC05A;
+    box-shadow: 0 6px 18px rgba(255, 174, 52, 0.4);
+}
+
+/* Mobile viewport layout break parameters */
+@media (max-width: 768px) {
+    .footer-bottom-shroud-cap {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+    }
+    .footer-bottom-shroud-cap p {
+        text-align: center;
+    }
+    .footer-legal-links {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
     </style>
-</head>
-<body>
+
 
 <footer class="studio-premium-footer">
     <div class="footer-master-grid">
@@ -1460,19 +1543,26 @@
                     <li><span class="contact-dot-gold"></span> <a href="mailto:info@stackly.com">info@stackly.com</a></li>
                 </ul>
                 <div class="footer-cta-container-row">
-                    <a href="404.html" class="footer-gold-pill-btn">Subscribe</a>
+                    <a href="login.html" class="footer-gold-pill-btn">Subscribe</a>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <!-- COPYRIGHT BAR -->
-    <div class="footer-bottom-shroud-cap">
-        <p>&copy; 2026 Stackly Architecture & Studio. All Rights Reserved.</p>
+  <!-- COPYRIGHT BAR -->
+<div class="footer-bottom-shroud-cap">
+    <p>&copy; 2026 Stackly. All rights reserved.</p>
+    <div class="footer-legal-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Use</a>
+        <a href="404.html">Sitemap</a>
     </div>
+    <a href="#" class="scroll-to-top-btn" aria-label="Scroll back to top">↑</a>
+</div>
+
 </footer>
 
-
-  </body>
+</body>
 </html>
+

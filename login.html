@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Studio — Architectural Registry Access</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- MANDATORY: Links the complete Font Awesome icon directory library -->
+<link rel="stylesheet" href="https://cloudflare.com">
+
+</head>
+<body style="background-color: #111412; margin: 0; padding: 0; overflow-x: hidden; display: flex; align-items: center; justify-content: center; min-height: 100vh; position: relative;">
+
+    <!-- 1. ENGINE FIXED BACKDROP VIDEO MASK -->
+    <div style="position: fixed; top: 0; left: 0; width: 100vw !important; height: 100vh !important; z-index: 1; pointer-events: none; overflow: hidden; background-color: #111412;">
+        <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100vw !important; min-height: 100vh !important; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover !important; opacity: 0.15 !important; filter: brightness(0.3) contrast(1.2) grayscale(25%);">
+            <source src="./Assests/Contact us.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- 2. DIAGRAM DESIGN SCHEMATIC BACKPLANE NETWORKS -->
+    <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-image: linear-gradient(rgba(175, 146, 114, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(175, 146, 114, 0.015) 1px, transparent 1px); background-size: 45px 45px; pointer-events: none; z-index: 2;"></div>
+
+    <!-- =========================================================================
+         MASTER LOGIN FORM CARD CHASSIS (HIGH CONTRAST GLASS EDITION)
+         ========================================================================= -->
+    <main id="login-form-card" class="studio-login-overlay-card login-pop-entrance" style="position: relative; z-index: 5; width: 100%; max-width: 520px; background: rgba(20, 24, 22, 0.85) !important; backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 3.5rem 2.5rem; box-sizing: border-box; box-shadow: 0 40px 80px rgba(0,0,0,0.7); text-align: center; margin: 40px 20px;">
+        
+        <!-- HEADER HEADER BUTTONS Row -->
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 2.8rem; box-sizing: border-box;">
+            <a href="index.html" style="display: inline-block; text-decoration: none;">
+                
+            </a>
+            <a href="index.html" class="login-back-home-anchor">
+                &larr; Home
+            </a>
+        </div>
+
+        <!-- TITLE HEADINGS -->
+        <div style="text-align: left !important; width: 100%; margin-bottom: 2.5rem;">
+            <h1 style="font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 500; color: #FFFFFF !important; text-transform: uppercase; margin: 0 0 0.6rem 0; letter-spacing: 0.04rem;">Welcome Back</h1>
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255, 255, 255, 0.55) !important; margin: 0; font-weight: 300; line-height: 1.5;">Select your operational role to sign in to your project dashboard.</p>
+        </div>
+
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 1.8rem; box-sizing: border-box;">
+            
+            <!-- FIXED ROLE CHANNELS TOGGLE -->
+           <!-- FIXED SELECT ROLE GRID CHASSIS (INLINE SVG INSTANCE) -->
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; width: 100%;">
+    <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: #AF9272 !important; letter-spacing: 0.12rem; text-transform: uppercase;">Select Role</label>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; width: 100%; box-sizing: border-box;">
+        
+        <!-- CARD 01: STUDIO PARTNER (ACTIVE POSITION) -->
+        <div class="login-role-deck-node active-role" onclick="selectStudioRole(this, 'partner')">
+            <div class="role-icon-box" style="width: 44px; height: 44px; border-radius: 50%; background: #AF9272; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: #111412; box-shadow: 0 0 15px rgba(175, 146, 114, 0.25);">
+                <!-- Blueprint drafting angle tools inline code paths -->
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <span style="font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; color: #AF9272; margin-top: 0.5rem; display: block;">Studio Partner</span>
+        </div>
+
+        <!-- CARD 02: CORPORATE CLIENT -->
+        <div class="login-role-deck-node" onclick="selectStudioRole(this, 'client')">
+            <div class="role-icon-box" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, 0.04); display: flex; align-items: center; justify-content: center; margin: 0 auto; color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease;">
+                <!-- High-performance structural skyscraper block building vector -->
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/><path d="M8 6h.01M16 6h.01M9 10h.01M15 10h.01"/></svg>
+            </div>
+            <span style="font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500; color: rgba(255, 255, 255, 0.6); margin-top: 0.5rem; display: block;">Corporate Client</span>
+        </div>
+
+    </div>
+</div>
+
+
+            <!-- EMAIL INPUT LAYER -->
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; width: 100%;">
+                <label for="login-email" style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Email Address</label>
+                <input type="email" id="login-email" placeholder="name@company.com" class="login-chassis-field-input">
+            </div>
+
+            <!-- PASSWORD INPUT LAYER -->
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; width: 100%;">
+                <label for="login-pass" style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Password</label>
+                <input type="password" id="login-pass" placeholder="Enter security key" class="login-chassis-field-input">
+            </div>
+
+            <!-- FORGOT LINK -->
+            <div style="text-align: right !important; width: 100%; box-sizing: border-box; margin-top: -0.2rem;">
+                <a href="404.html" style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #AF9272; font-weight: 600; text-decoration: none; transition: color 0.3s ease;">Forgot Password?</a>
+            </div>
+
+            <!-- PRIMARY SUBMIT: Triggers validation alert tracking functions -->
+            <button onclick="executeLoginValidation()" class="login-submit-master-btn">
+                Log In Securely &rarr;
+            </button>
+
+        </div>
+
+        <!-- SUB SEPARATOR BREAK STRINGS WITH SOCIAL CHOICES LAYOUT -->
+        <div style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 2.2rem 0; color: rgba(255,255,255,0.2); font-family: 'Inter', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12rem; font-weight: 600;">
+            <div style="height: 1px; flex: 1; background-color: rgba(255,255,255,0.1);"></div>
+            or sign in with
+            <div style="height: 1px; flex: 1; background-color: rgba(255,255,255,0.1);"></div>
+        </div>
+
+        <!-- SOCIAL LINKS WITH ACTIVE TIMEOUT ANIMATION HOOKS -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; width: 100%; box-sizing: border-box; margin-bottom: 2.2rem;">
+            <button onclick="handleSocialConnect('Google')" class="login-outsource-badge">
+                <i class="fa-brands fa-google" style="color: #ea4335;"></i> <span class="btn-txt">Google</span>
+            </button>
+            <button onclick="handleSocialConnect('Facebook')" class="login-outsource-badge">
+                <i class="fa-brands fa-facebook" style="color: #1877f2;"></i> <span class="btn-txt">Facebook</span>
+            </button>
+        </div>
+
+        <!-- FIXED ACCOUNT REDIRECTION PATH -->
+        <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.5); font-weight: 400;">
+            Don't have an account? <span onclick="toggleFormViews('register')" style="color: #AF9272; font-weight: 600; cursor: pointer; text-decoration: underline;">Create Account</span>
+        </div>
+    </main>
+
+
+    <!-- =========================================================================
+         B. MASTER REGISTER ACCOUNT FORM CARD (HIDDEN BY DEFAULT)
+         ========================================================================= -->
+    <!-- =========================================================================
+     B. MASTER REGISTER ACCOUNT FORM CARD (HIDDEN BY DEFAULT — REPAIRED EDITION)
+     ========================================================================= -->
+<main id="register-form-card" class="studio-login-overlay-card login-pop-entrance" style="position: relative; z-index: 5; width: 100%; max-width: 520px; background: rgba(20, 24, 22, 0.85) !important; backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 3.5rem 2.5rem; box-sizing: border-box; box-shadow: 0 40px 80px rgba(0,0,0,0.7); text-align: center; margin: 40px 20px; display: none;">
+    
+    <!-- HEADER BUTTON ROW: Logo Anchor Link and Back Trigger -->
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 2.8rem; box-sizing: border-box;">
+        <a href="index.html" style="display: inline-block; text-decoration: none;" aria-label="Return to Homepage">
+            <!-- FIXED: Re-embedded your verified studio logo asset pathway -->
+            
+        </a>
+        <span onclick="toggleFormViews('login')" class="login-back-home-anchor" style="cursor: pointer;">
+            &larr; Back to Log In
+        </span>
+    </div>
+
+    <!-- REGISTRATION EDITORIAL SUB-HEADER -->
+    <div style="text-align: left !important; width: 100%; margin-bottom: 2.5rem; box-sizing: border-box;">
+        <h1 style="font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 500; color: #FFFFFF !important; text-transform: uppercase; margin: 0 0 0.6rem 0; letter-spacing: 0.04rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+            Create Account
+        </h1>
+        <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255, 255, 255, 0.55) !important; margin: 0; font-weight: 300; line-height: 1.5;">
+            Register your organizational profile to open our project registry deck.
+        </p>
+    </div>
+
+    <!-- REGISTRATION FORM FIELD INPUT DECKS -->
+    <div style="width: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 1.4rem; box-sizing: border-box;">
+        
+        <!-- INPUT: FULL NAME -->
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; width: 100%;">
+            <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Full Name</label>
+            <input type="text" id="reg-name" placeholder="Enter your full name" class="login-chassis-field-input">
+        </div>
+
+        <!-- INPUT: EMAIL ADDRESS -->
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; width: 100%;">
+            <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Email Address</label>
+            <input type="email" id="reg-email" placeholder="you@example.com" class="login-chassis-field-input">
+        </div>
+
+        <!-- INPUT: PASSWORD -->
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; width: 100%;">
+            <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Password</label>
+            <input type="password" id="reg-pass" placeholder="••••••••" class="login-chassis-field-input">
+        </div>
+
+        <!-- INPUT: CONFIRM PASSWORD -->
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; width: 100%;">
+            <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Confirm Password</label>
+            <input type="password" id="reg-confirm" placeholder="••••••••" class="login-chassis-field-input">
+        </div>
+
+        <!-- KINETIC SIGN-UP ACTION TRIGGER TRIGGER -->
+        <button onclick="executeRegisterValidation()" class="login-submit-master-btn" style="background-color: #2e7d32 !important; border-color: #2e7d32 !important; color: #FFFFFF !important; margin-top: 0.8rem;">
+            Sign Up &rarr;
+        </button>
+
+        <!-- ALTERNATIVE BACK ROUTING LINK FOOTNOTE -->
+        <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.5); font-weight: 400; margin-top: 1rem;">
+            Already have an account? <span onclick="toggleFormViews('login')" style="color: #AF9272; font-weight: 600; cursor: pointer; text-decoration: underline;">Log In</span>
+        </div>
+        
+        
+    </div>
+</main>
+
+
+<style>
+
+
+/* =========================================================================
+   DYNAMIC DUAL SELECTION INTERFACES & TRANSITION RULES
+   ========================================================================= */
+
+/* --- 1. BASE INACTIVE NODE RESTING PROFILE STATES --- */
+.login-role-deck-node .role-icon-box {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    box-shadow: none !important;
+}
+
+.login-role-deck-node span {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-top: 0.5rem !important;
+    display: block !important;
+    transition: color 0.4s ease !important;
+}
+
+/* --- 2. THE DYNAMIC ACTIVE RULE MASK: OVERRIDES STYLES ON CLICK REVEAL --- */
+
+/* Changes the parent gold frame border line */
+.login-role-deck-node.active-role {
+    background: rgba(175, 146, 114, 0.05) !important;
+    border-color: #AF9272 !important;
+    box-shadow: 0 0 25px rgba(175, 146, 114, 0.1) !important;
+}
+
+/* FLIPS THE INNER CIRCLE ICON CONTAINER TO SOLID BRIGHT GOLD IN REAL-TIME */
+.login-role-deck-node.active-role .role-icon-box {
+    background: #AF9272 !important;
+    color: #111412 !important; /* Turns internal icon symbol extreme black contrast */
+    border-color: #AF9272 !important;
+    box-shadow: 0 0 15px rgba(175, 146, 114, 0.35) !important;
+}
+
+/* Changes text description to gold */
+.login-role-deck-node.active-role span {
+    color: #AF9272 !important;
+    font-weight: 600 !important;
+}
+
+
+
+
+   .login-pop-entrance {
+    animation: authCardRise 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes authCardRise {
+    0% { opacity: 0; transform: translateY(25px) scale(0.98); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.login-back-home-anchor {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #AF9272;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.1rem;
+    background: rgba(175, 146, 114, 0.08);
+    border: 1px solid rgba(175, 146, 114, 0.25);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.login-back-home-anchor:hover {
+    background-color: #AF9272 !important;
+    border-color: #AF9272 !important;
+    color: #111412 !important;
+}
+
+/* HIGH VISIBILITY ENTRY CHASSIS FIELDS */
+.login-chassis-field-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: #FFFFFF !important;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+}
+.login-chassis-field-input::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+.login-chassis-field-input:focus {
+    border-color: #AF9272 !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 0 15px rgba(175, 146, 114, 0.15);
+}
+
+/* ROLE DECK CELLS */
+.login-role-deck-node {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.login-role-deck-node .role-icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+}
+.login-role-deck-node span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+.login-role-deck-node:not(.active-role):hover { 
+    border-color: rgba(175, 146, 114, 0.4) !important; 
+    background: rgba(175, 146, 114, 0.02);
+}
+
+/* ACTIVE HIGHLIGHT SYSTEM HOOK */
+.login-role-deck-node.active-role {
+    background: rgba(175, 146, 114, 0.05) !important;
+    border-color: #AF9272 !important;
+    box-shadow: 0 0 25px rgba(175, 146, 114, 0.1);
+}
+.login-role-deck-node.active-role .role-icon-box { 
+    background: #AF9272 !important; 
+    color: #111412 !important; 
+}
+.login-role-deck-node.active-role span { 
+    color: #AF9272 !important; 
+    font-weight: 600; 
+}
+
+/* MASTER SUBMIT CAPSULE */
+.login-submit-master-btn {
+    width: 100%; padding: 1.1rem 0; background: #AF9272; border: 2px solid #AF9272; border-radius: 50px;
+    font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 700; color: #111412;
+    text-transform: uppercase; letter-spacing: 0.12rem; cursor: pointer; transition: all 0.4s ease; outline: none;
+}
+.login-submit-master-btn:hover { 
+    background-color: #FFFFFF !important; 
+    border-color: #FFFFFF !important; 
+    color: #111412 !important; 
+    transform: translateY(-2px); 
+    box-shadow: 0 10px 25px rgba(175,146,114,0.3);
+}
+
+/* SOCIAL DECK CAPSULES */
+.login-outsource-badge {
+    background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50px;
+    padding: 0.85rem 1rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+    font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; color: #FFFFFF; cursor: pointer; transition: all 0.4s ease;
+}
+.login-outsource-badge:hover { 
+    background: rgba(255, 255, 255, 0.05) !important; 
+    border-color: rgba(255, 255, 255, 0.2) !important; 
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    main.studio-login-overlay-card { padding: 2.5rem 1.3rem !important; margin: 20px 10px !important; }
+    .login-role-deck-node { padding: 1.2rem 0.4rem !important; }
+    .login-role-deck-node span { font-size: 0.78rem !important; }
+}
+</style>
+
+<!-- =========================================================================
+     JAVASCRIPT FUNCTIONAL INTERACTIVE ENGINE
+     ========================================================================= -->
+<script>
+let selectedRole = "partner";
+
+// 1. ACTIVE SELECT ROLE CARD SWITCHER
+function selectStudioRole(element, role) {
+    document.querySelectorAll('.login-role-deck-node').forEach(node => {
+        node.classList.remove('active-role');
+    });
+    element.classList.add('active-role');
+    selectedRole = role;
+}
+
+// 2. CARD DISPLACEMENT VIEW MANAGER (LOGIN VS REGISTER)
+function toggleFormViews(view) {
+    const loginCard = document.getElementById("login-form-card");
+    const regCard = document.getElementById("register-form-card");
+    
+    if(view === "register") {
+        loginCard.style.display = "none";
+        regCard.style.display = "block";
+    } else {
+        regCard.style.display = "none";
+        loginCard.style.display = "block";
+    }
+}
+
+// 3. TEXT FIELDS ERROR & SUCCESS ALERT HANDLERS
+function executeLoginValidation() {
+    const email = document.getElementById("login-email").value.trim();
+    const pass = document.getElementById("login-pass").value.trim();
+
+    if (!email || !pass) {
+        alert("Error: Please fill in all fields before requesting server log-in parameters.");
+        return;
+    }
+
+    alert("Successfully logged in! Access granted to Stackly Studio registry.");
+    window.location.href = "index.html"; /* Redirects cleanly back to Homepage loop */
+}
+
+function executeRegisterValidation() {
+    const name = document.getElementById("reg-name").value.trim();
+    const email = document.getElementById("reg-email").value.trim();
+    const pass = document.getElementById("reg-pass").value.trim();
+    const confirm = document.getElementById("reg-confirm").value.trim();
+
+    if (!name || !email || !pass || !confirm) {
+        alert("Error: Please complete all registration fields.");
+        return;
+    }
+
+    if (pass !== confirm) {
+        alert("Validation Error: Passwords do not match structural specifications.");
+        return;
+    }
+
+    alert("Account request submitted successfully! Returning to access terminal.");
+    toggleFormViews('login');
+}
+
+// 4. TIMED SOCIAL AUTHENTICATION LOADER (RE-ROUTES TO 404)
+function handleSocialConnect(platform) {
+    const buttons = document.querySelectorAll(".login-outsource-badge");
+    
+    buttons.forEach(btn => {
+        if(btn.innerText.includes(platform)) {
+            const textNode = btn.querySelector(".btn-txt");
+            const iconNode = btn.querySelector("i");
+            
+            // Replaces text with loading indicators dynamically
+            textNode.innerText = "Connecting...";
+            iconNode.className = "fa-solid fa-spinner fa-spin";
+            btn.style.pointerEvents = "none";
+            btn.style.opacity = "0.6";
+            
+            setTimeout(() => {
+                window.location.href = "404.html"; /* Precise 404 page target reroute after 2.5 seconds */
+            }, 2500);
+        }
+    });
+}
+</script>

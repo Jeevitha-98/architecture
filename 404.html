@@ -1,153 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 — Page Not Found | Stackly</title>
-    
-    <!-- Verified Google Fonts CDN Infrastructure Links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Verified FontAwesome Vector Icon Library CDN Link -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Studio — 404 Void Matrix</title>
+    <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
-    
-    <!-- SELF-CONTAINED EMBEDDED INLINE STYLES PREVENT BROKEN PATHS -->
     <style>
-      :root {
-          --bg-dark: #111412;
-          --accent-gold: #AF9272;
-          --white: #FFFFFF;
-          --font-serif: 'Cinzel', serif;
-          --font-sans: 'Inter', sans-serif;
-          --ease-premium: cubic-bezier(0.25, 1, 0.5, 1);
-      }
+        /* =========================================================================
+           AUTHENTICATION VIEW HIGH-CONTRAST OVERRIDES
+           ========================================================================= */
 
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
+        .error-body-shroud {
+            background-color: #111412;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+        }
 
-      .error-body-shroud {
-          background-color: var(--bg-dark);
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          overflow: hidden;
-      }
+        /* Opening card scale snap rise popup */
+        .error-pop-entrance {
+            animation: errorCardRise 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes errorCardRise {
+            0% { opacity: 0; transform: translateY(25px) scale(0.98); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
 
-      .error-view-terminal {
-          max-width: 650px;
-          width: 100%;
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          opacity: 0;
-          transform: translateY(20px);
-          animation: errorFadeIn 1.2s var(--ease-premium) forwards 0.2s;
-      }
+        /* DUAL ACTION GATEWAY CAPSULE PILLS */
+        .error-pill-cta {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.6rem !important;
+            padding: 1rem 2.2rem !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.85rem !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.1rem !important;
+            text-decoration: none !important;
+            border-radius: 50px !important;
+            cursor: pointer !important;
+            box-sizing: border-box !important;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+            white-space: nowrap !important;
+        }
 
-      .error-huge-metric {
-          font-family: var(--font-serif);
-          font-size: clamp(6rem, 12vw, 9.5rem);
-          font-weight: 600;
-          color: var(--accent-gold);
-          line-height: 1;
-          margin-bottom: 1.5rem;
-          letter-spacing: 0.1rem;
-      }
+        /* Button 1: Left Outlined Back Capsule */
+        .error-pill-cta.back-btn {
+            background: transparent !important;
+            color: #AF9272 !important;
+            border: 2px solid rgba(175, 146, 114, 0.4) !important;
+        }
+        .error-pill-cta.back-btn:hover {
+            background: rgba(175, 146, 114, 0.05) !important;
+            border-color: #AF9272 !important;
+            transform: translateY(-2px) !important;
+        }
+        .error-pill-cta.back-btn:hover i {
+            transform: translateX(-4px);
+        }
 
-      .error-heading-title {
-          font-family: var(--font-sans);
-          font-size: clamp(1.8rem, 4vw, 2.5rem);
-          font-weight: 600;
-          color: var(--white);
-          margin-bottom: 1.5rem;
-          letter-spacing: -0.01rem;
-      }
+        /* Button 2: Right Solid Gold Home Capsule */
+        .error-pill-cta.home-btn {
+            background: #AF9272 !important;
+            color: #111412 !important;
+            border: 2px solid #AF9272 !important;
+            box-shadow: 0 10px 25px rgba(175, 146, 114, 0.2) !important;
+        }
+        .error-pill-cta.home-btn:hover {
+            background-color: #FFFFFF !important;
+            border-color: #FFFFFF !important;
+            color: #111412 !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 12px 30px rgba(175, 146, 114, 0.4) !important;
+        }
+        .error-pill-cta.home-btn:hover i {
+            transform: translateX(3px) translateY(-3px);
+        }
 
-      .error-descriptive-summary {
-          font-family: var(--font-sans);
-          font-size: 1.05rem;
-          color: rgba(255, 255, 255, 0.65);
-          line-height: 1.6;
-          font-weight: 300;
-          max-width: 520px;
-          margin-bottom: 3.5rem;
-      }
+        /* Kinetic icon shifts */
+        .error-pill-cta i {
+            font-size: 0.9rem !important;
+            transition: transform 0.3s ease !important;
+        }
 
-      /* Custom pill format navigation CTA layout matching your wireframe design guidelines */
-      .error-pill-cta {
-          background-color: var(--white);
-          color: var(--bg-dark);
-          padding: 1.1rem 2.8rem;
-          font-size: 0.9rem;
-          font-weight: 600;
-          font-family: var(--font-sans);
-          text-decoration: none;
-          border-radius: 40px;
-          display: inline-flex;
-          align-items: center;
-          gap: 0.65rem;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-          transition: all 0.4s var(--ease-premium);
-      }
-
-      .error-pill-cta i {
-          font-size: 0.75rem;
-          transition: transform 0.4s var(--ease-premium);
-      }
-
-      .error-pill-cta:hover {
-          background-color: var(--accent-gold);
-          color: var(--white);
-          transform: translateY(-3px);
-          box-shadow: 0 15px 35px rgba(175, 146, 114, 0.3);
-      }
-
-      .error-pill-cta:hover i {
-          transform: translate(2px, -2px);
-      }
-
-      /* Entrance Animation Keyframe Logic */
-      @keyframes errorFadeIn {
-          from {
-              opacity: 0;
-              transform: translateY(20px);
-          }
-          to {
-              opacity: 1;
-              transform: translateY(0);
-          }
-      }
+        /* 📱 SMARTPHONE RESPONSIVE SECURITY BRACKETS */
+        @media (max-width: 575px) {
+            .error-view-terminal {
+                padding: 3rem 1.5rem !important;
+                margin: 20px !important;
+            }
+            .error-action-deck {
+                flex-direction: column !important;
+                gap: 1.2rem !important;
+                width: 100% !important;
+            }
+            .error-pill-cta {
+                width: 100% !important;
+                padding: 1.1rem !important;
+            }
+        }
     </style>
-  </head>
-  <body class="error-body-shroud">
-    
-    <!-- CENTRAL TERMINAL VIEW CONTROLLER CONSOLE -->
-    <div class="error-view-terminal">
-        <h1 class="error-huge-metric">404</h1>
-        <h2 class="error-heading-title">Oops! Page Not Found</h2>
-        <p class="error-descriptive-summary">The page you're looking for doesn't exist or has been moved. Let's get you back to building something great.</p>
+</head>
+<body class="error-body-shroud">
+
+    <!-- 1. FIXED BACKGROUND VIDEO LAYER -->
+    <div style="position: fixed; top: 0; left: 0; width: 100vw !important; height: 100vh !important; z-index: 1; pointer-events: none; overflow: hidden; background-color: #111412;">
+        <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100vw !important; min-height: 100vh !important; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover !important; opacity: 0.15 !important; filter: brightness(0.3) contrast(1.2) grayscale(25%);">
+            <source src="./Assests/8836203-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- 2. DIAGRAM DESIGN SCHEMATIC GRID NETWORKS -->
+    <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-image: linear-gradient(rgba(175, 146, 114, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(175, 146, 114, 0.015) 1px, transparent 1px); background-size: 45px 45px; pointer-events: none; z-index: 2;"></div>
+
+    <!-- =========================================================================
+         CENTRAL TERMINAL VIEW CONTROLLER CONSOLE (HIGH-CONTRAST GLASS)
+         ========================================================================= -->
+    <main class="error-view-terminal error-pop-entrance" style="position: relative; z-index: 5; width: 100%; max-width: 540px; background: rgba(20, 24, 22, 0.75); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 24px; padding: 4rem 3rem; box-sizing: border-box; box-shadow: 0 40px 80px rgba(0,0,0,0.7); text-align: center; margin: 20px;">
         
-        <div class="error-action-deck" style="display: flex; gap: 15px; justify-content: center;">
-            <!-- Button 1: Takes user back to the previous page they came from -->
+        <!-- Large Architectural Error Identifier -->
+        <h1 class="error-huge-metric" style="font-family: 'Cinzel', serif; font-size: clamp(5rem, 12vw, 7.5rem); font-weight: 700; color: #AF9272; margin: 0 0 1rem 0; line-height: 1; letter-spacing: 0.05rem; text-shadow: 0 4px 20px rgba(0,0,0,0.4); filter: drop-shadow(0 0 30px rgba(175,146,114,0.15));">
+            404
+        </h1>
+        
+        <!-- Refined Header Typography -->
+        <h2 class="error-heading-title" style="font-family: 'Cinzel', serif; font-size: clamp(1.4rem, 4vw, 1.8rem); font-weight: 500; color: #FFFFFF; text-transform: uppercase; margin: 0 0 1.2rem 0; letter-spacing: 0.04rem; line-height: 1.3;">
+            Oops! Page Not Found
+        </h2>
+        
+        <!-- High-Readability Descriptive Summary -->
+        <p class="error-descriptive-summary" style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255, 255, 255, 0.55); margin: 0 0 3rem 0; font-weight: 300; line-height: 1.65; max-width: 440px; margin-left: auto; margin-right: auto;">
+            The page you're looking for doesn't exist or has been moved. Let's get you back to building something great.
+        </p>
+        
+        <!-- Action Control Row Grid Layout -->
+        <div class="error-action-deck" style="display: flex; gap: 1.2rem; justify-content: center; align-items: center; width: 100%; box-sizing: border-box;">
+            
+            <!-- Button 1: Return to History Track (Font Awesome Icon Added) -->
             <a href="#" onclick="history.back(); return false;" class="error-pill-cta back-btn">
-                <i class="fa-solid fa-arrow-left"></i> BACK
+                <i class="fa-solid fa-arrow-left-long"></i> Back
             </a>
 
-            <!-- Button 2: Smooth return route steps directly back out into the home layout container -->
-            <a href="index.html" class="error-pill-cta">
+            <!-- Button 2: Direct Outbound Home Track (Font Awesome Icon Added) -->
+            <a href="index.html" class="error-pill-cta home-btn">
                 Go to Home <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
+            
         </div>
-    </div>
+    </main>
 
 </body>
 </html>
-

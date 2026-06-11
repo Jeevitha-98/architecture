@@ -89,15 +89,20 @@
     
     <!-- FIX: Swaps out the Quote button for the clean 3-line hamburger nodes dynamically on mobile screens -->
     <div class="header-actions">
-        <a href="404.html" class="quote-cta-btn">Get Free Quote <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        
-        <button class="mobile-menu-toggle" id="menu-toggle-trigger" aria-label="Toggle Menu">
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-        </button>
-    </div>
-  </div>
+    <!-- Inline styles shifted to display the architectural gold profile as the permanent base state -->
+    <a href="login.html" class="quote-cta-btn" style="color: #AF9272 !important; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.4rem; border-radius: 30px; border: 1px solid #AF9272 !important; background: rgba(175, 146, 114, 0.05); transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important; box-shadow: 0 0 15px rgba(175, 146, 114, 0.45) !important; text-shadow: 0 0 8px rgba(175, 146, 114, 0.35);" 
+       onmouseover="this.style.color='#FFFFFF'; this.style.borderColor='#FFFFFF'; this.style.boxShadow='0 0 15px rgba(255, 255, 255, 0.25)'; this.style.textShadow='none';" 
+       onmouseout="this.style.color='#AF9272'; this.style.borderColor='#AF9272'; this.style.boxShadow='0 0 15px rgba(175, 146, 114, 0.45)'; this.style.textShadow='0 0 8px rgba(175, 146, 114, 0.35)';">
+        Log in <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+    </a>
+    
+    <button class="mobile-menu-toggle" id="menu-toggle-trigger" aria-label="Toggle Menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+    </button>
+</div>
+
 </header>
 <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -704,7 +709,7 @@
 
         <!-- PRIMARY CALL-TO-ACTION CORE CAPSULE BUTTON -->
         <div style="text-align: center !important; width: 100% !important; display: flex !important; justify-content: center !important;">
-            <a href="contect.html" class="portfolio-discovery-cta" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; background: #FFFFFF; color: #111412; padding: 1.1rem 3.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1rem; text-decoration: none; border-radius: 50px; border: 2px solid #FFFFFF; cursor: pointer; box-shadow: 0 15px 35px rgba(0,0,0,0.35); box-sizing: border-box;">
+            <a href="contact.html" class="portfolio-discovery-cta" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; background: #FFFFFF; color: #111412; padding: 1.1rem 3.5rem; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1rem; text-decoration: none; border-radius: 50px; border: 2px solid #FFFFFF; cursor: pointer; box-shadow: 0 15px 35px rgba(0,0,0,0.35); box-sizing: border-box;">
                 Propose a custom blueprint
             </a>
         </div>
@@ -1325,7 +1330,7 @@
                     <li><span class="contact-dot-gold"></span> <a href="mailto:info@stackly.com">info@stackly.com</a></li>
                 </ul>
                 <div class="footer-cta-container-row">
-                    <a href="404.html" class="footer-gold-pill-btn">Subscribe</a>
+                    <a href="login.html" class="footer-gold-pill-btn">Subscribe</a>
                 </div>
             </div>
 
