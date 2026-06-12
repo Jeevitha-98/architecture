@@ -15,7 +15,14 @@
 
     <!-- B. LEFT SIDEBAR LAYOUT DRAWER FRAMEWORK -->
     <aside id="client-sidebar-panel" class="sidebar">
-        <div class="sidebar-brand">Stackly<span>.Client</span></div>
+       <!-- CORRECTED ACTIVE BRAND LINK FOR THE CLIENT PORTAL -->
+<div class="sidebar-brand">
+    <!-- Clicking the text routes the user instantly back to your root homepage index -->
+    <a href="client-dashboard.html" onclick="forcePageCleanRefresh(event)" style="text-decoration: none !important; color: inherit !important; display: inline-flex; align-items: center; cursor: pointer;">
+        Stackly<span>.Client</span>
+    </a>
+</div>
+
 
         <!-- 5 Unified Core Directory Links Stack (Excluding Logout Separator) -->
         <ul class="nav-menu">

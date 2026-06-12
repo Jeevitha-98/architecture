@@ -10,8 +10,15 @@
 <body>
 
 <!-- LEFT STICKY NAVIGATION SIDEBAR -->
+<!-- LEFT SIDEBAR WITH ACTIVE HOME REDIRECT LINK -->
 <aside class="sidebar">
-    <div class="sidebar-brand">Stackly<span>.Partner</span></div>
+    <div class="sidebar-brand">
+        <!-- Clicking the text triggers an instant redirect to index.html -->
+        <a href="partner-dashboard.html" onclick="forcePageCleanRefresh(event)" style="text-decoration: none !important; color: inherit !important; display: inline-flex; align-items: center; cursor: pointer;">
+            Stackly<span>.Partner</span>
+        </a>
+    </div>
+
     <ul class="nav-menu">
         <li class="nav-item active" onclick="switchDashboardTab(this, 'partner-overview')"><a><i class="fa-solid fa-chart-pie"></i> Core Overview</a></li>
         <li class="nav-item" onclick="switchDashboardTab(this, 'partner-blueprints')"><a><i class="fa-solid fa-compass-drafting"></i> Blueprint Registry</a></li>

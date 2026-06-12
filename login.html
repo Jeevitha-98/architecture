@@ -80,10 +80,52 @@
             </div>
 
             <!-- PASSWORD INPUT LAYER -->
-            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; width: 100%;">
-                <label for="login-pass" style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Password</label>
-                <input type="password" id="login-pass" placeholder="Enter security key" class="login-chassis-field-input">
-            </div>
+           <!-- CORRECTED PASSWORD WRAPPER WITH INTEGRATED EYE ICON -->
+<!-- REPAIRED PASSWORD WRAPPER WITH DIRECT INLINE SVG EYE ICON -->
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; width: 100%; position: relative !important;">
+    <label for="login-pass" style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Password</label>
+    <input type="password" id="login-pass" placeholder="Enter security key" class="login-chassis-field-input" style="width: 100% !important; padding-right: 3rem !important; box-sizing: border-box !important;">
+    
+    <!-- RESTING DEFAULT STATE: Slashed Eye icon loads because password text is hidden behind dots -->
+    <div id="togglePassword" style="position: absolute !important; right: 1.25rem !important; bottom: 0.85rem !important; cursor: pointer !important; z-index: 10 !important; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px;">
+        <svg id="eye-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="1" y1="1" x2="23" y2="23" stroke="#AF9272" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </div>
+</div>
+
+<script>
+
+
+const loginClickButton = document.getElementById("togglePassword");
+const loginInputTextBar = document.getElementById("login-pass");
+const loginVectorCanvas = document.getElementById("eye-icon-svg");
+
+if (loginClickButton && loginInputTextBar && loginVectorCanvas) {
+    loginClickButton.addEventListener("click", function () {
+        // 1. Check if the input is currently secure password dots
+        const textIsHiddenBehindDots = loginInputTextBar.getAttribute("type") === "password";
+        
+        if (textIsHiddenBehindDots) {
+            // SHOW PASSWORD TEXT: Change dots to text and show the CLEAN OPEN EYE
+            loginInputTextBar.setAttribute("type", "text");
+            loginVectorCanvas.innerHTML = `
+                <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            `;
+        } else {
+            // HIDE PASSWORD TEXT: Change text to dots and show the SLASHED EYE
+            loginInputTextBar.setAttribute("type", "password");
+            loginVectorCanvas.innerHTML = `
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="1" y1="1" x2="23" y2="23" stroke="#AF9272" stroke-width="2" stroke-linecap="round"/>
+            `;
+        }
+    });
+}
+
+</script>
 
             <!-- FORGOT LINK -->
             <div style="text-align: right !important; width: 100%; box-sizing: border-box; margin-top: -0.2rem;">
@@ -166,16 +208,98 @@
         </div>
 
         <!-- INPUT: PASSWORD -->
-        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; width: 100%;">
-            <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Password</label>
-            <input type="password" id="reg-pass" placeholder="••••••••" class="login-chassis-field-input">
-        </div>
+        <!-- REPAIRED SIGN UP PASSWORD WRAPPER WITH INLINE SVG EYE ICON -->
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; width: 100%; position: relative !important;">
+    <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Password</label>
+    <input type="password" id="reg-pass" placeholder="••••••••" class="login-chassis-field-input" style="width: 100% !important; padding-right: 3rem !important; box-sizing: border-box !important;">
+    
+    <!-- RESTING DEFAULT STATE: Slashed Eye icon loads because password text is hidden behind dots -->
+    <div id="toggleRegPassword" style="position: absolute !important; right: 1.25rem !important; bottom: 0.85rem !important; cursor: pointer !important; z-index: 10 !important; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px;">
+        <svg id="reg-eye-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org" style="display: block !important;">
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="1" y1="1" x2="23" y2="23" stroke="#AF9272" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </div>
+</div>
+
 
         <!-- INPUT: CONFIRM PASSWORD -->
-        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; width: 100%;">
-            <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Confirm Password</label>
-            <input type="password" id="reg-confirm" placeholder="••••••••" class="login-chassis-field-input">
-        </div>
+       <!-- REPAIRED SIGN UP CONFIRM PASSWORD WRAPPER WITH INLINE SVG EYE ICON -->
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; width: 100%; position: relative !important;">
+    <label style="font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.5); letter-spacing: 0.1rem; text-transform: uppercase;">Confirm Password</label>
+    <input type="password" id="reg-confirm" placeholder="••••••••" class="login-chassis-field-input" style="width: 100% !important; padding-right: 3rem !important; box-sizing: border-box !important;">
+    
+    <!-- RESTING DEFAULT STATE: Slashed Eye icon loads because confirmation text is hidden behind dots -->
+    <div id="toggleConfirmPassword" style="position: absolute !important; right: 1.25rem !important; bottom: 0.85rem !important; cursor: pointer !important; z-index: 10 !important; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px;">
+        <svg id="confirm-eye-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org" style="display: block !important;">
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="1" y1="1" x2="23" y2="23" stroke="#AF9272" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </div>
+</div>
+
+
+        <script>
+            /* =========================================================================
+   QA FIX: SIGN UP PASSWORD EYE MASK CONTROLLER
+   ========================================================================= */
+const regEyeClickNode = document.getElementById("toggleRegPassword");
+const regPasswordField = document.getElementById("reg-pass");
+const regEyeSvgPath = document.getElementById("reg-eye-icon-svg");
+
+if (regEyeClickNode && regPasswordField && regEyeSvgPath) {
+    regEyeClickNode.addEventListener("click", function () {
+        // 1. Check if the password field is currently hidden (type password)
+        const isCurrentlyHidden = regPasswordField.getAttribute("type") === "password";
+        
+        if (isCurrentlyHidden) {
+            // SHOW THE PASSWORD TEXT: Change dots to text and show the CLEAN OPEN EYE
+            regPasswordField.setAttribute("type", "text");
+            regEyeSvgPath.innerHTML = `
+                <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            `;
+        } else {
+            // HIDE THE PASSWORD TEXT: Change text back to dots and show the SLASHED EYE
+            regPasswordField.setAttribute("type", "password");
+            regEyeSvgPath.innerHTML = `
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="1" y1="1" x2="23" y2="23" stroke="#AF9272" stroke-width="2" stroke-linecap="round"/>
+            `;
+        }
+    });
+}
+/* =========================================================================
+   QA FIX: SIGN UP CONFIRM PASSWORD EYE MASK CONTROLLER
+   ========================================================================= */
+const confirmEyeClickNode = document.getElementById("toggleConfirmPassword");
+const confirmPasswordField = document.getElementById("reg-confirm");
+const confirmEyeSvgPath = document.getElementById("confirm-eye-icon-svg");
+
+if (confirmEyeClickNode && confirmPasswordField && confirmEyeSvgPath) {
+    confirmEyeClickNode.addEventListener("click", function () {
+        // 1. Check if the confirm input is currently masked (type password)
+        const isCurrentlyHidden = confirmPasswordField.getAttribute("type") === "password";
+        
+        if (isCurrentlyHidden) {
+            // SHOW THE PASSWORD TEXT: Change dots to text and show the CLEAN OPEN EYE
+            confirmPasswordField.setAttribute("type", "text");
+            confirmEyeSvgPath.innerHTML = `
+                <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            `;
+        } else {
+            // HIDE THE PASSWORD TEXT: Change text back to dots and show the SLASHED EYE
+            confirmPasswordField.setAttribute("type", "password");
+            confirmEyeSvgPath.innerHTML = `
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" stroke="#AF9272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="1" y1="1" x2="23" y2="23" stroke="#AF9272" stroke-width="2" stroke-linecap="round"/>
+            `;
+        }
+    });
+}
+
+        </script>
 
         <!-- KINETIC SIGN-UP ACTION TRIGGER TRIGGER -->
         <button onclick="executeRegisterValidation()" class="login-submit-master-btn" style="background-color: #AF9272 !important; border-color: #2e7d32 !important; color: black !important; margin-top: 0.8rem;">
@@ -261,23 +385,38 @@
 
 .login-back-home-anchor {
     font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    color: #AF9272;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.4rem;
     padding: 0.5rem 1.1rem;
-    background: rgba(175, 146, 114, 0.08);
-    border: 1px solid rgba(175, 146, 114, 0.25);
     border-radius: 30px;
+    box-sizing: border-box;
+
+    /* FIXED BASE STATE: Solid white background with pure black text */
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 1px solid #FFFFFF !important;
+    
     transition: all 0.3s ease;
 }
+
+/* INTERACTIVE ACTIVE HOVER AND TOUCH FLOW STATE */
 .login-back-home-anchor:hover {
+    /* Background completely morphs to solid signature gold fill */
     background-color: #AF9272 !important;
+    background: #AF9272 !important;
     border-color: #AF9272 !important;
-    color: #111412 !important;
+    
+    /* Text shifts to crisp white for ultra-clean contrast over gold */
+    color: #FFFFFF !important;
+    
+    /* Optional: Premium soft gold drop shadow glow */
+    box-shadow: 0 8px 20px rgba(175, 146, 114, 0.3) !important;
+    transform: translateY(-1px);
 }
 
 /* HIGH VISIBILITY ENTRY CHASSIS FIELDS */
