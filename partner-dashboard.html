@@ -32,6 +32,12 @@
 
     <!-- TOP NAVBAR -->
     <nav class="top-navbar">
+      <div class="menu-toggle" onclick="toggleSidebar(event)">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
         <h2 class="nav-title" id="dashboard-header-title">Core Overview</h2>
 
         <div class="user-profile" onclick="toggleProfileDropdown(event)" style="cursor:pointer; position:relative;">
@@ -64,48 +70,1612 @@
 
     <div class="dashboard-body">
 
-        <!-- TAB 1 -->
-        <div id="partner-overview" class="dashboard-tab-panel active-panel">
-            <div class="metrics-grid">
-                <div class="metric-card"><h3>Active Blueprints</h3><div class="metric-val">18</div></div>
-                <div class="metric-card"><h3>Calculations Pending</h3><div class="metric-val">04</div></div>
-                <div class="metric-card"><h3>Quarry Slabs Inspected</h3><div class="metric-val">42</div></div>
-                <div class="metric-card"><h3>Handover Efficiency</h3><div class="metric-val">99.8%</div></div>
+       <!-- TAB 1: EXECUTIVE PARTNER OVERVIEW MATRIX -->
+<div id="partner-overview" class="dashboard-tab-panel active-panel">
+    
+    <!-- 1. HIGH-DENSITY METRICS ROW GRID -->
+    <div class="metrics-grid">
+        <div class="metric-card metric-gold">
+            <div class="m-card-header">
+                <h3>Active Blueprints</h3>
+                <i class="fa-solid fa-scroll"></i>
+            </div>
+            <div class="metric-val">18</div>
+            <div class="metric-sub">Across 6 municipal zones</div>
+        </div>
+        
+        <div class="metric-card metric-amber">
+            <div class="m-card-header">
+                <h3>Calculations Pending</h3>
+                <i class="fa-solid fa-calculator"></i>
+            </div>
+            <div class="metric-val">04</div>
+            <div class="metric-sub">Structural density review</div>
+        </div>
+        
+        <div class="metric-card metric-green">
+            <div class="m-card-header">
+                <h3>Quarry Slabs Inspected</h3>
+                <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="metric-val">42</div>
+            <div class="metric-sub">Carrara and Alpine marble</div>
+        </div>
+        
+        <div class="metric-card metric-purple">
+            <div class="m-card-header">
+                <h3>Handover Efficiency</h3>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="metric-val">99.8%</div>
+            <div class="metric-sub">Turnkey timeline tolerance</div>
+        </div>
+    </div>
+
+    <!-- 2. TWO-COLUMN SPLIT ANALYTICS INFRASTRUCTURE -->
+    <div class="dashboard-split-row">
+        
+        <!-- LEFT COLUMN: BLOCK SHEET CORE TABLE (PROCUREMENT LOG) -->
+        <div class="dashboard-data-box table-box-container">
+            <div class="data-box-title-bar">
+                <h4>Recent Stone Procurement Logs</h4>
+                <span class="badge badge-gold">Live Tracking</span>
+            </div>
+            <div class="table-scroll-track">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Material Batch</th>
+                            <th>Origin Source</th>
+                            <th>Volume CBM</th>
+                            <th>Inspection Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Carrara White Splendor</strong></td>
+                            <td>Tuscany, Italy</td>
+                            <td>14.5m³</td>
+                            <td><span class="badge badge-green">Grade A1</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alpine Deep Verde</strong></td>
+                            <td>Tyrol, Austria</td>
+                            <td>8.2m³</td>
+                            <td><span class="badge badge-green">Grade A1</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Calacatta Gold Oro</strong></td>
+                            <td>Apuan Alps, Italy</td>
+                            <td>11.0m³</td>
+                            <td><span class="badge badge-amber">Grade A2</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pietra Grey Limestone</strong></td>
+                            <td>Isfahan, Iran</td>
+                            <td>19.4m³</td>
+                            <td><span class="badge badge-purple">In Transit</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <!-- TAB 2 -->
-        <div id="partner-blueprints" class="dashboard-tab-panel">
-            <h3>Blueprint Registry</h3>
+        <!-- RIGHT COLUMN: CHRONO TIMELINE STATUS FEED -->
+        <div class="dashboard-data-box timeline-box-container">
+            <div class="data-box-title-bar">
+                <h4>Project Timeline Updates</h4>
+            </div>
+            <div class="timeline-feed-track">
+                
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-gold"></div>
+                    <div class="tl-feed-content">
+                        <h5>Volumetric Lighting Matrix Locked</h5>
+                        <p>Alpha-3 residential project blueprints approved for solar tracking clearance lines.</p>
+                        <span class="tl-feed-timestamp">Today, 09:14 AM</span>
+                    </div>
+                </div>
+
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-green"></div>
+                    <div class="tl-feed-content">
+                        <h5>Timber Density Index Verified</h5>
+                        <p>Solid European Oak shipments checked directly at mountain yards for moisture calibration stability.</p>
+                        <span class="tl-feed-timestamp">Yesterday, 04:30 PM</span>
+                    </div>
+                </div>
+
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-purple"></div>
+                    <div class="tl-feed-content">
+                        <h5>Zoning Clearance Lodged</h5>
+                        <p>Turnkey commercial development drafting plans submitted to municipal architectural boards.</p>
+                        <span class="tl-feed-timestamp">June 10, 2026</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+    </div>
+</div>
+<style>
+    /* ==========================================================================
+   STACKLY ACCESS PORTAL — PARTNER OVERVIEW INFRASTRUCTURE
+   ========================================================================== */
+
+/* 1. THE METRICS CARDS ROW GRID */
+.metrics-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
+    width: 100% !important;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 16px !important;
+    padding: 1.5rem !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease !important;
+}
+
+.m-card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.metric-card h3 {
+    font-size: 0.78rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    margin: 0 !important;
+    font-weight: 500 !important;
+}
+
+.m-card-header i {
+    font-size: 1rem !important;
+    opacity: 0.35;
+}
+
+.metric-val {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.35rem !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.metric-sub {
+    font-size: 0.7rem !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* BRAND ACCENT CHROMATIC PIPELINES */
+.metric-gold .metric-val, .metric-gold i { color: #AF9272 !important; }
+.metric-amber .metric-val, .metric-amber i { color: #FBBF24 !important; }
+.metric-green .metric-val, .metric-green i { color: #4ADE80 !important; }
+.metric-purple .metric-val, .metric-purple i { color: #A78BFA !important; }
+
+.metric-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(175, 146, 114, 0.25) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 2. THE TWO-COLUMN SIDE-BY-SIDE ANALYTICS GRID */
+.dashboard-split-row {
+    display: grid !important;
+    grid-template-columns: 1.3fr 1fr !important; /* Asymmetric grid favoring tabular logs */
+    gap: 1.5rem !important;
+    width: 100% !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.dashboard-data-box {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 16px !important;
+    padding: 1.8rem !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.data-box-title-bar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 1.5rem !important;
+    width: 100% !important;
+}
+
+.data-box-title-bar h4 {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.95rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin: 0 !important;
+}
+
+/* BRAND DIRECTORY PIPELINE UNIFIED BADGES */
+.badge {
+    font-size: 0.68rem !important;
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02rem !important;
+}
+.badge-gold { background: rgba(175,146,114,0.15) !important; color: #AF9272 !important; border: 1px solid rgba(175,146,114,0.25) !important; }
+.badge-green { background: rgba(74,222,128,0.1) !important; color: #4ADE80 !important; border: 1px solid rgba(74,222,128,0.2) !important; }
+.badge-amber { background: rgba(251,191,36,0.1) !important; color: #FBBF24 !important; border: 1px solid rgba(251,191,36,0.2) !important; }
+.badge-purple { background: rgba(167,139,250,0.1) !important; color: #A78BFA !important; border: 1px solid rgba(167,139,250,0.2) !important; }
+
+/* 3. PROCUREMENT TABULAR SYSTEM OVERRIDES */
+.table-scroll-track {
+    width: 100% !important;
+    overflow-x: auto !important;
+}
+
+table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+th {
+    font-size: 0.7rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05rem !important;
+    color: rgba(255, 255, 255, 0.35) !important;
+    padding: 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    text-align: left !important;
+    font-weight: 500 !important;
+}
+
+td {
+    padding: 1.1rem 1rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.025) !important;
+    font-size: 0.84rem !important;
+}
+
+tr:last-child td { border-bottom: none !important; }
+tr:hover td { background: rgba(255, 255, 255, 0.015) !important; }
+
+/* 4. CHRONO TIMELINE STATUS SYSTEM FEED */
+.timeline-feed-track {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    position: relative !important;
+}
+
+.timeline-feed-item {
+    display: flex !important;
+    gap: 1.2rem !important;
+    position: relative !important;
+}
+
+/* Vertical track connector strip rule */
+.timeline-feed-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    width: 1px;
+    height: calc(100% + 1rem);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.tl-status-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin-top: 4px;
+    flex-shrink: 0;
+    z-index: 2;
+    background-color: var(--studio-dark);
+}
+.dot-gold { border: 2px solid #AF9272 !important; }
+.dot-green { border: 2px solid #4ADE80 !important; }
+.dot-purple { border: 2px solid #A78BFA !important; }
+
+.tl-feed-content { flex: 1 !important; display: flex !important; flex-direction: column !important; }
+.tl-feed-content h5 { font-size: 0.88rem !important; font-weight: 600; margin: 0 0 0.35rem 0; color: rgba(255,255,255,0.9); }
+.tl-feed-content p { font-size: 0.78rem !important; line-height: 1.5; color: rgba(255,255,255,0.5); margin: 0 0 0.5rem 0; text-align: left; }
+.tl-feed-timestamp { font-size: 0.68rem !important; color: rgba(255,255,255,0.25); font-weight: 500; }
+
+
+
+
+/* ==========================================================================
+   MULTI-DEVICE CLIENT OVERVIEW RESPONSIVE ADDS
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS & LANDSCAPE COUCH VIEWS (Max-Width: 1120px) --- */
+@media screen and (max-width: 1120px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Shifts to a clean 2x2 grid */
+        gap: 1.25rem !important;
+    }
+    .dashboard-split-row {
+        grid-template-columns: 1fr !important; /* Stacks the tables and timeline columns vertically */
+        gap: 1.5rem !important;
+    }
+}
+
+/* --- 2. SMARTPHONES & MOBILE FOLDS (Max-Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr !important; /* Stacks metrics cards completely vertically */
+        gap: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .dashboard-data-box {
+        padding: 1.25rem !important; /* Compacts padding boundaries on narrow displays */
+        border-radius: 12px !important;
+    }
+
+    th, td {
+        padding: 0.85rem 0.75rem !important; /* Packs down table sizing loops */
+        font-size: 0.78rem !important;
+    }
+
+    .data-box-title-bar h4 {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* --- 3. SMALLEST CELLPHONE PLATES (Max-Width: 480px) --- */
+@media screen and (max-width: 480px) {
+    th {
+        display: none !important; /* Hides horizontal heading rows on extreme screens */
+    }
+    
+    table, tbody, tr, td {
+        display: block !important; /* Transforms standard table into structural block rows */
+        width: 100% !important;
+    }
+    
+    tr {
+        margin-bottom: 1rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    td {
+        text-align: right !important;
+        padding: 0.4rem 0 !important;
+        border: none !important;
+        position: relative !important;
+    }
+
+    /* Generates micro-text data annotations inline on the left hand edge margin */
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+        font-weight: 600;
+    }
+}
+
+</style>
+
+        <!-- TAB 2 -->
+       <!-- TAB CONTAINER: PREMIUM PARTNER BLUEPRINT REGISTRY -->
+<div id="partner-blueprints" class="dashboard-tab-panel">
+    
+    <!-- SECTION HEADER BLOCK -->
+    <div class="panel-main-header-block">
+        <h3>Blueprint Registry</h3>
+        <p>Active structural drafting files, municipal building permits, and engineering matrix records database.</p>
+    </div>
+
+    <!-- 1. BLUEPRINT STATUS METRICS SUMMARY GRID -->
+    <div class="metrics-grid">
+        <div class="metric-card metric-gold">
+            <div class="m-card-header">
+                <h3>Total Registered Drafts</h3>
+                <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <div class="metric-val">114</div>
+            <div class="metric-sub">CAD & BIM cloud files</div>
+        </div>
+        
+        <div class="metric-card metric-green">
+            <div class="m-card-header">
+                <h3>Approved Code Clearances</h3>
+                <i class="fa-solid fa-stamp"></i>
+            </div>
+            <div class="metric-val">96</div>
+            <div class="metric-sub">Municipal zoning locks</div>
+        </div>
+        
+        <div class="metric-card metric-amber">
+            <div class="m-card-header">
+                <h3>Under Revision Review</h3>
+                <i class="fa-solid fa-pen-ruler"></i>
+            </div>
+            <div class="metric-val">12</div>
+            <div class="metric-sub">Moisture & load updates</div>
+        </div>
+        
+        <div class="metric-card metric-purple">
+            <div class="m-card-header">
+                <h3>Handover Vault Status</h3>
+                <i class="fa-solid fa-box-archive"></i>
+            </div>
+            <div class="metric-val">100%</div>
+            <div class="metric-sub">Secure backup mirrored</div>
+        </div>
+    </div>
+
+    <!-- 2. TWO-COLUMN SPLIT SCHEMATICS INFRASTRUCTURE -->
+    <div class="dashboard-split-row blueprint-split-matrix">
+        
+        <!-- LEFT PANEL COLUMN: ACTIVE BLUEPRINT LEDGER DATA TABLE -->
+        <div class="dashboard-data-box table-box-container">
+            <div class="data-box-title-bar">
+                <h4>Master Blueprint Ledger</h4>
+                <span class="badge badge-gold">Active Schematics</span>
+            </div>
+            <div class="table-scroll-track">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Drawing Reference</th>
+                            <th>Project Model Track</th>
+                            <th>Revision Code</th>
+                            <th>Zoning Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Drawing Reference"><strong>#DWG-ALPHA-301</strong></td>
+                            <td>Volumetric Natural Light Villa</td>
+                            <td>v4.2.1</td>
+                            <td><span class="badge badge-green">Permit Issued</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Drawing Reference"><strong>#DWG-OMEGA-104</strong></td>
+                            <td>Commercial Tower Foundation</td>
+                            <td>v1.0.8</td>
+                            <td><span class="badge badge-green">Permit Issued</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Drawing Reference"><strong>#DWG-SIGMA-08B</strong></td>
+                            <td>Eco-Minimalist Shroud Façade</td>
+                            <td>v2.1.0</td>
+                            <td><span class="badge badge-amber">Under Review</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Drawing Reference"><strong>#DWG-DELTA-502</strong></td>
+                            <td>Stone Continuity Core Grid</td>
+                            <td>v0.4.5</td>
+                            <td><span class="badge badge-purple">Drafting Tier</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL COLUMN: LIVE REVISION / CALCULATION FEED TIMELINE -->
+        <div class="dashboard-data-box timeline-box-container">
+            <div class="data-box-title-bar">
+                <h4>Engineering Revision Log</h4>
+            </div>
+            <div class="timeline-feed-track">
+                
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-gold"></div>
+                    <div class="tl-feed-content">
+                        <h5>Load Calculations Repaired</h5>
+                        <p>#DWG-SIGMA-08B dead-weight mass index adjusted to align safely with Alpine marble specifications.</p>
+                        <span class="tl-feed-timestamp">Today, 11:05 AM</span>
+                    </div>
+                </div>
+
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-green"></div>
+                    <div class="tl-feed-content">
+                        <h5>BIM Model Sync Completed</h5>
+                        <p>3D cross-axis glass projection arrays compiled across server networks successfully.</p>
+                        <span class="tl-feed-timestamp">Yesterday, 05:40 PM</span>
+                    </div>
+                </div>
+
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-purple"></div>
+                    <div class="tl-feed-content">
+                        <h5>Zoning Modification Lodged</h5>
+                        <p>Altered spatial boundary vectors submitted to regional development verification boards.</p>
+                        <span class="tl-feed-timestamp">June 08, 2026</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    /* ==========================================================================
+   STACKLY ACCESS PORTAL — BLUEPRINT REGISTRY LAYER OVERRIDES
+   ========================================================================== */
+
+/* Custom color tracking channels for dashboard drafting metric vectors */
+.metric-card i.fa-compass-drafting { color: #AF9272 !important; }
+.metric-card i.fa-stamp { color: #4ADE80 !important; }
+.metric-card i.fa-pen-ruler { color: #FBBF24 !important; }
+.metric-card i.fa-box-archive { color: #A78BFA !important; }
+
+/* Structural table font contrast normalization metrics */
+#partner-blueprints td strong {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+
+/* ==========================================================================
+   BLUEPRINT REGISTRY LAYER — MULTI-DEVICE Breakpoints SAFETY
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS & SCREEN FOLDS (Max-Width: 1120px) --- */
+@media screen and (max-width: 1120px) {
+    #partner-blueprints .metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Converts metrics into a 2x2 block grid */
+        gap: 1.25rem !important;
+    }
+    #partner-blueprints .dashboard-split-row {
+        grid-template-columns: 1fr !important; /* Stacks data table and revision logs vertically */
+        gap: 1.5rem !important;
+    }
+}
+
+/* --- 2. STANDARD HANDHELD SMARTPHONES (Max-Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    #partner-blueprints .metrics-grid {
+        grid-template-columns: 1fr !important; /* Single-column layout list flow */
+        gap: 1rem !important;
+    }
+    #partner-blueprints .dashboard-data-box {
+        padding: 1.25rem !important;
+    }
+}
+
+/* --- 3. SMALL MOBILE VIEWP_ORTS (Max-Width: 480px) --- */
+@media screen and (max-width: 480px) {
+    /* Completely converts horizontal table layout structures into block rows */
+    #partner-blueprints th { 
+        display: none !important; 
+    }
+    #partner-blueprints table, 
+    #partner-blueprints tbody, 
+    #partner-blueprints tr, 
+    #partner-blueprints td { 
+        display: block !important; 
+        width: 100% !important; 
+    }
+    #partner-blueprints tr {
+        margin-bottom: 1.25rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+        padding-bottom: 0.75rem !important;
+        box-sizing: border-box !important;
+    }
+    #partner-blueprints td {
+        text-align: right !important;
+        padding: 0.45rem 0 !important;
+        position: relative !important;
+        border: none !important;
+    }
+    /* Generates micro-text data annotations inline on the left hand edge margin */
+    #partner-blueprints td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+        font-weight: 600;
+        letter-spacing: 0.02rem;
+    }
+}
+
+</style>
 
         <!-- TAB 3 -->
-        <div id="partner-renderings" class="dashboard-tab-panel">
-            <h3>Rendering Queue</h3>
+        <!-- TAB CONTAINER: PREMIUM PARTNER RENDERING QUEUE -->
+<div id="partner-renderings" class="dashboard-tab-panel">
+    
+    <!-- SECTION HEADER BLOCK -->
+    <div class="panel-main-header-block">
+        <h3>Rendering Queue</h3>
+        <p>Live tracking of cloud server cluster pipelines generating high-end photorealistic 3D visualization sets.</p>
+    </div>
+
+    <!-- UNIQUE MINIMALIST JOB QUEUE MATRIX GRID -->
+    <div class="render-queue-matrix-grid">
+        
+        <!-- JOB CARD 01: PROCESSING CURRENT -->
+        <div class="render-job-card processing-state">
+            <div class="job-card-header-bar">
+                <span class="job-id-tag">#RN-ALPHA-3</span>
+                <span class="job-status-badge badge-amber"><i class="fa-solid fa-spinner fa-spin"></i> Processing</span>
+            </div>
+            <h4>Penthouse Volumetric Light Study</h4>
+            <p class="job-meta-specs">V-Ray Core Engine &bull; Ultra 4K UHD &bull; Frame 740 / 1200</p>
+            
+            <div class="job-progress-system">
+                <div class="job-progress-bar-track">
+                    <div class="job-progress-fill-line" style="width: 62%;"></div>
+                </div>
+                <div class="job-progress-percentage-label">62% Complete</div>
+            </div>
         </div>
 
-        <!-- TAB 4 -->
-        <div id="partner-sourcing" class="dashboard-tab-panel">
-            <h3>Sourcing Logs</h3>
+        <!-- JOB CARD 02: QUEUED STAGING -->
+        <div class="render-job-card queued-state">
+            <div class="job-card-header-bar">
+                <span class="job-id-tag">#RN-OMEGA-1</span>
+                <span class="job-status-badge badge-purple">Staged / Queued</span>
+            </div>
+            <h4>Commercial Tower Façade Glass Reflection</h4>
+            <p class="job-meta-specs">Unreal Lumen Path &bull; 8K Panoramas &bull; Priority High</p>
+            
+            <div class="job-progress-system">
+                <div class="job-progress-bar-track">
+                    <div class="job-progress-fill-line" style="width: 0%;"></div>
+                </div>
+                <div class="job-progress-percentage-label">Awaiting Server Cluster Core</div>
+            </div>
         </div>
 
-        <!-- TAB 5 -->
-        <div id="partner-communications" class="dashboard-tab-panel">
-            <h3>Communications</h3>
-            <p>Live message logs and blueprint revision notes shared with investors.</p>
+        <!-- JOB CARD 03: RECENTLY COMPLETED SUCCESS -->
+        <div class="render-job-card completed-state">
+            <div class="job-card-header-bar">
+                <span class="job-id-tag">#RN-DELTA-5</span>
+                <span class="job-status-badge badge-green"><i class="fa-solid fa-circle-check"></i> Finished</span>
+            </div>
+            <h4>Stone Continuity Core Entrance Hall</h4>
+            <p class="job-meta-specs">Corona Render Track &bull; 4K Matte Curation &bull; Saved to Cloud</p>
+            
+            <div class="job-progress-system">
+                <div class="job-progress-bar-track">
+                    <div class="job-progress-fill-line" style="width: 100%; background: #4ADE80;"></div>
+                </div>
+                <div class="job-progress-percentage-label" style="color: #4ADE80;">100% Rendered & Verified</div>
+            </div>
         </div>
+
+    </div>
+</div>
+<style>
+    /* ==========================================================================
+   STACKLY ACCESS PORTAL — RENDERING QUEUE OVERRIDES
+   ========================================================================== */
+
+.render-queue-matrix-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Elegant 3-column dashboard card split */
+    gap: 1.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.render-job-card {
+    background: rgba(255, 255, 255, 0.015) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 16px !important;
+    padding: 1.75rem !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: left !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease !important;
+}
+
+.job-card-header-bar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 1.5rem !important;
+    width: 100% !important;
+}
+
+.job-id-tag {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    letter-spacing: 0.05rem !important;
+}
+
+.render-job-card h4 {
+    font-family: 'Cinzel', serif !important;
+    font-size: 1.05rem !important;
+    color: #FFFFFF !important;
+    margin: 0 0 0.5rem 0 !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+}
+
+.job-meta-specs {
+    font-size: 0.78rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    margin: 0 0 2rem 0 !important;
+    line-height: 1.5 !important;
+}
+
+/* KINETIC PROGRESS METER TRACK COMPONENT BAR UNITS */
+.job-progress-system {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+    margin-top: auto !important; /* Locks progress track safely at bottom of card */
+}
+
+.job-progress-bar-track {
+    width: 100% !important;
+    height: 4px !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.job-progress-fill-line {
+    height: 100% !important;
+    background: #AF9272; /* Premium signature studio gold loading tracker line */
+    border-radius: 10px !important;
+    transition: width 0.5s ease-in-out !important;
+}
+
+.job-progress-percentage-label {
+    font-size: 0.7rem !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04rem !important;
+}
+
+/* Contextual Card Highlight Links */
+.render-job-card.processing-state { border-left: 3px solid #FBBF24 !important; }
+.render-job-card.queued-state { border-left: 3px solid #A78BFA !important; }
+.render-job-card.completed-state { border-left: 3px solid #4ADE80 !important; }
+
+.render-job-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(175, 146, 114, 0.2) !important;
+    background: rgba(255, 255, 255, 0.025) !important;
+}
+
+
+/* ==========================================================================
+   RENDERING QUEUE LAYER — MULTI-DEVICE Breakpoints SAFETY
+   ========================================================================== */
+
+/* --- 1. LAPTOPS & INWARD TABLET FOLDS (Max-Width: 1120px) --- */
+@media screen and (max-width: 1120px) {
+    .render-queue-matrix-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Safely moves cards into an even 2-column grid format */
+        gap: 1.25rem !important;
+    }
+}
+
+/* --- 2. STANDARD HANDHELD SMARTPHONES (Max-Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    .render-queue-matrix-grid {
+        grid-template-columns: 1fr !important; /* Converts column blocks completely to a single vertical stack layout list */
+        gap: 1rem !important;
+    }
+    
+    .render-job-card {
+        padding: 1.5rem !important;
+    }
+
+    .render-job-card h4 {
+        font-size: 0.95rem !important;
+    }
+
+    .job-meta-specs {
+        margin-bottom: 1.5rem !important;
+        font-size: 0.74rem !important;
+    }
+}
+
+</style>
+
+       <!-- TAB CONTAINER: PREMIUM PARTNER SOURCING LOGS -->
+<div id="partner-sourcing" class="dashboard-tab-panel">
+    
+    <!-- SECTION HEADER BLOCK -->
+    <div class="panel-main-header-block">
+        <h3>Sourcing Logs</h3>
+        <p>Live tracking of structural stone quarry extractions, timber log indexing, and custom density inspections from international mountain yards.</p>
+    </div>
+
+    <!-- SOURCING LOGS INTERACTIVE INFRASTRUCTURE MATRIX -->
+    <div class="dashboard-split-row sourcing-split-matrix">
+        
+        <!-- LEFT COLUMN: QUARRY MATERIALS EXTRACTION LEDGER DATA TABLE -->
+        <div class="dashboard-data-box table-box-container">
+            <div class="data-box-title-bar">
+                <h4>Active Quarry Extraction Database</h4>
+                <span class="badge badge-gold">Verified Shipments</span>
+            </div>
+            <div class="table-scroll-track">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Block Batch ID</th>
+                            <th>Material Type / Curation Line</th>
+                            <th>Density Index</th>
+                            <th>Inspection Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Block Batch ID"><strong>#QR-CR-2026-01</strong></td>
+                            <td>Carrara White Splendor Marble</td>
+                            <td>2.72 g/cm³</td>
+                            <td><span class="badge badge-green">Grade A1 Approved</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Block Batch ID"><strong>#QR-VD-2026-05</strong></td>
+                            <td>Alpine Deep Verde Serpentine</td>
+                            <td>2.84 g/cm³</td>
+                            <td><span class="badge badge-green">Grade A1 Approved</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Block Batch ID"><strong>#QR-CC-2026-12</strong></td>
+                            <td>Calacatta Oro Translucent Slabs</td>
+                            <td>2.69 g/cm³</td>
+                            <td><span class="badge badge-amber">Grade A2 Verified</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Block Batch ID"><strong>#QR-LS-2026-09</strong></td>
+                            <td>Pietra Grey Compact Limestone</td>
+                            <td>2.58 g/cm³</td>
+                            <td><span class="badge badge-purple">Transit Audit</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: LIAISON PROCUREMENT FEEDS TIMELINE -->
+        <div class="dashboard-data-box timeline-box-container">
+            <div class="data-box-title-bar">
+                <h4>Mountain Yard Despatches</h4>
+            </div>
+            <div class="timeline-feed-track">
+                
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-gold"></div>
+                    <div class="tl-feed-content">
+                        <h5>Block Mirror Inspection Completed</h5>
+                        <p>#QR-CR-2026-01 slabs have successfully passed visual grain matching tests directly at the Tuscany yard layout.</p>
+                        <span class="tl-feed-timestamp">Today, 08:34 AM</span>
+                    </div>
+                </div>
+
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-green"></div>
+                    <div class="tl-feed-content">
+                        <h5>Moisture Calibration Stabilized</h5>
+                        <p>Solid European Oak shipments checked and marked at Austrian timber yards, clearing raw density checks.</p>
+                        <span class="tl-feed-timestamp">Yesterday, 03:12 PM</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    /* ==========================================================================
+   STACKLY ACCESS PORTAL — SOURCING LOGS LAYER ENHANCEMENTS
+   ========================================================================== */
+
+/* Structural layout hooks match your main theme dashboards symmetrically */
+#partner-sourcing td strong {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Enhances split row grid formatting for text-heavy logistical rows */
+.sourcing-split-matrix {
+    grid-template-columns: 1.4fr 1fr !important;
+    gap: 1.5rem !important;
+}
+
+
+/* ==========================================================================
+   SOURCING LOGS LAYER — MULTI-DEVICE Breakpoints SAFETY
+   ========================================================================== */
+
+/* --- 1. TABLET SCREENS & MONITOR RESIZES (Max-Width: 1120px) --- */
+@media screen and (max-width: 1120px) {
+    .sourcing-split-matrix {
+        grid-template-columns: 1fr !important; /* Stacks data table and timeline layout blocks vertically */
+        gap: 1.5rem !important;
+    }
+}
+
+/* --- 2. STANDARD HANDHELD SMARTPHONES (Max-Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    #partner-sourcing td {
+        font-size: 0.8rem !important;
+        padding: 0.9rem 0.75rem !important;
+    }
+}
+
+/* --- 3. ULTRA-SMALL PHONES VIEWPORT PANELS (Max-Width: 480px) --- */
+@media screen and (max-width: 480px) {
+    /* Completely converts horizontal table layout elements into stacked block items */
+    #partner-sourcing th { 
+        display: none !important; 
+    }
+    #partner-sourcing table, 
+    #partner-sourcing tbody, 
+    #partner-sourcing tr, 
+    #partner-sourcing td { 
+        display: block !important; 
+        width: 100% !important; 
+    }
+    #partner-sourcing tr {
+        margin-bottom: 1.25rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+        padding-bottom: 0.75rem !important;
+        box-sizing: border-box !important;
+    }
+    #partner-sourcing td {
+        text-align: right !important;
+        padding: 0.45rem 0 !important;
+        position: relative !important;
+        border: none !important;
+    }
+    /* Generates micro-text data annotations inline on the left hand edge margin */
+    #partner-sourcing td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+        font-weight: 600;
+        letter-spacing: 0.02rem;
+    }
+}
+
+</style>
+
+       <!-- TAB 5: PREMIUM PARTNER COMMUNICATIONS MATRIX -->
+<div id="partner-communications" class="dashboard-tab-panel">
+    
+    <!-- SECTION HEADER BLOCK -->
+    <div class="panel-main-header-block">
+        <h3>Communications</h3>
+        <p>Live message logs, secure investor channels, and blueprint revision notes shared with enterprise partners.</p>
+    </div>
+
+    <!-- MAIN TWO-COLUMN SYMMETRICAL NETWORK INFRASTRUCTURE -->
+    <div class="dashboard-split-row comms-split-matrix">
+        
+        <!-- LEFT COLUMN: ACTIVE CLIENT CHANNELS REVEAL SYSTEM -->
+        <div class="dashboard-data-box comms-channels-box">
+            <div class="data-box-title-bar">
+                <h4>Active Investor Streams</h4>
+                <span class="badge badge-gold">Secure Network</span>
+            </div>
+            
+            <div class="comms-channels-list">
+                
+                <!-- Channel Node 1 -->
+                <div class="comms-channel-card">
+                    <div class="channel-icon-shield">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="channel-details-track">
+                        <h5>Enterprise Investor Room</h5>
+                        <p>Active discussion thread for Salem Core Sector-4 parcel deed authorizations.</p>
+                        <a onclick="alert('Launching encrypted secure chat room...')" class="comms-cta-link">Open Workspace &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Channel Node 2 -->
+                <div class="comms-channel-card">
+                    <div class="channel-icon-shield">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <div class="channel-details-track">
+                        <h5>On-Site Engineering Hub</h5>
+                        <p>Coordination stream regarding moisture index calibrations for European Oak cargo.</p>
+                        <a onclick="alert('Launching encrypted secure chat room...')" class="comms-cta-link">Open Workspace &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: CHRONO ARCHITECTURAL DRAFTING REVISION FEED -->
+        <div class="dashboard-data-box timeline-box-container">
+            <div class="data-box-title-bar">
+                <h4>Blueprint Revision Notes</h4>
+            </div>
+            <div class="timeline-feed-track">
+                
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-gold"></div>
+                    <div class="tl-feed-content">
+                        <h5>Solar Tracking Angle Dispatched</h5>
+                        <p>Updated calculation metrics for volumetric window frames shared cleanly with investor accounts.</p>
+                        <span class="tl-feed-timestamp">Today, 09:45 AM</span>
+                    </div>
+                </div>
+
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-green"></div>
+                    <div class="tl-feed-content">
+                        <h5>Marble Core Grid Notes Compiled</h5>
+                        <p>Detailed density report regarding Carrara White Splendor batches uploaded straight to the shared server logs.</p>
+                        <span class="tl-feed-timestamp">Yesterday, 03:12 PM</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    /* ==========================================================================
+   STACKLY PARTNER ACC_ESS PORTAL — COMMUNICATIONS HUB OVERRIDES
+   ========================================================================== */
+
+.comms-channels-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+}
+
+.comms-channel-card {
+    background: rgba(255, 255, 255, 0.015) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 12px !important;
+    padding: 1.25rem !important;
+    display: flex !important;
+    gap: 1.25rem !important;
+    align-items: flex-start !important;
+    box-sizing: border-box !important;
+    transition: border-color 0.3s ease, background 0.3s ease !important;
+    cursor: pointer;
+}
+
+.channel-icon-shield {
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(175, 146, 114, 0.08) !important;
+    border: 1px solid rgba(175, 146, 114, 0.15) !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.channel-icon-shield i {
+    color: #AF9272 !important;
+    font-size: 0.95rem !important;
+}
+
+.channel-details-track {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: left !important;
+}
+
+.channel-details-track h5 {
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    margin: 0 0 0.35rem 0 !important;
+    color: #FFFFFF !important;
+}
+
+.channel-details-track p {
+    font-size: 0.78rem !important;
+    line-height: 1.5 !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+    margin: 0 0 0.85rem 0 !important;
+}
+
+.comms-cta-link {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    color: #AF9272 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05rem !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+    width: fit-content !important;
+}
+
+/* Micro-interaction hover triggers */
+.comms-channel-card:hover {
+    border-color: rgba(175, 146, 114, 0.25) !important;
+    background: rgba(175, 146, 114, 0.02) !important;
+}
+
+.comms-channel-card:hover .comms-cta-link {
+    color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   COMMUNICATIONS HUB LAYER — MULTI-DEVICE Breakpoints SAFETY
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS MAPS (Max-Width: 1120px) --- */
+@media screen and (max-width: 1120px) {
+    .comms-split-matrix {
+        grid-template-columns: 1fr !important; /* Collapses the split grid layout into a single column row */
+        gap: 1.5rem !important;
+    }
+}
+
+/* --- 2. STANDARD HANDHELD SMARTPHONES (Max-Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    .comms-channel-card {
+        padding: 1rem !important;
+        gap: 1rem !important;
+    }
+    
+    .channel-icon-shield {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    .channel-details-track h5 {
+        font-size: 0.85rem !important;
+    }
+    
+    .channel-details-track p {
+        font-size: 0.74rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* --- 3. SMALL MOBILE SCREEN FRAMES (Max-Width: 480px) --- */
+@media screen and (max-width: 480px) {
+    .comms-channel-card {
+        flex-direction: column !important; /* Stacks the icon block cleanly on top of details copy */
+        align-items: flex-start !important;
+        gap: 0.85rem !important;
+    }
+    
+    .channel-icon-shield {
+        margin-bottom: 0.25rem !important;
+    }
+}
+
+</style>
 
         <!-- TAB 6 -->
-        <div id="partner-financials" class="dashboard-tab-panel">
-            <h3>Financials Overview</h3>
-            <p>Total Budget Pool: $1.24M | Funds Disbursed: $840,000</p>
+        <!-- TAB CONTAINER: PREMIUM PARTNER FINANCIALS MATRIX -->
+<div id="partner-financials" class="dashboard-tab-panel">
+    
+    <!-- SECTION HEADER BLOCK -->
+    <div class="panel-main-header-block">
+        <h3>Financials Overview</h3>
+        <p>Dynamic capital allocation logs, maritime escrow disbursements, and procurement liquidity pools monitoring.</p>
+    </div>
+
+    <!-- 1. CHROMATIC CAPITAL MATRIX SUMMARY GRID -->
+    <div class="metrics-grid">
+        <div class="metric-card metric-gold">
+            <div class="m-card-header">
+                <h3>Total Budget Pool</h3>
+                <i class="fa-solid fa-vault"></i>
+            </div>
+            <div class="metric-val">$1.24M</div>
+            <div class="metric-sub">Capital ceiling limit lock</div>
+        </div>
+        
+        <div class="metric-card metric-green">
+            <div class="m-card-header">
+                <h3>Funds Disbursed</h3>
+                <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            </div>
+            <div class="metric-val">$840k</div>
+            <div class="metric-sub">Quarry & lumber settlements</div>
+        </div>
+        
+        <div class="metric-card metric-amber">
+            <div class="m-card-header">
+                <h3>Escrow In Review</h3>
+                <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <div class="metric-val">$160k</div>
+            <div class="metric-sub">Pending milestone verification</div>
+        </div>
+        
+        <div class="metric-card metric-purple">
+            <div class="m-card-header">
+                <h3>Available Liquidity</h3>
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div class="metric-val">$240k</div>
+            <div class="metric-sub">Unallocated pool tracking</div>
+        </div>
+    </div>
+
+    <!-- 2. TWO-COLUMN SPLIT FINANCES INFRASTRUCTURE -->
+    <div class="dashboard-split-row financial-split-matrix">
+        
+        <!-- LEFT PANEL COLUMN: ACTIVE CAPITAL TRANCHES DATA TABLE -->
+        <div class="dashboard-data-box table-box-container">
+            <div class="data-box-title-bar">
+                <h4>Resource Draw & Billing Ledger</h4>
+                <span class="badge badge-gold">Audited Logs</span>
+            </div>
+            <div class="table-scroll-track">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tranche Code</th>
+                            <th>Allocation / Supply Line</th>
+                            <th>Amount (USD)</th>
+                            <th>Payment State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Tranche Code"><strong>#TR-SLM-902</strong></td>
+                            <td>Carrara White Splendor Marble Slabs</td>
+                            <td>$42,500.00</td>
+                            <td><span class="badge badge-green">Settled / Closed</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Tranche Code"><strong>#TR-MDU-108</strong></td>
+                            <td>Solid European Oak Timber Cargo</td>
+                            <td>$56,000.00</td>
+                            <td><span class="badge badge-green">Settled / Closed</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Tranche Code"><strong>#TR-CHN-412</strong></td>
+                            <td>High-Performance Glass Panoramas</td>
+                            <td>$34,200.00</td>
+                            <td><span class="badge badge-amber">Awaiting Clear</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Tranche Code"><strong>#TR-CBE-053</strong></td>
+                            <td>Alpine Deep Verde Block Staging</td>
+                            <td>$27,300.00</td>
+                            <td><span class="badge badge-purple">Processing Wire</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <!-- TAB 7 -->
-        <div id="partner-settings" class="dashboard-tab-panel">
-            <h3>System Settings</h3>
-            <p>Manage authentication keys and system configuration.</p>
+        <!-- RIGHT PANEL COLUMN: CHRONO FINANCIAL MILESTONES FEED -->
+        <div class="dashboard-data-box timeline-box-container">
+            <div class="data-box-title-bar">
+                <h4>Billing Activity Streams</h4>
+            </div>
+            <div class="timeline-feed-track">
+                
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-green"></div>
+                    <div class="tl-feed-content">
+                        <h5>Wire Settlement Confirmed</h5>
+                        <p>Payment for Tranche #TR-MDU-108 successfully verified by maritime freight custom clearing networks.</p>
+                        <span class="tl-feed-timestamp">Today, 08:20 AM</span>
+                    </div>
+                </div>
+
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-purple"></div>
+                    <div class="tl-feed-content">
+                        <h5>Customs Duty Escrow Draw</h5>
+                        <p>Capital tranche cleared to cover maritime port processing tasks in Chennai safely.</p>
+                        <span class="tl-feed-timestamp">June 11, 2026</span>
+                    </div>
+                </div>
+
+                <div class="timeline-feed-item">
+                    <div class="tl-status-dot dot-gold"></div>
+                    <div class="tl-feed-content">
+                        <h5>Calculation Retainer Generated</h5>
+                        <p>Draft balance track initialized for pending engineering load density matrix testing.</p>
+                        <span class="tl-feed-timestamp">June 04, 2026</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+    </div>
+</div>
+<style>
+    /* ==========================================================================
+   STACKLY ACCESS PORTAL — FINANCIALS OVERVIEW LAYER OVERRIDES
+   ========================================================================== */
+
+/* Custom color tracking channels for dashboard financial vectors */
+.metric-card i.fa-vault { color: #AF9272 !important; }
+.metric-card i.fa-circle-dollar-to-slot { color: #4ADE80 !important; }
+.metric-card i.fa-hourglass-half { color: #FBBF24 !important; }
+.metric-card i.fa-wallet { color: #A78BFA !important; }
+
+/* Structural table font contrast normalization metrics */
+#partner-financials td strong {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+
+/* ==========================================================================
+   FINANCIALS OVERVIEW LAYER — MULTI-DEVICE Breakpoints SAFETY
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS & SCREEN FOLDS (Max-Width: 1120px) --- */
+@media screen and (max-width: 1120px) {
+    #partner-financials .metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Converts metrics cards to an even 2x2 grid */
+        gap: 1.25rem !important;
+    }
+    #partner-financials .dashboard-split-row {
+        grid-template-columns: 1fr !important; /* Stacks data table and billing timelines vertically */
+        gap: 1.5rem !important;
+    }
+}
+
+/* --- 2. STANDARD HANDHELD SMARTPHONES (Max-Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    #partner-financials .metrics-grid {
+        grid-template-columns: 1fr !important; /* Clean downstack single line vertical view */
+        gap: 1rem !important;
+    }
+    #partner-financials .dashboard-data-box {
+        padding: 1.25rem !important;
+    }
+}
+
+/* --- 3. SMALL MOBILE SCREEN PANELS (Max-Width: 480px) --- */
+@media screen and (max-width: 480px) {
+    /* Completely converts horizontal table cell layout elements into stacked block items */
+    #partner-financials th { 
+        display: none !important; 
+    }
+    #partner-financials table, 
+    #partner-financials tbody, 
+    #partner-financials tr, 
+    #partner-financials td { 
+        display: block !important; 
+        width: 100% !important; 
+    }
+    #partner-financials tr {
+        margin-bottom: 1.25rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+        padding-bottom: 0.75rem !important;
+        box-sizing: border-box !important;
+    }
+    #partner-financials td {
+        text-align: right !important;
+        padding: 0.45rem 0 !important;
+        position: relative !important;
+        border: none !important;
+    }
+    /* Generates micro-text data annotations inline on the left hand edge margin */
+    #partner-financials td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+        font-weight: 600;
+        letter-spacing: 0.02rem;
+    }
+}
+
+</style>
+
+        <!-- TAB 7 -->
+       <!-- TAB CONTAINER: PREMIUM PARTNER SYSTEM SETTINGS -->
+<div id="partner-settings" class="dashboard-tab-panel">
+    
+    <!-- SECTION HEADER BLOCK -->
+    <div class="panel-main-header-block">
+        <h3>System Settings</h3>
+        <p>Manage infrastructure authentication keys, cryptographic credential phrases, and live automated system configuration profiles.</p>
+    </div>
+
+    <!-- MAIN TWO-COLUMN FORM AND Preference CONFIGURATOR -->
+    <div class="dashboard-split-row settings-split-matrix">
+        
+        <!-- LEFT COLUMN: AUTHENTICATION KEYS VAULT FORM -->
+        <div class="dashboard-data-box settings-form-box">
+            <div class="data-box-title-bar">
+                <h4>API Credentials & Vault Tokens</h4>
+                <span class="badge badge-gold">RSA-4096 Secured</span>
+            </div>
+            
+            <form class="studio-dashboard-form" onsubmit="event.preventDefault(); alert('Infrastructure key arrays successfully recycled.');">
+                
+                <div class="form-group-row">
+                    <div class="form-input-field">
+                        <label class="form-label-text">Widescreen Server Public API Key</label>
+                        <input type="text" class="form-input-box" value="stk_live_4096_db7a90f23ce511b8b8f" readonly style="font-family: monospace !important; color: rgba(255,255,255,0.65) !important; cursor: not-allowed !important;">
+                    </div>
+                </div>
+
+                <div class="form-group-row split-form-row">
+                    <div class="form-input-field">
+                        <label class="form-label-text">Master Secret Token Phrase</label>
+                        <input type="password" class="form-input-box" placeholder="••••••••••••••••••••" required>
+                    </div>
+                    <div class="form-input-field">
+                        <label class="form-label-text">Verify Token Phrase</label>
+                        <input type="password" class="form-input-box" placeholder="Repeat token phrase" required>
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-input-field">
+                        <label class="form-label-text">Emergency Encrypted System Passcode</label>
+                        <input type="password" class="form-input-box" placeholder="Vault verification code" required>
+                    </div>
+                </div>
+
+                <div class="form-action-deck" style="margin-top: 1rem;">
+                    <button type="submit" class="btn-studio-submit">Recycle Cryptographic Keys</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- RIGHT COLUMN: SYSTEM PREFERENCES & AUTOMATION TOGGLES -->
+        <div class="dashboard-data-box settings-options-box">
+            <div class="data-box-title-bar">
+                <h4>Automated Cloud Cluster Rules</h4>
+            </div>
+            
+            <div class="settings-toggles-list">
+                
+                <!-- Toggle Item 1 -->
+                <div class="toggle-control-row">
+                    <div class="toggle-text-track">
+                        <h5>Automatic Server Engine Balancing</h5>
+                        <p>Automatically distribute 3D visualization render queues across multi-core European server threads.</p>
+                    </div>
+                    <label class="studio-switch-node">
+                        <input type="checkbox" checked>
+                        <span class="studio-switch-slider"></span>
+                    </label>
+                </div>
+
+                <!-- Toggle Item 2 -->
+                <div class="toggle-control-row">
+                    <div class="toggle-text-track">
+                        <h5>Live CAD / BIM Model Sync Alerts</h5>
+                        <p>Receive immediate push messages regarding cross-axis vector and layout adjustment updates.</p>
+                    </div>
+                    <label class="studio-switch-node">
+                        <input type="checkbox" checked>
+                        <span class="studio-switch-slider"></span>
+                    </label>
+                </div>
+
+                <!-- Toggle Item 3 -->
+                <div class="toggle-control-row">
+                    <div class="toggle-text-track">
+                        <h5>Biometric Terminal Gateway Access</h5>
+                        <p>Enforce quantum-signature face verification checks on administrative handheld device entries.</p>
+                    </div>
+                    <label class="studio-switch-node">
+                        <input type="checkbox">
+                        <span class="studio-switch-slider"></span>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    /* ==========================================================================
+   STACKLY ACCESS PORTAL — INFRASTRUCTURE SYSTEM SETTINGS OVERRIDES
+   ========================================================================== */
+
+.studio-dashboard-form { display: flex !important; flex-direction: column !important; gap: 1.25rem !important; width: 100% !important; }
+.form-input-field { display: flex !important; flex-direction: column !important; gap: 0.5rem !important; width: 100% !important; text-align: left !important; }
+.form-label-text { font-size: 0.72rem !important; text-transform: uppercase !important; letter-spacing: 0.06rem !important; color: rgba(255, 255, 255, 0.4) !important; font-weight: 600 !important; }
+
+.form-input-box {
+    width: 100% !important; background: rgba(255, 255, 255, 0.03) !important; border: 1px solid rgba(255, 255, 255, 0.08) !important; border-radius: 8px !important; padding: 0.8rem 1rem !important;
+    color: #FFFFFF !important; font-family: 'Inter', sans-serif !important; font-size: 0.9rem !important; outline: none !important; box-sizing: border-box !important; transition: border-color 0.3s ease, background 0.3s ease !important;
+}
+.form-input-box:focus { border-color: #AF9272 !important; background: rgba(175, 146, 114, 0.02) !important; }
+
+.btn-studio-submit {
+    background-color: #AF9272 !important; color: #111412 !important; border: 1px solid #AF9272 !important; border-radius: 8px !important; padding: 0.8rem 1.8rem !important;
+    font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.05rem !important; cursor: pointer !important; width: fit-content !important; transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.btn-studio-submit:hover { background-color: #CBB295 !important; border-color: #CBB295 !important; transform: translateY(-2px) !important; box-shadow: 0 8px 20px rgba(175, 146, 114, 0.25) !important; }
+
+/* ADJUSTABLE SLIDER TOGGLES MATRICES */
+.settings-toggles-list { display: flex !important; flex-direction: column !important; gap: 1.5rem !important; width: 100% !important; }
+.toggle-control-row { display: flex !important; justify-content: space-between !important; align-items: center !important; gap: 1.5rem !important; width: 100% !important; }
+.toggle-text-track { display: flex !important; flex-direction: column !important; text-align: left !important; flex: 1 !important; }
+.toggle-text-track h5 { font-size: 0.88rem !important; font-weight: 600 !important; margin: 0 0 0.25rem 0 !important; color: #FFFFFF !important; }
+.toggle-text-track p { font-size: 0.76rem !important; line-height: 1.45 !important; color: rgba(255, 255, 255, 0.45) !important; margin: 0 !important; }
+
+.studio-switch-node { position: relative !important; display: inline-block !important; width: 44px !important; height: 24px !important; flex-shrink: 0 !important; }
+.studio-switch-node input { opacity: 0; width: 0; height: 0; }
+.studio-switch-slider { position: absolute !important; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255,255,0.08) !important; border: 1px solid rgba(255,255,255,0.06) !important; border-radius: 24px !important; transition: .3s !important; }
+.studio-switch-slider::before { position: absolute !important; content: "" !important; height: 16px !important; width: 16px !important; left: 3px !important; bottom: 3px !important; background-color: rgba(255,255,255,0.4) !important; border-radius: 50% !important; transition: .3s !important; }
+.studio-switch-node input:checked + .studio-switch-slider { background-color: rgba(175, 146, 114, 0.15) !important; border-color: rgba(175, 146, 114, 0.3) !important; }
+.studio-switch-node input:checked + .studio-switch-slider::before { transform: translateX(20px) !important; background-color: #AF9272 !important; }
+
+
+/* ==========================================================================
+   SYSTEM SETTINGS LAYER — MULTI-DEVICE Breakpoints SAFETY
+   ========================================================================== */
+
+/* --- 1. MID-SIZE TABLETS & CONFIGURATIONS (Max-Width: 1120px) --- */
+@media screen and (max-width: 1120px) {
+    .settings-split-matrix {
+        grid-template-columns: 1fr !important; /* Stacks credentials form and system rules vertically */
+        gap: 1.5rem !important;
+    }
+}
+
+/* --- 2. STANDARD HANDHELD SMARTPHONES (Max-Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    .split-form-row {
+        flex-direction: column !important; /* Converts side-by-side twin inputs into independent stacked single rows */
+        gap: 1.25rem !important;
+    }
+    .toggle-control-row { gap: 1rem !important; }
+    .toggle-text-track h5 { font-size: 0.84rem !important; }
+    .toggle-text-track p { font-size: 0.72rem !important; }
+}
+
+/* --- 3. ULTRA-SMALL DEVICES SCREEN SAVER (Max-Width: 480px) --- */
+@media screen and (max-width: 480px) {
+    .btn-studio-submit {
+        width: 100% !important; /* Expands key recycling trigger buttons to full container card width */
+        text-align: center !important;
+    }
+    .toggle-control-row {
+        flex-direction: row !important; /* Keeps switch buttons locked completely parallel to description copy */
+        align-items: flex-start !important;
+    }
+    .studio-switch-node { margin-top: 0.2rem !important; }
+}
+
+</style>
 
     </div>
 </div>
@@ -145,9 +1715,94 @@ function executeStudioLogout() {
         window.location.href = "login.html";
     }
 }
+
+
+
+
+function toggleSidebar(event) {
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("active");
+
+    if (event) event.stopPropagation();
+}
+
+
+document.addEventListener("click", function (e) {
+    const sidebar = document.querySelector(".sidebar");
+    const toggle = document.querySelector(".menu-toggle");
+
+    if (!sidebar || !toggle) return;
+
+    const isOpen = sidebar.classList.contains("active");
+
+    if (isOpen && !sidebar.contains(e.target) && !toggle.contains(e.target)) {
+        sidebar.classList.remove("active");
+    }
+});
+
 </script>
 
 <style>
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2000;
+}
+
+/* bars */
+.menu-toggle div {
+    width: 26px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* SHOW ONLY ON MOBILE */
+@media (max-width: 991px) {
+    .menu-toggle {
+        display: flex !important;
+    }
+}
+
+
+
+
+
+
+    .sidebar {
+    width: 260px;
+    background: rgba(15,18,16,0.95);
+    border-right: 1px solid var(--studio-border);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+
+    /* IMPORTANT FIX */
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+/* MOBILE DEFAULT HIDDEN */
+@media (max-width: 991px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+
 /* =========================================================================
    PARTNER REGISTRY EXTENDED DROPDOWN & TRANSITION STYLES
    ========================================================================= */
@@ -279,17 +1934,112 @@ td { padding: 1.2rem 1rem; font-size: 0.88rem; color: rgba(255,255,255,0.8); bor
 .status-badge { padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03rem; display: inline-block; }
 .status-badge.active { background: rgba(175, 146, 114, 0.15); color: var(--studio-gold); border: 1px solid var(--studio-gold); }
 
+
 /* RESPONSIVE RESPONSIVENESS SAFETY BLOCKS */
 @media (max-width: 1024px) {
     .metrics-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
-@media (max-width: 991px) {
-    .sidebar { display: none; } .main-content { margin-left: 0; } .top-navbar { padding: 0 1.5rem; } .dashboard-body { padding: 1.5rem; }
-}
+
 @media (max-width: 575px) {
     .metrics-grid { grid-template-columns: 1fr !important; } table, th, td { font-size: 0.75rem; }
     .top-navbar span { display: none; } /* Hides text welcome string on tiny smartphones viewport to prevent title collisions */
 }
+
+
+
+/* =========================
+   HAMBURGER MENU ICON
+   ========================= */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    width: 26px;
+    height: 2px;
+    background: #fff;
+    display: block;
+    border-radius: 2px;
+}
+
+/* =========================
+   MOBILE SIDEBAR BEHAVIOR
+   ========================= */
+@media (max-width: 991px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .sidebar {
+        position: fixed;
+           /* hidden by default */
+        top: 0;
+        height: 100vh;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+   
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    /* optional overlay effect */
+    body.sidebar-open::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        z-index: 998;
+    }
+}
+
+
+
+@media (max-width: 991px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 260px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    body.sidebar-open::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+}
+
+
 </style>
 
 </body>
