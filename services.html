@@ -60,47 +60,53 @@
   })();
 </script>
 
-  <header class="global-header animate-header">
-    <div class="nav-container">
-        
-        <!-- Structural Brand Logo Connector -->
-        <a href="index.html" class="logo-container">
-            <div class="logo-wrapper">
-                <img src="./Assests/stackly-logo-final (1).webp" alt="Stackly logo" class="nav-logo-icon" />
-            </div>
-        </a>
-        
-        <!-- Navigation Directory Deck Layout: FIXED LINKS & CLEANED INLINE STYLES -->
-        <nav class="nav-menu" id="mobile-nav-overlay">
-            <ul class="nav-links" style="list-style: none; margin: 0; padding: 0;">
-                <li><a href="index.html" style="text-decoration: none;">Home</a></li>
-                <li><a href="about.html" style="text-decoration: none;">About Us</a></li>
-                <li><a href="services.html" class="active" style="text-decoration: none;">Services</a></li>
-                <li><a href="projects.html" style="text-decoration: none;">Projects</a></li>
-                <li><a href="blog.html" style="text-decoration: none;">Blog</a></li>
-                <li><a href="contact.html" style="text-decoration: none;">Contact Us</a></li>
-                  <li>
-    <a href="login.html" class="mobile-login-link">Login</a>
-</li>
-            </ul>
-        </nav>
-        
-        <!-- Global Action Trigger Module Button Deck -->
-        <div class="header-actions">
-            <a href="login.html" class="quote-cta-btn" style="color: #AF9272 !important; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.4rem; border-radius: 30px; border: 1px solid #AF9272 !important; background: rgba(175, 146, 114, 0.05); transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important; box-shadow: 0 0 15px rgba(175, 146, 114, 0.45) !important; text-shadow: 0 0 8px rgba(175, 146, 114, 0.35);" 
-               onmouseover="this.style.color='#FFFFFF'; this.style.borderColor='#FFFFFF'; this.style.boxShadow='0 0 15px rgba(255, 255, 255, 0.25)'; this.style.textShadow='none';" 
-               onmouseout="this.style.color='#AF9272'; this.style.borderColor='#AF9272'; this.style.boxShadow='0 0 15px rgba(175, 146, 114, 0.45)'; this.style.textShadow='0 0 8px rgba(175, 146, 114, 0.35)';">
-                Log in <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-            </a>
-            
-            <button class="mobile-menu-toggle" id="menu-toggle-trigger" aria-label="Toggle Menu">
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-            </button>
-        </div>
-        
+  
+    <!-- 2. STICKY INTERACTIVE GLASS NAVBAR -->
+    <header class="global-header animate-header">
+  <div class="nav-container">
+      
+    <a href="index.html" class="logo-container">
+      <div class="logo-wrapper">
+  
+    <img 
+      src="./Assests/stackly-logo-final (1).webp" 
+      alt="Stackly logo"
+      class="nav-logo-icon"
+    />
+
     </div>
+      </a>
+ 
+
+      
+    <!-- FIX: Attached ID handle here so your JavaScript observer can capture the toggle clock states -->
+    <nav class="nav-menu" id="mobile-nav-overlay">
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html" class="active" >Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li class="login-item">
+    <a href="login.html" style="background-color: #AF9272 !important; color: #111412 !important; border: 1px solid #AF9272 !important; border-radius: 30px !important; padding: 7px 18px !important; display: inline-flex !important; align-items: center !important; font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.05rem !important; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important; box-shadow: 0 4px 15px rgba(175, 146, 114, 0.15) !important;"
+       onmouseover="this.style.backgroundColor='#CBB295'; this.style.borderColor='#CBB295'; this.style.boxShadow='0 10px 25px rgba(175, 146, 114, 0.4), 0 0 30px rgba(175, 146, 114, 0.3)'; this.style.transform='translateY(-3px)';"
+       onmouseout="this.style.backgroundColor='#AF9272'; this.style.borderColor='#AF9272'; this.style.boxShadow='0 4px 15px rgba(175, 146, 114, 0.15)'; this.style.transform='none';">
+        Log In
+    </a>
+</li>
+
+        </ul>
+    </nav>
+    <button id="menu-toggle-trigger" class="mobile-menu-toggle">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+</button>
+    
+   
+
+
 </header>
 
 <script>

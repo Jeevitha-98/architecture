@@ -365,6 +365,68 @@ body {
     display: flex !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* push nav to right side */
+.nav-menu {
+    margin-left: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+
+.nav-links li.login-item a {
+    all: unset; /* resets conflicting styles */
+    display: inline-block;
+
+    color: #AF9272 !important;
+    background: transparent !important;
+
+    padding: 6px 14px !important;
+    border: 1px solid #AF9272 !important;
+    border-radius: 25px !important;
+
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+.nav-links li.login-item a:hover {
+    background: #AF9272 !important;
+    color: #111 !important;
+
+    box-shadow:
+        0 0 12px rgba(175, 146, 114, 0.7),
+        0 0 25px rgba(175, 146, 114, 0.4);
+
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
 @media (max-width: 1024px) {
     .quote-cta-btn,
     .cta-btn,
